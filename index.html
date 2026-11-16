@@ -1,0 +1,4341 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>[BẢN DEMO] CAO VĂN ĐẠI TỘC GIA PHẢ - Làng Đông Mỹ, Thôn Bình Hội, Xã Thăng Phú, Tp Đà Nẵng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --crimson: #8B1E1E;
+      --crimson-dark: #5E1111;
+      --gold: #C6923A;
+      --gold-light: #F3E5C8;
+      --paper: #FAF6EE;
+      --paper-card: #FFFDF9;
+      --paper-dark: #EFE6D5;
+      --ink: #231815;
+      --ink-muted: #615049;
+      --border-gold: rgba(198, 146, 58, 0.55);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+    }
+
+    .font-serif-royal { font-family: 'Noto Serif', Georgia, serif; }
+
+    /* Hoành phi Header */
+    .hoanh-phi {
+      background: linear-gradient(135deg, #6E1414 0%, #8B1E1E 50%, #5A0F0F 100%);
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 4px 16px rgba(35, 24, 21, 0.18);
+      color: var(--paper);
+    }
+
+    .container { max-width: 1320px; margin: 0 auto; padding: 0 14px; width: 100%; }
+
+    /* Header Top */
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+    }
+    .brand-box { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 260px; }
+    .emblem-box {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(45, 10, 10, 0.55);
+      border: 2px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Noto Serif', serif; font-weight: 700; font-size: 18px; color: #F7D996;
+      shrink: 0; overflow: hidden;
+    }
+    .emblem-box img { width: 100%; height: 100%; object-fit: cover; }
+    .title-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .site-title {
+      font-family: 'Noto Serif', serif; font-size: clamp(16px, 2.5vw, 22px);
+      font-weight: 700; color: #FDECC8; letter-spacing: 0.4px; text-transform: uppercase;
+    }
+    .demo-badge {
+      background: var(--gold); color: #231815; font-size: 10px; font-weight: 800;
+      padding: 2px 8px; border-radius: 6px; letter-spacing: 0.6px; text-transform: uppercase;
+    }
+    .site-subtitle { font-size: 12px; color: rgba(253, 236, 200, 0.9); margin-top: 2px; }
+
+    /* Custom Banner Image (Admin optional) */
+    #customHeaderBanner {
+      width: 100%; max-height: 180px; object-fit: cover;
+      border-bottom: 2px solid var(--gold); display: none;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 8px 13px; border-radius: 10px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: 1px solid transparent; transition: all 0.15s ease;
+      font-family: inherit; white-space: nowrap;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-gold { background: var(--gold); color: #231815; border-color: #DFB05A; }
+    .btn-gold:hover { background: #D9A346; }
+    .btn-crimson { background: var(--crimson); color: #FFFDF9; }
+    .btn-crimson:hover { background: var(--crimson-dark); }
+    .btn-outline-gold { background: rgba(45, 10, 10, 0.45); color: #FDECC8; border-color: rgba(198, 146, 58, 0.65); }
+    .btn-outline-gold:hover { background: rgba(45, 10, 10, 0.75); }
+    .btn-paper { background: var(--paper-dark); color: var(--ink); border-color: var(--border-gold); }
+    .btn-paper:hover { background: #E6D9C2; }
+    .btn-sm { padding: 5px 10px; font-size: 12px; border-radius: 8px; }
+
+    /* Toolbar */
+    .toolbar {
+      background: var(--paper); color: var(--ink);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 10px 0;
+    }
+    .toolbar-inner {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .search-wrap { position: relative; flex: 1; min-width: 260px; max-width: 520px; }
+    .search-input {
+      width: 100%; padding: 9px 76px 9px 36px; border-radius: 10px;
+      border: 1.5px solid var(--gold); background: #FFFDF9; color: var(--ink);
+      font-size: 13.5px; outline: none; font-family: inherit;
+    }
+    .search-input:focus { border-color: var(--crimson); box-shadow: 0 0 0 3px rgba(139, 30, 30, 0.12); }
+    .search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--crimson); font-size: 14px; pointer-events: none; }
+    .clear-search-btn {
+      position: absolute; right: 7px; top: 50%; transform: translateY(-50%);
+      background: rgba(139, 30, 30, 0.1); color: var(--crimson); border: none;
+      padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; display: none;
+    }
+    .search-dropdown {
+      position: absolute; left: 0; right: 0; top: calc(100% + 4px);
+      background: #FFFDF9; border: 1.5px solid var(--gold); border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(35, 24, 21, 0.2); max-height: 340px; overflow-y: auto;
+      z-index: 60; display: none;
+    }
+    .search-item {
+      width: 100%; text-align: left; padding: 10px 14px; border: none; background: transparent;
+      border-bottom: 1px solid #F1E8D7; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;
+      font-family: inherit;
+    }
+    .search-item:hover { background: #FAF2E2; }
+
+    .controls-group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .select-box {
+      padding: 8px 10px; border-radius: 10px; border: 1px solid var(--gold);
+      background: #FFFDF9; color: var(--ink); font-size: 12.5px; font-weight: 500;
+      font-family: inherit; outline: none;
+    }
+    .view-tabs {
+      display: inline-flex; background: var(--paper-dark); padding: 3px;
+      border-radius: 10px; border: 1px solid var(--border-gold);
+    }
+    .view-tab {
+      padding: 6px 11px; border-radius: 8px; font-size: 12px; font-weight: 600;
+      border: none; background: transparent; color: var(--ink); cursor: pointer; font-family: inherit;
+    }
+    .view-tab.active { background: var(--crimson); color: #FFFDF9; box-shadow: 0 2px 6px rgba(139,30,30,0.25); }
+
+    /* Focus Banner */
+    .focus-banner {
+      background: #F6E7C8; border-top: 1px solid var(--gold); padding: 8px 0; display: none;
+    }
+    .focus-banner-inner {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;
+    }
+    .focus-tag {
+      background: var(--crimson); color: #fff; font-size: 11px; font-weight: 700;
+      padding: 2px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    /* Interactive Tree CSS */
+    #treeViewport {
+      width: 100%; height: calc(100vh - 155px); min-height: 520px;
+      overflow: auto; position: relative; cursor: grab;
+      background-image: radial-gradient(rgba(198, 146, 58, 0.22) 1px, transparent 1px);
+      background-size: 22px 22px;
+      padding: 28px 40px 80px 40px;
+    }
+    #treeViewport:active { cursor: grabbing; }
+    #treeCanvas { transform-origin: top center; transition: transform 0.15s ease; display: inline-block; min-width: 100%; text-align: center; }
+
+    .tree ul {
+      padding-top: 22px; position: relative; display: flex; justify-content: center;
+      list-style: none;
+    }
+    .tree li {
+      text-align: center; list-style-type: none; position: relative;
+      padding: 22px 8px 0 8px; display: flex; flex-direction: column; align-items: center;
+    }
+    .tree li::before, .tree li::after {
+      content: ''; position: absolute; top: 0; right: 50%;
+      border-top: 2px solid var(--gold); width: 50%; height: 22px;
+    }
+    .tree li::after { right: auto; left: 50%; border-left: 2px solid var(--gold); }
+    .tree li:only-child::after, .tree li:only-child::before { display: none; }
+    .tree li:only-child { padding-top: 0; }
+    .tree li:first-child::before, .tree li:last-child::after { border: 0 none; }
+    .tree li:last-child::before { border-right: 2px solid var(--gold); border-radius: 0 6px 0 0; }
+    .tree li:first-child::after { border-radius: 6px 0 0 0; }
+    .tree ul ul::before {
+      content: ''; position: absolute; top: 0; left: 50%;
+      border-left: 2px solid var(--gold); width: 0; height: 22px;
+    }
+
+    /* Node Card */
+    .node-card {
+      background: var(--paper-card); border: 1.5px solid var(--gold);
+      border-radius: 12px; padding: 10px 12px; width: 205px; text-align: left;
+      position: relative; cursor: pointer; box-shadow: 0 3px 10px rgba(35, 24, 21, 0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .node-card:hover { transform: translateY(-2px); border-color: var(--crimson); box-shadow: 0 6px 16px rgba(139, 30, 30, 0.16); }
+    .node-card.is-root {
+      background: linear-gradient(135deg, #7A1818, #580F0F); color: #FDECC8;
+      border: 2px solid var(--gold); width: 235px;
+    }
+    .node-card.is-focus-target {
+      border: 2.5px solid var(--crimson); background: #FFF4DC;
+      box-shadow: 0 0 0 4px rgba(139, 30, 30, 0.16);
+    }
+    .node-card.is-root.is-focus-target { background: linear-gradient(135deg, #8B1E1E, #5E1111); }
+
+    .node-meta { display: flex; justify-content: space-between; align-items: center; gap: 4px; margin-bottom: 5px; }
+    .badge-gen {
+      font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 5px;
+      background: rgba(139, 30, 30, 0.1); color: var(--crimson); border: 1px solid rgba(139, 30, 30, 0.25);
+    }
+    .is-root .badge-gen { background: var(--gold); color: #231815; border: none; }
+    .badge-kids { font-size: 10px; font-weight: 600; background: #F4E8D1; color: #6C4B1B; padding: 2px 6px; border-radius: 5px; }
+    .node-name { font-family: 'Noto Serif', serif; font-weight: 700; font-size: 13px; line-height: 1.35; color: var(--ink); }
+    .is-root .node-name { color: #FDECC8; font-size: 13.5px; }
+    .node-spouse {
+      font-size: 11px; color: var(--ink-muted); margin-top: 5px;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .is-root .node-spouse { color: rgba(253, 236, 200, 0.88); }
+    .badge-status {
+      display: inline-block; margin-top: 5px; font-size: 10px; font-weight: 700;
+      padding: 1px 6px; border-radius: 4px; background: #FDE2E2; color: #9B1C1C;
+    }
+    .collapse-btn {
+      position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+      min-width: 24px; height: 24px; padding: 0 6px; border-radius: 999px;
+      background: var(--crimson); color: #fff; border: 2px solid var(--paper);
+      font-size: 11px; font-weight: 700; cursor: pointer; z-index: 10;
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+    .collapse-btn:hover { background: var(--crimson-dark); }
+
+    /* Floating Zoom Controls */
+    .floating-controls {
+      position: fixed; bottom: 20px; right: 18px; z-index: 35;
+      background: rgba(255, 253, 249, 0.96); border: 1.5px solid var(--gold);
+      border-radius: 14px; padding: 6px; display: flex; flex-direction: column; gap: 5px;
+      box-shadow: 0 8px 22px rgba(35, 24, 21, 0.18);
+    }
+    .zoom-btn {
+      width: 34px; height: 34px; border-radius: 9px; border: 1px solid transparent;
+      background: transparent; color: var(--ink); font-weight: 700; font-size: 14px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+    .zoom-btn:hover { background: var(--paper-dark); border-color: var(--border-gold); }
+
+    /* Compact & Appendix Views */
+    .section-box { max-width: 1080px; margin: 18px auto; padding: 0 14px 40px 14px; width: 100%; display: none; }
+    .panel-card {
+      background: #FFFDF9; border: 1.5px solid var(--gold); border-radius: 16px;
+      padding: 18px; box-shadow: 0 4px 14px rgba(35, 24, 21, 0.06); margin-bottom: 16px;
+    }
+    .compact-node {
+      border-left: 2.5px solid var(--gold); padding-left: 12px; margin: 8px 0;
+    }
+    .compact-card {
+      background: #FFFDF9; border: 1px solid var(--border-gold); border-radius: 12px;
+      padding: 11px 14px; display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+    }
+    .compact-card:hover { border-color: var(--crimson); }
+
+    .appendix-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; margin-top: 14px;
+    }
+    .appendix-item {
+      background: #FFFDF9; border: 1px solid var(--border-gold); border-radius: 10px;
+      padding: 9px 12px; font-size: 13px; font-weight: 500;
+    }
+
+    /* Modals & Drawer */
+    .overlay {
+      position: fixed; inset: 0; background: rgba(20, 12, 10, 0.55);
+      backdrop-filter: blur(2px); z-index: 70; display: none;
+    }
+    .drawer {
+      position: fixed; top: 0; right: 0; height: 100%; width: 100%; max-width: 450px;
+      background: #FFFDF9; border-left: 2px solid var(--gold); z-index: 80;
+      transform: translateX(100%); transition: transform 0.25s ease;
+      display: flex; flex-direction: column; box-shadow: -8px 0 28px rgba(0,0,0,0.25);
+    }
+    .drawer.open { transform: translateX(0); }
+    .modal-wrap {
+      position: fixed; inset: 0; z-index: 85; display: none;
+      align-items: center; justify-content: center; padding: 12px; overflow-y: auto;
+    }
+    .modal-box {
+      background: #FFFDF9; border: 2px solid var(--gold); border-radius: 18px;
+      width: 100%; max-width: 920px; max-height: 92vh; display: flex; flex-direction: column;
+      overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+    .modal-header {
+      background: linear-gradient(135deg, #6E1414, #8B1E1E); color: #FDECC8;
+      padding: 14px 18px; border-bottom: 2px solid var(--gold);
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .modal-body { padding: 18px; overflow-y: auto; flex: 1; }
+
+    /* Compare 2 or 3 People Grid */
+    .compare-inputs-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-bottom: 14px;
+    }
+    .compare-slot {
+      background: var(--paper); border: 1px solid var(--gold); border-radius: 12px;
+      padding: 12px; position: relative;
+    }
+    .compare-tree-columns {
+      display: grid; gap: 12px; margin-top: 12px;
+    }
+    .compare-branch-col {
+      background: var(--paper); border: 1px solid var(--border-gold); border-radius: 12px;
+      padding: 10px; display: flex; flex-direction: column; align-items: center;
+    }
+    .compare-step-card {
+      width: 100%; background: #FFFDF9; border: 1px solid var(--gold); border-radius: 9px;
+      padding: 7px 9px; text-align: center; font-size: 12px;
+    }
+    .compare-step-card.target {
+      background: var(--crimson); color: #fff; border-color: var(--crimson-dark); font-weight: 700;
+    }
+
+    /* Info Block in Drawer */
+    .info-block {
+      background: var(--paper); border: 1px solid var(--border-gold); border-radius: 12px;
+      padding: 12px; margin-bottom: 12px; font-size: 13px;
+    }
+    .info-block-title {
+      font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--crimson);
+      letter-spacing: 0.4px; margin-bottom: 6px;
+    }
+
+    /* Toast */
+    #toastBox {
+      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+      background: #231815; color: #FDECC8; border: 1px solid var(--gold);
+      padding: 10px 18px; border-radius: 12px; font-size: 13px; font-weight: 500;
+      z-index: 100; display: none; box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-align: center; max-width: 90vw;
+    }
+
+    @media (max-width: 640px) {
+      #treeViewport { height: calc(100vh - 205px); padding: 18px 16px 80px 16px; }
+      .node-card { width: 175px; padding: 8px 10px; }
+      .node-card.is-root { width: 200px; }
+      .floating-controls { bottom: 14px; right: 12px; }
+      .btn { padding: 7px 10px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- OPTIONAL CUSTOM HEADER BANNER (ADMIN) -->
+  <img id="customHeaderBanner" alt="Ảnh tiêu đề dòng tộc" />
+
+  <!-- HEADER -->
+  <header class="hoanh-phi">
+    <div class="container">
+      <div class="header-top">
+        <div class="brand-box">
+          <div class="emblem-box" id="headerEmblemBox">高族</div>
+          <div>
+            <div class="title-row">
+              <h1 class="site-title" id="headerMainTitle">CAO ĐẠI TỘC GIA PHẢ</h1>
+              <span class="demo-badge" id="headerDemoBadge">BẢN DEMO</span>
+            </div>
+            <p class="site-subtitle" id="headerSubTitle">
+              Làng Đông Mỹ, thôn Bình Hội, xã Thăng Phú, Tp Đà Nẵng • Lập thành 15.11 Canh Ngọ (1990)
+            </p>
+          </div>
+        </div>
+
+        <div class="controls-group">
+          <button class="btn btn-gold" onclick="openCompareModal()">⚖️ So sánh quan hệ (2–3 người)</button>
+          <button class="btn btn-outline-gold" onclick="openShareModal()">🌐 Xuất bản / Chia sẻ</button>
+          <button class="btn btn-outline-gold" onclick="openAdminModal()">⚙️ Quản trị</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+      <div class="container toolbar-inner">
+        <!-- Search Box -->
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="lineageSearchInput" class="search-input" autocomplete="off"
+                 placeholder="Tìm gốc gác, bà con (VD: Cao Văn Nhơn, Cao Ngọc Đàn, Cao Văn Cải...)" />
+          <button id="clearSearchBtn" class="clear-search-btn" onclick="clearLineageFocus()">Xóa</button>
+          <div id="searchDropdown" class="search-dropdown"></div>
+        </div>
+
+        <!-- Filters & View Switcher -->
+        <div class="controls-group">
+          <select id="branchFilter" class="select-box" onchange="applyFilters()">
+            <option value="ALL">Tất cả 6 Phái</option>
+            <option value="Gốc">Đời Thủy Tổ – Đệ Tam</option>
+            <option value="Phái Nhất">Phái Nhất (Cao Ngọc Cảng)</option>
+            <option value="Phái Nhì">Phái Nhì (Cao Văn Biều)</option>
+            <option value="Phái Ba">Phái Ba (Cao Ngọc Thiệt)</option>
+            <option value="Phái Tư">Phái Tư (Cao Ngọc Tánh)</option>
+            <option value="Phái Năm">Phái Năm (Cao Ngọc Xuy)</option>
+            <option value="Phái Sáu">Phái Sáu (12 Vị Đệ Tứ)</option>
+          </select>
+
+          <select id="genFilter" class="select-box" onchange="applyFilters()">
+            <option value="ALL">Tất cả 13 Đời</option>
+            <option value="0">Đời 0: Ngài Thủy Tổ</option>
+            <option value="1">Đời 1: Đệ Nhất Thế Tổ</option>
+            <option value="2">Đời 2: Đệ Nhị Thế Tổ</option>
+            <option value="3">Đời 3: Đệ Tam Thế Tổ</option>
+            <option value="4">Đời 4: Đệ Tứ Thế Tổ</option>
+            <option value="5">Đời 5: Đệ Ngũ Thế Tổ</option>
+            <option value="6">Đời 6: Đệ Lục Thế Tổ</option>
+            <option value="7">Đời 7: Đệ Thất Thế Tổ</option>
+            <option value="8">Đời 8: Đệ Bát Thế Tổ</option>
+            <option value="9">Đời 9: Đệ Cửu Thế Tổ</option>
+            <option value="10">Đời 10: Đệ Thập Thế Tổ</option>
+            <option value="11">Đời 11: Đệ Thập Nhất Thế Tổ</option>
+            <option value="12">Đời 12: Đệ Thập Nhị Thế Tổ</option>
+          </select>
+
+          <div class="view-tabs">
+            <button id="tabTree" class="view-tab active" onclick="switchView('tree')">Sơ đồ cây</button>
+            <button id="tabCompact" class="view-tab" onclick="switchView('compact')">Danh sách gọn</button>
+            <button id="tabAppendix" class="view-tab" onclick="switchView('appendix')">5 Phụ trang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Focus Lineage Bar -->
+      <div id="focusBanner" class="focus-banner">
+        <div class="container focus-banner-inner">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; flex:1;">
+            <span class="focus-tag" id="focusBadge">Trục dọc huyết thống</span>
+            <div id="focusBreadcrumb" style="font-size:12.5px; font-weight:500;"></div>
+          </div>
+          <button class="btn btn-paper btn-sm" onclick="clearLineageFocus()">✕ Hiện lại toàn cây</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- VIEW 1: FAMILY TREE CANVAS -->
+  <main id="viewTreeSection" style="flex:1; position:relative;">
+    <div id="treeViewport">
+      <div id="treeCanvas" class="tree"></div>
+    </div>
+
+    <div class="floating-controls">
+      <button class="zoom-btn" onclick="zoomTree(0.15)" title="Phóng to">+</button>
+      <button class="zoom-btn" onclick="zoomTree(-0.15)" title="Thu nhỏ">−</button>
+      <button class="zoom-btn" onclick="fitTreeToScreen()" title="Vừa màn hình">⤢</button>
+      <button class="zoom-btn" onclick="expandAllNodes()" title="Mở rộng tất cả" style="font-size:11px; color:var(--crimson);">Mở</button>
+      <button class="zoom-btn" onclick="collapseToBranches()" title="Thu gọn nhánh" style="font-size:11px; color:var(--crimson);">Gọn</button>
+    </div>
+  </main>
+
+  <!-- VIEW 2: COMPACT MOBILE LIST VIEW -->
+  <section id="viewCompactSection" class="section-box">
+    <div class="panel-card" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:10px;">
+      <div>
+        <h2 class="font-serif-royal" style="font-size:17px; color:var(--crimson);">Phả Đồ Dạng Thư Mục (Tối Ưu Điện Thoại)</h2>
+        <p style="font-size:12.5px; color:var(--ink-muted);">Chạm vào từng vị để mở rộng nhánh con hoặc xem đầy đủ tiểu sử, phối ngẫu, phần mộ.</p>
+      </div>
+      <div style="display:flex; gap:8px;">
+        <button class="btn btn-paper btn-sm" onclick="toggleAllCompact(true)">Mở tất cả</button>
+        <button class="btn btn-paper btn-sm" onclick="toggleAllCompact(false)">Thu gọn</button>
+      </div>
+    </div>
+    <div id="compactTreeContainer"></div>
+  </section>
+
+  <!-- VIEW 3: 5 APPENDICES VIEW -->
+  <section id="viewAppendixSection" class="section-box">
+    <div class="panel-card">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:14px;">
+        <div style="max-width:720px;">
+          <h2 class="font-serif-royal" style="font-size:18px; color:var(--crimson);">Danh Sách 5 Phụ Trang (Chưa Rõ Đường Dây Sinh Hạ)</h2>
+          <p style="font-size:12.5px; color:var(--ink-muted); margin-top:4px;">
+            Theo lời thông bạch lập phả ngày 15.11 Canh Ngọ (1990): Các vị tiền nhân được ghi trong văn tự cúng tế nhưng chưa tìm ra đường dây sinh hạ nên được chép trang trọng vào 5 Phụ trang để con cháu truy niệm.
+          </p>
+        </div>
+        <input type="text" id="appendixSearchInput" class="search-input" style="max-width:260px; padding-left:12px;"
+               oninput="renderAppendices()" placeholder="Lọc tên trong Phụ trang..." />
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:6px; padding-bottom:12px; border-bottom:1px solid var(--border-gold);">
+        <button class="btn btn-crimson btn-sm" id="appTab1" onclick="selectAppendixTab(1)">Phụ trang 1 (Đời 5 - 98 vị)</button>
+        <button class="btn btn-paper btn-sm" id="appTab2" onclick="selectAppendixTab(2)">Phụ trang 2 (Đời 6 - 139 vị)</button>
+        <button class="btn btn-paper btn-sm" id="appTab3" onclick="selectAppendixTab(3)">Phụ trang 3 (Đời 7 - 174 vị)</button>
+        <button class="btn btn-paper btn-sm" id="appTab4" onclick="selectAppendixTab(4)">Phụ trang 4 (Đời 8 - 178 vị)</button>
+        <button class="btn btn-paper btn-sm" id="appTab5" onclick="selectAppendixTab(5)">Phụ trang 5 (Đời 9 - Các nhánh)</button>
+      </div>
+
+      <div id="appendixContent" style="margin-top:14px;"></div>
+    </div>
+  </section>
+
+  <!-- DETAIL DRAWER -->
+  <div id="detailOverlay" class="overlay" onclick="closeDetailDrawer()"></div>
+  <aside id="detailDrawer" class="drawer">
+    <div class="modal-header">
+      <div>
+        <span id="drawerGenBadge" class="demo-badge">Đời ...</span>
+        <h3 id="drawerName" class="font-serif-royal" style="font-size:17px; margin-top:4px;">Họ và Tên</h3>
+      </div>
+      <button class="btn btn-outline-gold btn-sm" onclick="closeDetailDrawer()">✕ Đóng</button>
+    </div>
+    <div id="drawerBody" class="modal-body"></div>
+    <div style="padding:12px 16px; background:var(--paper-dark); border-top:1px solid var(--border-gold); display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+      <button id="drawerFocusBtn" class="btn btn-crimson">🔍 Xem trục dọc</button>
+      <button id="drawerCompareBtn" class="btn btn-gold">⚖️ Đưa vào so sánh</button>
+    </div>
+  </aside>
+
+  <!-- COMPARE MODAL (2 OR 3 OBJECTS) -->
+  <div id="compareModal" class="modal-wrap overlay">
+    <div class="modal-box" style="overflow:visible;">
+      <div class="modal-header" style="border-radius:16px 16px 0 0;">
+        <div>
+          <h3 class="font-serif-royal" style="font-size:17px;">So Sánh Mối Quan Hệ Huyết Thống (2 hoặc 3 Đối Tượng)</h3>
+          <p style="font-size:12px; opacity:0.9;">Chọn tên từ danh sách gợi ý hoặc bấm nút "So sánh ngay" để xem cây trục dọc &amp; kết luận gốc gác, cách xưng hô</p>
+        </div>
+        <button class="btn btn-outline-gold btn-sm" onclick="closeCompareModal()">✕ Đóng</button>
+      </div>
+
+      <div class="modal-body" style="overflow-y:auto;">
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; margin-bottom:12px;">
+          <div style="display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:12px;">
+            <span style="color:var(--ink-muted); font-weight:600;">Ví dụ mẫu:</span>
+            <button type="button" class="btn btn-paper btn-sm" onclick="setSampleCompare(['P2_D11_NHON', 'P2_D11_HOA'])">Cao Văn Nhơn &amp; Cao Văn Hoa</button>
+            <button type="button" class="btn btn-paper btn-sm" onclick="setSampleCompare(['P2_D11_ANH', 'P2_D11_HOA', 'P2_D11_LANG'])">So sánh 3 người: Cảnh, Hoa, Lang</button>
+            <button type="button" class="btn btn-paper btn-sm" onclick="setSampleCompare(['P1_D10_DAN', 'P4_D10_CONG'])">Cao Ngọc Đàn &amp; Cao Văn Công</button>
+          </div>
+          <button type="button" id="btnToggleThirdPerson" class="btn btn-outline-gold btn-sm" style="background:var(--crimson); border-color:var(--crimson);" onclick="toggleThirdCompareSlot()">
+            + Thêm đối tượng thứ 3 (C)
+          </button>
+        </div>
+
+        <div class="compare-inputs-grid">
+          <!-- Slot A -->
+          <div class="compare-slot">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <label style="font-size:11px; font-weight:700; color:var(--crimson); text-transform:uppercase;">Đối tượng thứ nhất (A)</label>
+              <button type="button" onclick="clearCompareSlot('A')" style="border:none; background:none; color:var(--ink-muted); font-size:11px; cursor:pointer; text-decoration:underline;">Xóa</button>
+            </div>
+            <input type="text" id="compareInputA" class="search-input" style="margin-top:5px; padding-left:10px; padding-right:10px;"
+                   autocomplete="off" oninput="handleCompareSearch('A')" onfocus="handleCompareSearch('A')" onkeydown="handleCompareKeydown(event, 'A')" placeholder="Gõ tên người A (VD: Cao Văn Nhơn)..." />
+            <div id="compareSelectedA" style="font-size:11.5px; color:var(--ink-muted); margin-top:5px;">Chưa chọn đối tượng A</div>
+            <div id="compareDropdownA" class="search-dropdown" style="z-index:120;"></div>
+          </div>
+
+          <!-- Slot B -->
+          <div class="compare-slot">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <label style="font-size:11px; font-weight:700; color:var(--crimson); text-transform:uppercase;">Đối tượng thứ hai (B)</label>
+              <button type="button" onclick="clearCompareSlot('B')" style="border:none; background:none; color:var(--ink-muted); font-size:11px; cursor:pointer; text-decoration:underline;">Xóa</button>
+            </div>
+            <input type="text" id="compareInputB" class="search-input" style="margin-top:5px; padding-left:10px; padding-right:10px;"
+                   autocomplete="off" oninput="handleCompareSearch('B')" onfocus="handleCompareSearch('B')" onkeydown="handleCompareKeydown(event, 'B')" placeholder="Gõ tên người B (VD: Cao Văn Hoa)..." />
+            <div id="compareSelectedB" style="font-size:11.5px; color:var(--ink-muted); margin-top:5px;">Chưa chọn đối tượng B</div>
+            <div id="compareDropdownB" class="search-dropdown" style="z-index:120;"></div>
+          </div>
+
+          <!-- Slot C (Optional 3rd person) -->
+          <div class="compare-slot" id="compareSlotC" style="display:none;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <label style="font-size:11px; font-weight:700; color:var(--crimson); text-transform:uppercase;">Đối tượng thứ ba (C)</label>
+              <div style="display:flex; gap:8px;">
+                <button type="button" onclick="clearCompareSlot('C')" style="border:none; background:none; color:var(--ink-muted); font-size:11px; cursor:pointer; text-decoration:underline;">Xóa</button>
+                <button type="button" onclick="toggleThirdCompareSlot(false)" style="border:none; background:none; color:var(--crimson); font-size:11px; font-weight:700; cursor:pointer;">✕ Ẩn C</button>
+              </div>
+            </div>
+            <input type="text" id="compareInputC" class="search-input" style="margin-top:5px; padding-left:10px; padding-right:10px;"
+                   autocomplete="off" oninput="handleCompareSearch('C')" onfocus="handleCompareSearch('C')" onkeydown="handleCompareKeydown(event, 'C')" placeholder="Gõ tên người C..." />
+            <div id="compareSelectedC" style="font-size:11.5px; color:var(--ink-muted); margin-top:5px;">Tùy chọn đối tượng C</div>
+            <div id="compareDropdownC" class="search-dropdown" style="z-index:120;"></div>
+          </div>
+        </div>
+
+        <!-- Explicit Action Bar -->
+        <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px; margin-bottom:16px; padding:10px; background:var(--paper-dark); border-radius:12px; border:1px solid var(--border-gold);">
+          <button type="button" class="btn btn-crimson" style="padding:10px 22px; font-size:14px; box-shadow:0 3px 10px rgba(139,30,30,0.28);" onclick="triggerExplicitCompare()">
+            ⚖️ So sánh quan hệ ngay
+          </button>
+          <button type="button" class="btn btn-paper btn-sm" onclick="swapCompareAB()" title="Đổi vị trí A và B">
+            ⇄ Đổi A ↔ B
+          </button>
+          <button type="button" class="btn btn-paper btn-sm" onclick="resetAllCompareSlots()">
+            ↺ Làm mới
+          </button>
+        </div>
+
+        <!-- Compare Result -->
+        <div id="compareResultBox" style="display:none;">
+          <!-- 1. Tree Visualization -->
+          <div class="panel-card" style="background:var(--paper-card);">
+            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; margin-bottom:10px;">
+              <h4 class="font-serif-royal" style="font-size:14.5px; color:var(--crimson);">Sơ Đồ Cây Trục Dọc Đối Chiếu Các Đời</h4>
+              <button type="button" id="btnShowVOnMainTree" class="btn btn-crimson btn-sm" onclick="renderCompareOnMainTree()">Hiển thị trên Sơ đồ cây chính</button>
+            </div>
+            <div id="compareTreeDiagram"></div>
+          </div>
+
+          <!-- 2. Conclusion Box -->
+          <div id="compareVerdictCard" class="panel-card" style="background:linear-gradient(135deg, #FFF8EA, #F9ECD2); border:2px solid var(--crimson);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARE / PUBLISH MODAL -->
+  <div id="shareModal" class="modal-wrap overlay">
+    <div class="modal-box" style="max-width:650px;">
+      <div class="modal-header">
+        <div>
+          <h3 class="font-serif-royal" style="font-size:17px;">Xuất Bản Website Miễn Phí & Chia Sẻ Dòng Tộc</h3>
+          <p style="font-size:12px; opacity:0.9;">Tương thích hoàn hảo trên máy tính và điện thoại di động</p>
+        </div>
+        <button class="btn btn-outline-gold btn-sm" onclick="closeShareModal()">✕ Đóng</button>
+      </div>
+      <div class="modal-body" style="font-size:13.5px;">
+        <div class="info-block" style="background:#FFF8EA;">
+          <div class="info-block-title">Bước 1: Lưu file Web App độc lập (index.html)</div>
+          <p style="margin-bottom:10px;">Toàn bộ dữ liệu gia phả đã được đóng gói trong 1 file <strong>index.html</strong> duy nhất, không phụ thuộc máy chủ trả phí.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <button class="btn btn-crimson" onclick="downloadStandaloneHTML()">⬇ Tải file index.html</button>
+            <button class="btn btn-gold" onclick="copyStandaloneHTML()">📋 Sao chép toàn bộ mã HTML</button>
+          </div>
+          <div id="fallbackCodeBox" style="display:none; margin-top:10px;">
+            <p style="font-size:11.5px; color:var(--crimson); font-weight:600; margin-bottom:4px;">Nhấn Ctrl+A rồi Ctrl+C để sao chép, dán vào Notepad và lưu tên <strong>index.html</strong> (UTF-8):</p>
+            <textarea id="standaloneCodeTextarea" readonly rows="4" style="width:100%; padding:8px; border-radius:8px; border:1px solid var(--gold); font-family:monospace; font-size:11px;"></textarea>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block-title">Bước 2: Đưa lên Web miễn phí vĩnh viễn (2 phút)</div>
+          <ol style="padding-left:18px; line-height:1.7;">
+            <li>Truy cập trang <strong>app.netlify.com/drop</strong> hoặc <strong>pages.github.com</strong> (đăng nhập bằng Gmail).</li>
+            <li>Kéo thả file <strong>index.html</strong> vào khung tải lên.</li>
+            <li>Nhận ngay đường link web cố định (ví dụ: <em>giapha-caovan-dongmy.netlify.app</em>) và gửi vào nhóm Zalo dòng họ hoặc in mã QR dán tại nhà thờ tộc.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN MODAL -->
+  <div id="adminModal" class="modal-wrap overlay">
+    <div class="modal-box" style="max-width:680px;">
+      <div class="modal-header">
+        <div>
+          <h3 class="font-serif-royal" style="font-size:17px;">Bảng Quản Trị & Chỉnh Lý Gia Phả</h3>
+          <p style="font-size:12px; opacity:0.9;">Tùy chỉnh tiêu đề, hình ảnh header, biểu tượng dòng tộc và thêm thành viên</p>
+        </div>
+        <button class="btn btn-outline-gold btn-sm" onclick="closeAdminModal()">✕ Đóng</button>
+      </div>
+      <div class="modal-body" style="font-size:13px;">
+        <!-- Login Box -->
+        <div id="adminLoginBox" class="info-block" style="text-align:center; padding:24px 16px;">
+          <div class="font-serif-royal" style="font-size:16px; font-weight:700; color:var(--crimson); margin-bottom:6px;">Xác Thực Ban Quản Trị Dòng Tộc</div>
+          <p style="color:var(--ink-muted); font-size:12.5px; margin-bottom:12px;">Nhập mật khẩu quản trị để mở khóa tùy chỉnh giao diện & dữ liệu (Mật khẩu mặc định: <strong>caovan1990</strong>)</p>
+          <div style="display:flex; justify-content:center; gap:8px; max-width:340px; margin:0 auto;">
+            <input type="password" id="adminPassInput" class="search-input" style="padding-left:12px; padding-right:12px;" placeholder="Nhập mật khẩu..." />
+            <button class="btn btn-crimson" onclick="verifyAdminLogin()">Đăng nhập</button>
+          </div>
+        </div>
+
+        <!-- Admin Controls -->
+        <div id="adminControlsBox" style="display:none;">
+          <div class="info-block">
+            <div class="info-block-title">1. Chỉnh Lý Tiêu Đề, Huy Hiệu & Ảnh Header</div>
+            <div style="display:grid; gap:10px;">
+              <div>
+                <label style="font-weight:600; font-size:12px;">Tiêu đề chính (Hoành phi):</label>
+                <input type="text" id="adminTitleInput" class="search-input" style="padding:7px 10px; margin-top:3px;" />
+              </div>
+              <div>
+                <label style="font-weight:600; font-size:12px;">Dòng địa danh / mô tả phụ:</label>
+                <input type="text" id="adminSubtitleInput" class="search-input" style="padding:7px 10px; margin-top:3px;" />
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                <div>
+                  <label style="font-weight:600; font-size:12px;">Chữ trong ấn triện (VD: 高族):</label>
+                  <input type="text" id="adminEmblemText" class="search-input" style="padding:7px 10px; margin-top:3px;" />
+                </div>
+                <div>
+                  <label style="font-weight:600; font-size:12px;">Nhãn phiên bản (VD: BẢN DEMO):</label>
+                  <input type="text" id="adminBadgeText" class="search-input" style="padding:7px 10px; margin-top:3px;" />
+                </div>
+              </div>
+              <div>
+                <label style="font-weight:600; font-size:12px;">Tải ảnh biểu tượng / logo dòng tộc (thay chữ ấn triện):</label>
+                <input type="file" accept="image/*" onchange="handleAdminImageUpload(event, 'emblem')" style="display:block; margin-top:4px; font-size:12px;" />
+              </div>
+              <div>
+                <label style="font-weight:600; font-size:12px;">Tải ảnh Banner Header phía trên (tùy chọn):</label>
+                <input type="file" accept="image/*" onchange="handleAdminImageUpload(event, 'banner')" style="display:block; margin-top:4px; font-size:12px;" />
+                <button class="btn btn-paper btn-sm" style="margin-top:6px;" onclick="clearAdminBanner()">Xóa ảnh Banner</button>
+              </div>
+              <div style="display:flex; gap:8px; margin-top:4px;">
+                <button class="btn btn-crimson" onclick="saveAdminSettings()">💾 Lưu thay đổi giao diện</button>
+                <button class="btn btn-gold" onclick="downloadStandaloneHTML()">⬇ Xuất file HTML đã chỉnh lý</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-block-title">2. Bổ Sung Thành Viên Đời Sau Nhanh</div>
+            <div style="display:grid; gap:8px;">
+              <div>
+                <label style="font-weight:600; font-size:12px;">Chọn người Cha trên cây:</label>
+                <select id="adminParentSelect" class="select-box" style="width:100%; margin-top:3px;"></select>
+              </div>
+              <div style="display:grid; grid-template-columns:2fr 1fr; gap:8px;">
+                <div>
+                  <label style="font-weight:600; font-size:12px;">Họ và tên thành viên mới:</label>
+                  <input type="text" id="adminNewName" class="search-input" style="padding:7px 10px; margin-top:3px;" placeholder="VD: CAO VĂN ..." />
+                </div>
+                <div>
+                  <label style="font-weight:600; font-size:12px;">Thứ tự con (1, 2, 3...):</label>
+                  <input type="number" id="adminNewOrder" class="search-input" style="padding:7px 10px; margin-top:3px;" value="1" min="1" />
+                </div>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+                <div>
+                  <label style="font-weight:600; font-size:12px;">Ngày tháng năm sinh:</label>
+                  <input type="text" id="adminNewBirth" class="search-input" style="padding:7px 10px; margin-top:3px;" placeholder="VD: Sinh năm ..." />
+                </div>
+                <div>
+                  <label style="font-weight:600; font-size:12px;">Phối ngẫu (Vợ/Chồng):</label>
+                  <input type="text" id="adminNewSpouse" class="search-input" style="padding:7px 10px; margin-top:3px;" placeholder="VD: Nguyễn Thị ..." />
+                </div>
+              </div>
+              <button class="btn btn-crimson" onclick="addNewMemberFromAdmin()">+ Thêm vào cây phả hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toastBox"></div>
+
+  <script>
+    /* ============================================================================
+       >>> [VỊ TRÍ BỔ SUNG / SỬA ĐỔI DỮ LIỆU GIA PHẢ - BẮT ĐẦU TẠI ĐÂY] <<<
+       ============================================================================
+       HƯỚNG DẪN NHẬP LIỆU / CHỈNH LÝ TRỰC TIẾP TRONG MÃ NGUỒN:
+       - Toàn bộ dữ liệu trích xuất nguyên bản từ "Cao Đại Tộc Gia Phả" (15.11 Canh Ngọ 1990).
+       - Để thêm thành viên mới, sao chép 1 khối { ... } trong mảng RAW_NODES bên dưới,
+         đặt "parentId" trùng với "id" của người Cha ở đời trên.
+       ============================================================================ */
+
+    const GEN_LABELS = {
+      0: "Ngài Thủy Tổ (Đời 0)",
+      1: "Đệ Nhất Thế Tổ (Đời 1)",
+      2: "Đệ Nhị Thế Tổ (Đời 2)",
+      3: "Đệ Tam Thế Tổ (Đời 3)",
+      4: "Đệ Tứ Thế Tổ (Đời 4)",
+      5: "Đệ Ngũ Thế Tổ (Đời 5)",
+      6: "Đệ Lục Thế Tổ (Đời 6)",
+      7: "Đệ Thất Thế Tổ (Đời 7)",
+      8: "Đệ Bát Thế Tổ (Đời 8)",
+      9: "Đệ Cửu Thế Tổ (Đời 9)",
+      10: "Đệ Thập Thế Tổ (Đời 10)",
+      11: "Đệ Thập Nhất Thế Tổ (Đời 11)",
+      12: "Đệ Thập Nhị Thế Tổ (Đời 12)"
+    };
+
+    const RAW_NODES = [
+      // ==================== ĐỜI 0: NGÀI THỦY TỔ (TRANG 1, 6) ====================
+      {
+        id: "D0_LE",
+        parentId: null,
+        gen: 0,
+        branch: "Gốc",
+        order: 1,
+        name: "Đức Ngài Thủy Tổ Đại Lang CAO VĂN LỄ",
+        alias: "Đức Ngài Thủy Tổ Đại Lang Cao Văn Lễ",
+        birth: "Không rõ",
+        death: "Không rõ • Hàng năm kỷ niệm: Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: [
+          "1. Đoàn Thị Ngữ (Kinh Triều quận)",
+          "2. Nguyễn Thị Hưu (Trần Lưu quận)",
+          "3. Nguyễn Thị Chiếm (nt)",
+          "4. Triệu Thị Nhượng (Thiên Thủy quận)"
+        ],
+        childrenSummary: ["1. Cao Văn Thanh (xem sinh hạ trang 8)"],
+        note: "Trang 6: Không rõ tại sao bút văn có dẫn thượng quý Bà Phan Thị Diệu, Ngô Thị Đỏ + Lưu Thị Quả lên ngang đời của Ngài, phải chăng Ngài còn anh hoặc em thời phải?"
+      },
+
+      // ==================== ĐỜI 1: ĐỆ NHẤT THẾ TỔ (TRANG 8) ====================
+      {
+        id: "D1_THANH",
+        parentId: "D0_LE",
+        gen: 1,
+        branch: "Gốc",
+        order: 1,
+        name: "CAO VĂN THANH",
+        alias: "Ông Cao Văn Thanh",
+        birth: "Không rõ",
+        death: "Không rõ • Hàng năm kỷ niệm: Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["1. Ngô Thị Chá", "2. Nguyễn Thị Tiết"],
+        childrenSummary: [
+          "1. Cao Ngọc Vinh", "2. Cao Văn Dung", "3. Cao Văn Trần", "4. Cao Văn Thọ",
+          "5. Cao Ngọc Ninh", "6. Cao Văn Phú (đạo hiệu Huyền Đức)", "7. Cao Việt Bố",
+          "8. Cao Văn Bằng", "9. Cao Văn Mục", "10. Cao Việt Hiên", "11. Cao Văn Đẳng",
+          "12. Cao Văn Hiên", "13. Cao Văn Sanh", "14. Cao Văn Hội", "15. Cao Văn Vương",
+          "16. Cao Văn Lương"
+        ],
+        note: "Trang 8: Ông và quý Bà sinh hạ 16 vị Đệ Nhị Thế Tổ."
+      },
+
+      // ==================== ĐỜI 2: ĐỆ NHỊ THẾ TỔ - 16 VỊ (TRANG 10-11) ====================
+      {
+        id: "D2_GROUP16",
+        parentId: "D1_THANH",
+        gen: 2,
+        branch: "Gốc",
+        order: 1,
+        name: "Đệ Nhị Thế Tổ (16 Vị)",
+        alias: "1. Cao Ngọc Vinh; 2. Cao Văn Dung; 3. Cao Văn Trần; 4. Cao Văn Thọ; 5. Cao Ngọc Ninh; 6. Cao Văn Phú (hiệu Huyền Đức); 7. Cao Việt Bố; 8. Cao Văn Bằng; 9. Cao Văn Mục; 10. Cao Việt Hiên; 11. Cao Văn Đẳng; 12. Cao Văn Hiên; 13. Cao Văn Sanh; 14. Cao Văn Hội; 15. Cao Văn Vương; 16. Cao Văn Lương",
+        birth: "Không rõ",
+        death: "Không rõ • Hàng năm kỷ niệm: Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Trong bút văn có dẫn thượng 2 Bà: 1. Đoàn Thị Tiên; 2. Võ Thị Biệt (không rõ vị nào sinh hạ ra về sau vì bút văn không dẫn rõ)"],
+        childrenSummary: [
+          "1. Cao Văn Bảng (Đạo hiệu Huyền Ninh)", "2. Cao Ngọc Lương", "3. Cao Văn Ốc",
+          "4. Cao Văn Lạng", "5. Cao Văn Ngọ", "6. Cao Văn Pháp", "7. Cao Văn ... (Trường Sa)",
+          "8. Cao Thị Hiến"
+        ],
+        note: "Trang 10-11: Quý ngài là con của ông Cao Văn Thanh và 2 Bà Ngô Thị Chá, Nguyễn Thị Tiết."
+      },
+
+      // ==================== ĐỜI 3: ĐỆ TAM THẾ TỔ - 7 VỊ (TRANG 13-15) ====================
+      {
+        id: "D3_GROUP7",
+        parentId: "D2_GROUP16",
+        gen: 3,
+        branch: "Gốc",
+        order: 1,
+        name: "Đệ Tam Thế Tổ (7 Vị)",
+        alias: "1. Cao Văn Bảng (Đạo hiệu Huyền Ninh) phối Bà Đoàn Thị Thổ; 2. Cao Ngọc Lương phối Bà Trần Thị Bổ; 3. Cao Văn Ốc phối Bà Võ Thị Đồng; 4. Cao Văn Lạng phối Bà Võ Thị Niệm; 5. Cao Văn Ngọ phối Bà Trần Thị Tôm; 6. Cao Văn Pháp phối Bà Phạm Thị Đồn; 7. Cao Văn ... (Trường Sa) phối Bà Nguyễn Thị Quýt",
+        birth: "Không rõ",
+        death: "Không rõ • Hàng năm kỷ niệm: Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: [
+          "Bà Đoàn Thị Thổ", "Bà Trần Thị Bổ", "Bà Võ Thị Đồng", "Bà Võ Thị Niệm",
+          "Bà Trần Thị Tôm", "Bà Phạm Thị Đồn", "Bà Nguyễn Thị Quýt"
+        ],
+        childrenSummary: [
+          "1. Cao Ngọc Cảng (Phái Nhất)", "2. Cao Văn Biều (Phái Nhì)", "3. Cao Văn Thành",
+          "4. Cao Văn Quỳ", "5. Cao Văn ...", "6. Cao Ngọc Thiệt (Phái Ba)",
+          "7. Cao Ngọc Tánh (Phái Tư)", "8. Cao Ngọc Xuy (Phái Năm)",
+          "9–20. Các Bà Cao Thị Lịch, Kiệm, Hoàn, Muộn, Vọng, Giá, Dần, Nhỏ, Sơn, Thân, Điểu...",
+          "21–32. 12 vị Phái Sáu (Cao Đắc Thọ, Cao Đắc Thiện, Cao Văn Ta, Cao Văn Vân, Cao Văn Huy, Cao Văn Tài, Cao Văn Suất, Cao Phúc Ân, Cao Văn Bạn, Cao Văn Nhị, Cao Văn Tế, Cao Văn Nghiêm)"
+        ],
+        note: "Trang 13-15: Không rõ vị nào trong 7 vị Đệ Tam Thế Tổ sinh hạ xuống từng vị ở Đệ Tứ Thế Tổ. Từ Đệ Tứ Thế Tổ phân thành 6 Phái."
+      },
+
+      // ==================== ĐỜI 4: ĐỆ TỨ THẾ TỔ - 6 PHÁI (TRANG 17-23) ====================
+      // --- PHÁI NHẤT ---
+      {
+        id: "P1_D4_CANG",
+        parentId: "D3_GROUP7",
+        gen: 4,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC CẢNG",
+        alias: "Tổ Phái Nhất",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Võ Thị Tơm"],
+        childrenSummary: ["1. Cao Ngọc Sành (xem sinh hạ trang 27)"],
+        note: "Trang 17: Con quý ông Đệ Tam Thế Tổ, nhưng không rõ ông nào sinh hạ ra ông."
+      },
+      // --- PHÁI NHÌ ---
+      {
+        id: "P2_D4_BIEU",
+        parentId: "D3_GROUP7",
+        gen: 4,
+        branch: "Phái Nhì",
+        order: 2,
+        name: "CAO VĂN BIỀU",
+        alias: "Tổ Phái Nhì",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Báo",
+        grave: "Rừng họ tộc (đạo yếu cây xoài) Đông Mỹ, Thăng Bình",
+        status: "",
+        spouses: ["1. Ngô Thị Giang", "2. Nguyễn Thị Lồng"],
+        childrenSummary: ["1. Cao Văn Vuông (xem sinh hạ trang 28)", "Và một số người xem Phụ trang số 24"],
+        note: "Trang 18: Con trai quý ông Đệ Tam Thế Tổ."
+      },
+      // --- PHÁI BA ---
+      {
+        id: "P3_D4_THIET",
+        parentId: "D3_GROUP7",
+        gen: 4,
+        branch: "Phái Ba",
+        order: 3,
+        name: "CAO NGỌC THIỆT",
+        alias: "Tổ Phái Ba",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Tôn Thị Lũ"],
+        childrenSummary: ["1. Cao Ngọc Lợi (xem sinh hạ trang 29)", "Và một số ông Bà xem Phụ trang số 24"],
+        note: "Trang 19: Con trai quý ông Đệ Tam Thế Tổ."
+      },
+      // --- PHÁI TƯ ---
+      {
+        id: "P4_D4_TANH",
+        parentId: "D3_GROUP7",
+        gen: 4,
+        branch: "Phái Tư",
+        order: 4,
+        name: "CAO NGỌC TÁNH",
+        alias: "Tổ Phái Tư",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Đoàn Thị Lương"],
+        childrenSummary: ["1. Cao Văn Bồn (xem sinh hạ trang 30)", "Và một số ông Bà xem Phụ trang số 24"],
+        note: "Trang 20: Con quý ông Đệ Tam Thế Tổ."
+      },
+      // --- PHÁI NĂM ---
+      {
+        id: "P5_D4_XUY",
+        parentId: "D3_GROUP7",
+        gen: 4,
+        branch: "Phái Năm",
+        order: 5,
+        name: "CAO NGỌC XUY (hay NGỌC ĐIỆT)",
+        alias: "Tổ Phái Năm",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Đoàn Thị Chồn"],
+        childrenSummary: ["1. Ông Cao Ngọc Nội (xem sinh hạ trang 31)", "Và một số ông Bà xem Phụ trang số 24"],
+        note: "Trang 21: Con quý ông Đệ Tam Thế Tổ."
+      },
+      // --- PHÁI SÁU ---
+      {
+        id: "P6_D4_12VI",
+        parentId: "D3_GROUP7",
+        gen: 4,
+        branch: "Phái Sáu",
+        order: 6,
+        name: "Phái Sáu Đệ Tứ Thế Tổ (12 Vị)",
+        alias: "1. Cao Đắc Thọ; 2. Cao Đắc Thiện; 3. Cao Văn Ta; 4. Cao Văn Vân; 5. Cao Văn Huy; 6. Cao Văn Tài; 7. Cao Văn Suất; 8. Cao Phúc Ân; 9. Cao Văn Bạn; 10. Cao Văn Nhị; 11. Cao Văn Tế; 12. Cao Văn Nghiêm",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Bất thức danh tánh"],
+        childrenSummary: [
+          "1. Cao Văn Diệt (phối Phạm Thị Ẩn)",
+          "2. Cao Văn Thiều (phối Nguyễn Thị Ngũ)",
+          "3. Cao Văn Khuê (xem sinh hạ trang 32)",
+          "4. Cao Văn Thiên (phối Hồ Thị Hạt)",
+          "5. Cao Văn Cẩn (phối Võ Thị Trí)",
+          "6. Cao Văn Truyện (phối 1. Nguyễn Thị Mẫn; 2. Nguyễn Thị Cửu)",
+          "7. Cao Văn Hào (xem sinh hạ trang 33)"
+        ],
+        note: "Trang 22-23: 12 vị Phái Sáu Đệ Tứ Thế Tổ sinh hạ 7 vị Đệ Ngũ Thế Tổ."
+      },
+
+      // ==================== ĐỜI 5: ĐỆ NGŨ THẾ TỔ (TRANG 27-33) ====================
+      {
+        id: "P1_D5_SANH",
+        parentId: "P1_D4_CANG",
+        gen: 5,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC SÀNH (XOAY)",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Nguyễn Thị Hảnh"],
+        childrenSummary: ["1. Cao Ngọc Uyên (xem sinh hạ trang 37)"],
+        note: "Trang 27: Con ông Cao Ngọc Cảng và Bà Võ Thị Tơm."
+      },
+      {
+        id: "P2_D5_VUONG",
+        parentId: "P2_D4_BIEU",
+        gen: 5,
+        branch: "Phái Nhì",
+        order: 1,
+        name: "CAO VĂN VUÔNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Đoàn Thị Yến"],
+        childrenSummary: [
+          "1. Cao Văn Lục", "2. Cao Văn Lịch", "3. Cao Văn Đài", "4. Cao Văn Thái",
+          "5. Cao Thị Điệp", "6. Cao Thị ..."
+        ],
+        note: "Trang 28: Con ông Cao Văn Biều và Bà Ngô Thị Giang, Nguyễn Thị Lồng."
+      },
+      {
+        id: "P3_D5_LOI",
+        parentId: "P3_D4_THIET",
+        gen: 5,
+        branch: "Phái Ba",
+        order: 1,
+        name: "CAO NGỌC LỢI",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Hồ Thị Thường"],
+        childrenSummary: ["1. Cao Văn Thọ (xem sinh hạ trang 39)"],
+        note: "Trang 29: Con ông Cao Ngọc Thiệt và Bà Tôn Thị Lũ."
+      },
+      {
+        id: "P4_D5_BON",
+        parentId: "P4_D4_TANH",
+        gen: 5,
+        branch: "Phái Tư",
+        order: 1,
+        name: "CAO VĂN BỒN",
+        alias: "",
+        birth: "Sinh tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Chánh Rừng Vòng Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["1. Nguyễn Thị Lài", "2. Nguyễn Thị Hạnh"],
+        childrenSummary: [
+          "1. Cao Văn Viên",
+          "2. Cao Văn Lược (xem sinh hạ trang 40)",
+          "3. Cao Văn Khai (xem sinh hạ trang 41)",
+          "4. Cao Văn Di (đạo hiệu Huyền Kình - xem sinh hạ trang 42)"
+        ],
+        note: "Trang 30: Con ông Cao Ngọc Tánh và Bà Đoàn Thị Lương."
+      },
+      {
+        id: "P5_D5_NOI",
+        parentId: "P5_D4_XUY",
+        gen: 5,
+        branch: "Phái Năm",
+        order: 1,
+        name: "CAO NGỌC NỘI",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Đoàn Thị Di"],
+        childrenSummary: ["1. Cao Văn ... (xem sinh hạ trang 43)"],
+        note: "Trang 31: Con ông Cao Ngọc Xuy và Bà Đoàn Thị Chồn."
+      },
+      {
+        id: "P6_D5_KHUE",
+        parentId: "P6_D4_12VI",
+        gen: 5,
+        branch: "Phái Sáu",
+        order: 3,
+        name: "CAO VĂN KHUÊ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Nguyễn Thị Phụng"],
+        childrenSummary: [
+          "1. Cao Văn Bảo", "2. Cao Văn Dũ (xem sinh hạ trang 44)",
+          "3. Cao Thị Lịch", "4. Cao Thị Thiết", "5. Cao Thị Thơ",
+          "6. Cao ... (Vô danh)", "7. Cao Văn Hòe (xem sinh hạ trang 45)"
+        ],
+        note: "Trang 32: Con quý ông Phái Sáu Đệ Tứ Thế Tổ."
+      },
+      {
+        id: "P6_D5_HAO",
+        parentId: "P6_D4_12VI",
+        gen: 5,
+        branch: "Phái Sáu",
+        order: 7,
+        name: "CAO VĂN HÀO",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["1. Đoàn Thị Thuần", "2. Tôn Thị Cút"],
+        childrenSummary: [
+          "1. Cao Văn Vận (xem sinh hạ trang 46)", "2. Cao Văn ...",
+          "3. Cao Văn Một", "4. Cao Văn Tại", "5. Cao Thị Phỉ", "6. Cao Thị Bờ"
+        ],
+        note: "Trang 33: Con quý ông Phái Sáu Đệ Tứ Thế Tổ."
+      },
+
+      // ==================== ĐỜI 6: ĐỆ LỤC THẾ TỔ (TRANG 37-46) ====================
+      {
+        id: "P1_D6_UYEN",
+        parentId: "P1_D5_SANH",
+        gen: 6,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC UYÊN",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: [],
+        childrenSummary: ["1. Cao Ngọc Hiến (xem sinh hạ trang 51)", "2. Cao Ngọc Trì (xem sinh hạ trang 52)"],
+        note: "Trang 37: Con ông Cao Ngọc Sành và Bà Nguyễn Thị Hảnh."
+      },
+      {
+        id: "P2_D6_4VI",
+        parentId: "P2_D5_VUONG",
+        gen: 6,
+        branch: "Phái Nhì",
+        order: 1,
+        name: "4 Vị: Cao Văn Lục, Cao Văn Lịch, Cao Văn Đài, Cao Văn Thái",
+        alias: "1. Cao Văn Lục phối Triệu Thị Dứ; 2. Cao Văn Lịch phối Triệu Thị Đề; 3. Cao Văn Đài phối Đoàn Thị Nghị; 4. Cao Văn Thái phối Hồ Thị Thống",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Ngày nay không rõ",
+        status: "",
+        spouses: ["Bà Triệu Thị Dứ", "Bà Triệu Thị Đề", "Bà Đoàn Thị Nghị", "Bà Hồ Thị Thống"],
+        childrenSummary: [
+          "1. Cao Ngọc Bửu (phối Bà Võ Thị Thảo)",
+          "2. Cao Văn Cang (xem sinh hạ trang 53)",
+          "3. Cao Văn Tụ (xem sinh hạ trang 54)",
+          "4. Cao Văn Chi (phối Bà Võ Thị Sung)",
+          "5. Cao Văn Viết (phối Bà Nguyễn Thị Mậu)",
+          "6. Cao Văn Biểu (phối Bà I Tôn Thị ..., Bà II Trần Thị Núi)"
+        ],
+        note: "Trang 38: Quý ông là con của ông Cao Văn Vuông và Bà Đoàn Thị Yến. Không rõ ông nào sinh ra các vị Đệ Thất Thế Tổ."
+      },
+      {
+        id: "P3_D6_THO",
+        parentId: "P3_D5_LOI",
+        gen: 6,
+        branch: "Phái Ba",
+        order: 1,
+        name: "CAO VĂN THỌ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["1. Nguyễn Thị Đảm", "2. Nguyễn Thị Trị"],
+        childrenSummary: ["1. Cao Văn Giáng (xem sinh hạ trang 55)"],
+        note: "Trang 39: Con ông Cao Ngọc Lợi và Bà Hồ Thị Thường."
+      },
+      {
+        id: "P4_D6_LUOC",
+        parentId: "P4_D5_BON",
+        gen: 6,
+        branch: "Phái Tư",
+        order: 2,
+        name: "CAO VĂN LƯỢC",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Rừng Bàu Khá, Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Nguyễn Thị Chuộc"],
+        childrenSummary: [
+          "1. Cao Văn Đạo (xem sinh hạ trang 56)",
+          "2. Cao Văn Nhỏ (xem sinh hạ trang 57)",
+          "3. Cao Văn Bông (xem sinh hạ trang 58)"
+        ],
+        note: "Trang 40: Con ông Cao Văn Bồn và quý Bà Nguyễn Thị Lài, Nguyễn Thị Hạnh."
+      },
+      {
+        id: "P4_D6_KHAI",
+        parentId: "P4_D5_BON",
+        gen: 6,
+        branch: "Phái Tư",
+        order: 3,
+        name: "CAO VĂN KHAI",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Nguyễn Thị ..."],
+        childrenSummary: [
+          "1. Cao Văn Thiết (xem sinh hạ trang 59)",
+          "2. Cao Văn Tuyền (xem sinh hạ trang 60)",
+          "3. Cao Thị Cung", "4. Cao Thị Thuận"
+        ],
+        note: "Trang 41: Con ông Cao Văn Bồn và quý Bà Nguyễn Thị Lài, Nguyễn Thị Hạnh."
+      },
+      {
+        id: "P4_D6_DI",
+        parentId: "P4_D5_BON",
+        gen: 6,
+        branch: "Phái Tư",
+        order: 4,
+        name: "CAO VĂN DI (Đạo hiệu HUYỀN KÌNH)",
+        alias: "Đạo hiệu Huyền Kình",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Triệu Thị Giáo"],
+        childrenSummary: ["1. Cao Văn Luật (xem sinh hạ trang 61)"],
+        note: "Trang 42: Con ông Cao Văn Bồn."
+      },
+      {
+        id: "P5_D6_QCONG",
+        parentId: "P5_D5_NOI",
+        gen: 6,
+        branch: "Phái Năm",
+        order: 1,
+        name: "CAO VĂN ... (Quý công)",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["... Thị ... (Quý nương)"],
+        childrenSummary: [
+          "1. Cao Văn Sự (xem sinh hạ trang 62)", "2. Cao Văn Chập", "3. Cao Thị Thất",
+          "4. Cao Thị Bá", "5. Cao Thị Vân", "6. Cao Văn Hiệp (xem sinh hạ trang 63)",
+          "7. Cao Văn Từ (xem sinh hạ trang 64)", "8. Cao Thị Lại", "9. Cao Thị Lữ",
+          "10. Cao Thị Oa", "11. Cao ... (Vô danh)"
+        ],
+        note: "Trang 43: Con ông Cao Ngọc Nội và Bà Đoàn Thị Di."
+      },
+      {
+        id: "P6_D6_DU",
+        parentId: "P6_D5_KHUE",
+        gen: 6,
+        branch: "Phái Sáu",
+        order: 2,
+        name: "CAO VĂN DŨ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Nguyễn Thị Đẩu"],
+        childrenSummary: [
+          "1. Cao Thị Liên", "2. Cao Thị Viên", "3. Cao Thị Sách", "4. Cao Thị Chút",
+          "5. Cao Thị Nhỏ", "6. Cao ... (Vô danh)", "7. Cao ... (Vô danh)"
+        ],
+        note: "Trang 44: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P6_D6_HOE",
+        parentId: "P6_D5_KHUE",
+        gen: 6,
+        branch: "Phái Sáu",
+        order: 7,
+        name: "CAO VĂN HÒE",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Báo",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Triệu Thị Huỳnh"],
+        childrenSummary: ["1. Cao Thị Trường", "2. Cao Thị Cải", "3. Cao Thị Bếp", "4. Cao Thị Đỏ"],
+        note: "Trang 45: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P6_D6_VAN",
+        parentId: "P6_D5_HAO",
+        gen: 6,
+        branch: "Phái Sáu",
+        order: 1,
+        name: "CAO VĂN VẬN",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Triệu Thị Dần"],
+        childrenSummary: ["1. Cao Văn ... (xem sinh hạ trang 65)"],
+        note: "Trang 46: Con ông Cao Văn Hào và quý Bà Đoàn Thị Thuần, Tôn Thị Cút."
+      },
+
+      // ==================== ĐỜI 7: ĐỆ THẤT THẾ TỔ (TRANG 51-65) ====================
+      {
+        id: "P1_D7_HIEN",
+        parentId: "P1_D6_UYEN",
+        gen: 7,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC HIẾN",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: [],
+        childrenSummary: [
+          "1. Cao Ngọc Hạnh (xem sinh hạ trang 69)",
+          "2. Cao Ngọc Thi (xem sinh hạ trang 70)",
+          "3. Cao Ngọc Thầu (xem sinh hạ trang 71)"
+        ],
+        note: "Trang 51: Con ông Bà Cao Ngọc Uyên."
+      },
+      {
+        id: "P1_D7_TRI",
+        parentId: "P1_D6_UYEN",
+        gen: 7,
+        branch: "Phái Nhất",
+        order: 2,
+        name: "CAO NGỌC TRÌ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: [],
+        childrenSummary: [
+          "1. Cao Ngọc Chánh (xem sinh hạ trang 72)",
+          "2. Cao Thị ... (gả về xóm Rừng)",
+          "3. Cao Thị Thương (gả về An Hiệp)",
+          "4. Cao Ngọc Ty (xem sinh hạ trang 73)"
+        ],
+        note: "Trang 52: Con ông Bà Cao Ngọc Uyên."
+      },
+      {
+        id: "P2_D7_CANG",
+        parentId: "P2_D6_4VI",
+        gen: 7,
+        branch: "Phái Nhì",
+        order: 2,
+        name: "CAO VĂN CANG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Rừng Cồi (cây xoài) làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Triệu Thị Toại"],
+        childrenSummary: [
+          "1. Cao Văn Thọ (xem sinh hạ trang 74)",
+          "2. Cao Văn Quý (xem sinh hạ trang 75)",
+          "3. Cao Văn Hưng (xem sinh hạ trang 76)"
+        ],
+        note: "Trang 53: Con ông Bà Cao Văn Lục, Cao Văn Lịch, Cao Văn Đài, Cao Văn Thái."
+      },
+      {
+        id: "P2_D7_TU",
+        parentId: "P2_D6_4VI",
+        gen: 7,
+        branch: "Phái Nhì",
+        order: 3,
+        name: "CAO VĂN TỤ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Lưu Thị Trang"],
+        childrenSummary: [
+          "1. Cao Văn Lộc (xem sinh hạ trang 77)",
+          "2. Cao Thị Cần (gả về Trà Sơn)",
+          "3. Cao Thị Kiến"
+        ],
+        note: "Trang 54: Con ông Bà Cao Văn Lục, Lịch, Đài, Thái."
+      },
+      {
+        id: "P3_D7_GIANG",
+        parentId: "P3_D6_THO",
+        gen: 7,
+        branch: "Phái Ba",
+        order: 1,
+        name: "CAO VĂN GIÁNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Huỳnh Thị Trưng"],
+        childrenSummary: [
+          "1. Cao Văn Đăng (xem sinh hạ trang 78)",
+          "2. Cao Văn Thông", "3. Cao Văn Vận", "4. Cao (Sút hồn)"
+        ],
+        note: "Trang 55: Con ông Cao Văn Thọ và quý Bà Nguyễn Thị Đảm, Nguyễn Thị Trị."
+      },
+      {
+        id: "P4_D7_DAO",
+        parentId: "P4_D6_LUOC",
+        gen: 7,
+        branch: "Phái Tư",
+        order: 1,
+        name: "CAO VĂN ĐẠO",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Rộc Quý xứ Ba Nhà, Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Triệu Thị Lại"],
+        childrenSummary: [
+          "1. Cao Văn Vi", "2. Cao Văn Danh",
+          "3. Cao Văn Điện (xem sinh hạ trang 79)",
+          "4. Cao Văn Hiến (xem sinh hạ trang 80)",
+          "5. Cao Thị Cẩm", "6. Cao Thị Cú", "7. Cao Thị Lãng",
+          "8. Cao Thị Bắc", "9. Cao Thị (Vô danh)"
+        ],
+        note: "Trang 56: Con ông Cao Văn Lược và Bà Nguyễn Thị Chuộc."
+      },
+      {
+        id: "P4_D7_NHO",
+        parentId: "P4_D6_LUOC",
+        gen: 7,
+        branch: "Phái Tư",
+        order: 2,
+        name: "CAO VĂN NHỎ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Đoàn Thị Đá"],
+        childrenSummary: [
+          "1. Cao Văn Ty", "2. Cao Văn Dâu", "3. Cao Văn Ninh",
+          "4. Cao Thị Đới", "5. Cao Thị Biển", "6. Cao (Vô danh)"
+        ],
+        note: "Trang 57: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P4_D7_BONG",
+        parentId: "P4_D6_LUOC",
+        gen: 7,
+        branch: "Phái Tư",
+        order: 3,
+        name: "CAO VĂN BỒNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["... Thị ... (Quý nương)"],
+        childrenSummary: [
+          "1. Cao Thị Mẹo", "2. Cao Thị Bàn", "3. Cao Thị Thế", "4. Cao Thị Tụng",
+          "5. Cao Văn Cao", "6. Cao Văn Thiết", "7. Cao Văn Tuân", "8. Cao Văn Vịnh",
+          "9. Cao Văn (Vô danh)", "10. Cao Thị (Vô danh)"
+        ],
+        note: "Trang 58: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P4_D7_THIET",
+        parentId: "P4_D6_KHAI",
+        gen: 7,
+        branch: "Phái Tư",
+        order: 1,
+        name: "CAO VĂN THIẾT",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["... Thị Sửu"],
+        childrenSummary: [
+          "1. Cao Văn Nghĩa", "2. Cao Văn Mây", "3. Cao Văn Bi",
+          "4. Cao Thị Nhơn", "5. Cao (Sút hồn)"
+        ],
+        note: "Trang 59: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P4_D7_TUYEN",
+        parentId: "P4_D6_KHAI",
+        gen: 7,
+        branch: "Phái Tư",
+        order: 2,
+        name: "CAO VĂN TUYÊN",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Mai Thị Điểm"],
+        childrenSummary: [
+          "1. Cao Thị Định", "2. Cao Văn Nhược",
+          "3. Cao Văn Rớt (xem sinh hạ trang 81)",
+          "4. Cao Thị Danh", "5. Cao Thị ...", "6. Cao Thị Ngựa"
+        ],
+        note: "Trang 60: Con ông Cao Văn Khai."
+      },
+      {
+        id: "P4_D7_LUAT",
+        parentId: "P4_D6_DI",
+        gen: 7,
+        branch: "Phái Tư",
+        order: 1,
+        name: "CAO VĂN LUẬT",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Phạm Thị Sạn"],
+        childrenSummary: [
+          "1. Cao Văn Nghiêm", "2. Cao Văn Trang (xem sinh hạ trang 82)",
+          "3. Cao Văn Tha", "4. Cao Văn Cơ", "5. Cao Thị Nhị",
+          "6. Cao Thị Điểm", "7. Cao Thị Đao", "8. Cao Thị Mai", "9. Cao (Vô danh)"
+        ],
+        note: "Trang 61: Con ông Cao Văn Di (đạo hiệu Huyền Kình) và Bà Triệu Thị Giáo."
+      },
+      {
+        id: "P5_D7_SU",
+        parentId: "P5_D6_QCONG",
+        gen: 7,
+        branch: "Phái Năm",
+        order: 1,
+        name: "CAO VĂN SỰ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Triệu Thị Nhượng"],
+        childrenSummary: [
+          "1. Cao Văn Hội (xem sinh hạ trang 83)", "2. Cao Thị Công", "3. Cao Thị Thanh",
+          "4. Cao Thị Nhân", "5. Cao Thị Thoa", "6. Cao Thị Ngự", "7. Cao (Vô danh)"
+        ],
+        note: "Trang 62: Con ông Cao Văn (Quý công)."
+      },
+      {
+        id: "P5_D7_HIEP",
+        parentId: "P5_D6_QCONG",
+        gen: 7,
+        branch: "Phái Năm",
+        order: 6,
+        name: "CAO VĂN HIỆP",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Trương Thị Hữu"],
+        childrenSummary: [
+          "1. Cao Văn Hướng (xem sinh hạ trang 84)",
+          "2. Cao Văn Huấn (xem sinh hạ trang 85)",
+          "3. Cao Văn Đời", "4. Cao Văn Lào", "5. Cao Thị Hoài",
+          "6. Cao Thị Nào", "7. Cao Thị (Vô danh)", "8. Cao Thị Bảo"
+        ],
+        note: "Trang 63: Con ông Cao Văn (Quý công)."
+      },
+      {
+        id: "P5_D7_TU",
+        parentId: "P5_D6_QCONG",
+        gen: 7,
+        branch: "Phái Năm",
+        order: 7,
+        name: "CAO VĂN TỪ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["1. Nguyễn Thị Tựu", "2. Đoàn Thị Thiết"],
+        childrenSummary: [
+          "1. Cao Văn Tinh (xem sinh hạ trang 86)",
+          "2. Cao Văn Khoang (xem sinh hạ trang 87)",
+          "3. Cao Văn Canh", "4. Cao Văn ...", "5. Cao Văn Li", "6. Cao Văn Phổ",
+          "7. Cao Thị Thanh", "8. Cao Thị Giảng", "9. Cao (Vô danh)"
+        ],
+        note: "Trang 64: Con ông Cao Văn (Quý công)."
+      },
+      {
+        id: "P6_D7_QCONG",
+        parentId: "P6_D6_VAN",
+        gen: 7,
+        branch: "Phái Sáu",
+        order: 1,
+        name: "CAO VĂN ... (Quý công)",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["... Thị ... (Quý nương)"],
+        childrenSummary: [
+          "1. Cao Thị Nhưng", "2. Cao Thị Tuyết", "3. Cao Thị Nga (gả ông Trương Chạy)",
+          "4. Cao Thị Ngâm", "5. Cao Thị Chung", "6. Cao Thị Rau (gả ông Triệu Văn Thiệm)"
+        ],
+        note: "Trang 65: Con ông Cao Văn Vận và Bà Triệu Thị Dần. Đời ông đến đây VÔ HẬU."
+      },
+
+      // ==================== ĐỜI 8: ĐỆ BÁT THẾ TỔ (TRANG 69-87) ====================
+      {
+        id: "P1_D8_HANH",
+        parentId: "P1_D7_HIEN",
+        gen: 8,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC HẠNH",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: [],
+        childrenSummary: ["1. Cao Ngọc Khoa (xem sinh hạ trang 89)", "2. Cao Thị Chi (gả về Châu Long)"],
+        note: "Trang 69: Con ông Cao Ngọc Hiến."
+      },
+      {
+        id: "P1_D8_THI",
+        parentId: "P1_D7_HIEN",
+        gen: 8,
+        branch: "Phái Nhất",
+        order: 2,
+        name: "CAO NGỌC THI",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: [],
+        childrenSummary: ["1. Cao Thị Chi (gả về Phú Xuân)", "2. Cao Thị Điểm (gả về Xóm Rừng)"],
+        note: "Trang 70: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P1_D8_THAU",
+        parentId: "P1_D7_HIEN",
+        gen: 8,
+        branch: "Phái Nhất",
+        order: 3,
+        name: "CAO NGỌC THẦU",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: [],
+        childrenSummary: [
+          "1. Cao Thị Trái (gả về Cây Dừa)", "2. Cao Thị Bình (gả về An Hiệp)",
+          "3. Cao Thị ... (gả về Mỹ Trà)", "4. Cao Thị Ngại (gả về Mỹ Trà)",
+          "5. Cao Thị Liền (gả về Đông Mỹ)"
+        ],
+        note: "Trang 71: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P1_D8_CHANH",
+        parentId: "P1_D7_TRI",
+        gen: 8,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC CHÁNH",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: [],
+        childrenSummary: [
+          "1. Cao Ngọc Bảng (xem sinh hạ trang 90)",
+          "2. Cao Ngọc Bản",
+          "3. Cao Thị Sơn (gả về An Hiệp)",
+          "4. Cao Ngọc Được (xem sinh hạ trang 91)"
+        ],
+        note: "Trang 72: Con ông Cao Ngọc Trì."
+      },
+      {
+        id: "P1_D8_TY",
+        parentId: "P1_D7_TRI",
+        gen: 8,
+        branch: "Phái Nhất",
+        order: 4,
+        name: "CAO NGỌC TY",
+        alias: "",
+        birth: "Không rõ",
+        death: "Bà tạ thế ngày 21 tháng 5 năm 1959 tại Mỹ Hội",
+        grave: "Mỹ Hội",
+        status: "",
+        spouses: ["Trần Thị Bằng"],
+        childrenSummary: ["1. Cao Ngọc Hoàng (xem sinh hạ trang 92)"],
+        note: "Trang 73: Con ông Cao Ngọc Trì."
+      },
+      {
+        id: "P2_D8_THO",
+        parentId: "P2_D7_CANG",
+        gen: 8,
+        branch: "Phái Nhì",
+        order: 1,
+        name: "CAO VĂN THỌ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Kỵ nhật: Ông 25/6/al • Bà 25/6/al",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Nguyễn Thị Đồng"],
+        childrenSummary: [
+          "1. Cao Thị Giác", "2. Cao Thị Cỡ (gả về Phụng Sơn)",
+          "3. Cao Thị Khiêm (gả về Đại An)", "4. Cao Thị Toan (gả về Châu Long)",
+          "5. Cao Thị Giai", "6. Cao Văn Kham (xem sinh hạ trang 93)",
+          "7. Cao Thị Đèo", "8. Cao Thị Điều (gọi ông Cón Am)"
+        ],
+        note: "Trang 74: Con ông Cao Văn Cang và Bà Triệu Thị Toại."
+      },
+      {
+        id: "P2_D8_QUY",
+        parentId: "P2_D7_CANG",
+        gen: 8,
+        branch: "Phái Nhì",
+        order: 2,
+        name: "CAO VĂN QUÝ",
+        alias: "",
+        birth: "Sinh tại xã Đông Mỹ, huyện Thăng Bình, tỉnh Quảng Nam",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Đoàn Thị Loan"],
+        childrenSummary: [
+          "1. Cao Thị Phong (gả về Phú Hòa)",
+          "2. Cao Văn Bé (xem sinh hạ trang 94)",
+          "3. Cao Thị Sum", "4. Cao Văn Bô", "5. Cao (Vô danh)",
+          "6. Cao Văn Rớ (xem sinh hạ trang 96)"
+        ],
+        note: "Trang 75: Con ông Cao Văn Cang và Bà Triệu Thị Toại."
+      },
+      {
+        id: "P2_D8_HUNG",
+        parentId: "P2_D7_CANG",
+        gen: 8,
+        branch: "Phái Nhì",
+        order: 3,
+        name: "CAO VĂN HƯNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Đoàn Thị Tịch"],
+        childrenSummary: [
+          "1. Cao Văn Vân (phối Bà Trương Thị Bắn - Trà Sơn - Vô hậu)",
+          "2. Cao (Vô danh)", "3. Cao Thị Trước", "4. Cao Thị Cường", "5. Cao Thị ...",
+          "6. Cao (Sút hồn)", "7. Cao Thị Quật", "8. Cao Văn Di", "9. Cao Văn Quy",
+          "10. Cao Văn Do (Thất tích)", "11. Cao Văn Hành"
+        ],
+        note: "Trang 76: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P2_D8_LOC",
+        parentId: "P2_D7_TU",
+        gen: 8,
+        branch: "Phái Nhì",
+        order: 1,
+        name: "CAO VĂN LỘC",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Rừng Cồi họ Cao (cây xoài) Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Triệu Thị Cương"],
+        childrenSummary: [
+          "1. Cao Văn Thực (xem sinh hạ trang 97)",
+          "2. Cao Văn Long (xem sinh hạ trang 98)",
+          "3. Cao Văn Hiếu (xem sinh hạ trang 99)",
+          "4. Cao Văn Phò", "5. Cao (Vô danh)"
+        ],
+        note: "Trang 77: Con ông Cao Văn Tụ và Bà Lưu Thị Trang."
+      },
+      {
+        id: "P3_D8_DANG",
+        parentId: "P3_D7_GIANG",
+        gen: 8,
+        branch: "Phái Ba",
+        order: 1,
+        name: "CAO VĂN ĐĂNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Báo",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Phùng Thị Khai"],
+        childrenSummary: [
+          "1. Cao Văn Nguyên",
+          "2. Cao Văn Nghiệp (xem sinh hạ trang 100)",
+          "3. Cao Văn Côn", "4. Cao Thị Quỳ"
+        ],
+        note: "Trang 78: Con ông Cao Văn Giáng và Bà Huỳnh Thị Trưng."
+      },
+      {
+        id: "P4_D8_DIEN",
+        parentId: "P4_D7_DAO",
+        gen: 8,
+        branch: "Phái Tư",
+        order: 3,
+        name: "CAO VĂN ĐIỆN",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ, Thu Báo",
+        grave: "Gò Ông Kỵ, Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Võ Thị Sao"],
+        childrenSummary: [
+          "1. Cao (Vô danh)", "2. Cao Thị Kiều",
+          "3. Cao Văn Bì (xem sinh hạ trang 101)"
+        ],
+        note: "Trang 79: Con ông Cao Văn Đạo và Bà Triệu Thị Lại."
+      },
+      {
+        id: "P4_D8_HIEN",
+        parentId: "P4_D7_DAO",
+        gen: 8,
+        branch: "Phái Tư",
+        order: 4,
+        name: "CAO VĂN HIẾN",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Tế",
+        grave: "Ông tại Gò Ông Kỵ Đông Mỹ • Bà tại xứ Rừng Vòng Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["1. Nguyễn Thị Giang", "2. Nguyễn Thị Hoài"],
+        childrenSummary: [
+          "1. Cao (Vô danh)", "2. Cao Thị Chiều", "3. Cao Thị Chiêm (gả về Gia Phước)",
+          "4. Cao Thị Bạn (gả về An Lợi)", "5. Cao Thị Cam (gả về Trà Sơn)",
+          "6. Cao Thị Bôi (gả về Thanh Hòa)", "7. Cao Thị Lơ", "8. Cao Thị Đê",
+          "9. Cao Thị Điệp", "10. Cao Văn (Vô danh)", "11. Cao Thị (Vô danh)",
+          "12. Cao Thị Xa", "13. Cao Văn Kỹ (xem sinh hạ trang 102)",
+          "14. Cao Văn Phong (mộ tại Rừng Đông Mỹ)"
+        ],
+        note: "Trang 80: Con ông Cao Văn Đạo và Bà Triệu Thị Lại."
+      },
+      {
+        id: "P4_D8_ROT",
+        parentId: "P4_D7_TUYEN",
+        gen: 8,
+        branch: "Phái Tư",
+        order: 3,
+        name: "CAO VĂN RỚT",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Võ Thị Quản"],
+        childrenSummary: ["1. Cao Văn Được", "2. Cao Thị Xá", "3. Cao Thị Bầu", "4. Cao Thị Mua"],
+        note: "Trang 81: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P4_D8_TRANG",
+        parentId: "P4_D7_LUAT",
+        gen: 8,
+        branch: "Phái Tư",
+        order: 2,
+        name: "CAO VĂN TRANG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Kỵ nhật: Ông 10/4/al • Bà 15/11/al",
+        grave: "Ông tại kề đám ruộng Ông Bảy Đông Mỹ • Bà tại Vườn Bà Thềm Hản, Đông Mỹ",
+        status: "",
+        spouses: ["Triệu Thị Hoa"],
+        childrenSummary: [
+          "1. Cao Văn Bằng (xem sinh hạ trang 103)",
+          "2. Cao Văn Mua (phối Bà Đỗ Thị Tửu ở An Lợi - Vô hậu)",
+          "3. Cao Văn Nhạn", "4. Cao Văn Lăng", "5. Cao Văn Gần", "6. Cao Thị (Vô danh)"
+        ],
+        note: "Trang 82: Con ông Cao Văn Luật và Bà Phạm Thị Sạn."
+      },
+      {
+        id: "P5_D8_HOI",
+        parentId: "P5_D7_SU",
+        gen: 8,
+        branch: "Phái Năm",
+        order: 1,
+        name: "CAO VĂN HỘI",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Nguyễn Thị Huế"],
+        childrenSummary: [
+          "1. Cao Thị Củ", "2. Cao Thị ... (gả Mộ Ngưu Xuân Bình)",
+          "3. Cao Thị Hạch (gả Dương Thúc)", "4. Cao Thị Ly", "5. Cao Thị Đôi",
+          "6. Cao Thị Cốc", "7. Cao (Vô danh)",
+          "8. Cao Văn Đáng (xem sinh hạ trang 104)", "9. Cao Văn Ếch"
+        ],
+        note: "Trang 83: Con ông Cao Văn Sự và Bà Triệu Thị Nhượng."
+      },
+      {
+        id: "P5_D8_HUONG",
+        parentId: "P5_D7_HIEP",
+        gen: 8,
+        branch: "Phái Năm",
+        order: 1,
+        name: "CAO VĂN HƯỚNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Hồ Thị Hạnh"],
+        childrenSummary: [
+          "1. Cao Văn Tuất (xem sinh hạ trang 105)",
+          "2. Cao Văn Túc (xem sinh hạ trang 106)",
+          "3. Cao Thị Chữ", "4. Cao Thị Mật", "5. Cao (Sút hồn)"
+        ],
+        note: "Trang 84: Con ông Cao Văn Hiệp và Bà Trương Thị Hữu."
+      },
+      {
+        id: "P5_D8_HUAN",
+        parentId: "P5_D7_HIEP",
+        gen: 8,
+        branch: "Phái Năm",
+        order: 2,
+        name: "CAO VĂN HUẤN",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Trương Thị Trưng"],
+        childrenSummary: [
+          "1. Cao Văn Cáo (xem sinh hạ trang 107)",
+          "2. Cao Văn Quát", "3. Cao Văn Trịnh", "4. Cao (Vô danh)"
+        ],
+        note: "Trang 85: Con ông Cao Văn Hiệp và Bà Trương Thị Hữu."
+      },
+      {
+        id: "P5_D8_TINH",
+        parentId: "P5_D7_TU",
+        gen: 8,
+        branch: "Phái Năm",
+        order: 1,
+        name: "CAO VĂN TINH",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Triệu Thị Chiết"],
+        childrenSummary: ["1. Cao Thị Tuyết", "2. Cao Thị Nghỉ"],
+        note: "Trang 86: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P5_D8_KHOANG",
+        parentId: "P5_D7_TU",
+        gen: 8,
+        branch: "Phái Năm",
+        order: 2,
+        name: "CAO VĂN KHOANG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Triệu Thị Vịt"],
+        childrenSummary: ["1. Cao Thị Chạc"],
+        note: "Trang 87: Đời ông đến đây VÔ HẬU."
+      },
+
+      // ==================== ĐỜI 9: ĐỆ CỬU THẾ TỔ (TRANG 89-107) ====================
+      {
+        id: "P1_D9_KHOA",
+        parentId: "P1_D8_HANH",
+        gen: 9,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC KHOA",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["... Thị ..."],
+        childrenSummary: ["1. Cao Ngọc Nghĩa"],
+        note: "Trang 89: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P1_D9_BANG",
+        parentId: "P1_D8_CHANH",
+        gen: 9,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC BẢNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Phùng Thị Điểm"],
+        childrenSummary: ["1. Cao Thị Nhiên (gả về An Hội)", "2. Cao Ngọc Khuê"],
+        note: "Trang 90: Con ông Cao Ngọc Chánh."
+      },
+      {
+        id: "P1_D9_DUOC",
+        parentId: "P1_D8_CHANH",
+        gen: 9,
+        branch: "Phái Nhất",
+        order: 4,
+        name: "CAO NGỌC ĐƯỢC",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["... Thị ..."],
+        childrenSummary: ["1. Cao Thị Lạp (gả về Châu Long)"],
+        note: "Trang 91: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P1_D9_HOANG",
+        parentId: "P1_D8_TY",
+        gen: 9,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC HOÀNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Trần Thị Quới"],
+        childrenSummary: ["1. Cao Ngọc Đàn (xem sinh hạ trang 109)"],
+        note: "Trang 92: Con ông Cao Ngọc Ty và Bà Trần Thị Bằng."
+      },
+      {
+        id: "P2_D9_KHAM",
+        parentId: "P2_D8_THO",
+        gen: 9,
+        branch: "Phái Nhì",
+        order: 6,
+        name: "CAO VĂN KHAM",
+        alias: "",
+        birth: "Sinh tại thôn Đông Mỹ, huyện Thăng Bình, tỉnh Quảng Nam",
+        death: "Ông tạ thế ngày 15/12 năm Giáp Tuất (1933), kỵ 14/12/al • Bà tạ thế ngày 10/6 năm Bính Thân (1956), kỵ 09/6/al",
+        grave: "Ông tại Rừng Thượng Tượng làng Đông Mỹ • Bà tại Rừng Độn làng Đông Mỹ",
+        status: "",
+        spouses: ["Triệu Thị Cần (sinh năm Ất Dậu 1884 tại làng Đông Mỹ)"],
+        childrenSummary: [
+          "1. Cao Thị Cản (gả về An Sơn Phủ)",
+          "2. Cao Thị Đã (gả ông Nguyễn Công Con)",
+          "3. Cao Văn Như (xem sinh hạ trang 110)",
+          "4. Cao Văn Cải (xem sinh hạ trang 111)",
+          "5. Cao Văn Hiệu (xem sinh hạ trang 112)"
+        ],
+        note: "Trang 93: Con trai ông Cao Văn Thọ và Bà Nguyễn Thị Đồng."
+      },
+      {
+        id: "P2_D9_BE",
+        parentId: "P2_D8_QUY",
+        gen: 9,
+        branch: "Phái Nhì",
+        order: 2,
+        name: "CAO VĂN BÉ",
+        alias: "",
+        birth: "Sinh tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Không rõ",
+        grave: "Rừng Vòng làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["1. Lê Thị Giám", "2. Nguyễn Thị Miên", "3. Nguyễn Thị Kiếp"],
+        childrenSummary: [
+          "1. Cao Thị Nữ", "2. Cao Thị Bé", "3. Cao Thị Đi", "4. Cao Thị Mưa",
+          "5. Cao (Vô danh)", "6. Cao (Sút hồn)", "7. Cao Văn Mẹo",
+          "8. Cao Thị Né (gả ông Trương Di)",
+          "9. Cao Văn Lung (xem sinh hạ trang 113)",
+          "10. Cao Thị Quả tức Cúc (gả ông Nguyễn Mạnh)",
+          "11. Cao Văn Quy", "12. Cao Thị Bông"
+        ],
+        note: "Trang 94-95: Con ông Cao Văn Quý và Bà Đoàn Thị Loan."
+      },
+      {
+        id: "P2_D9_RO",
+        parentId: "P2_D8_QUY",
+        gen: 9,
+        branch: "Phái Nhì",
+        order: 6,
+        name: "CAO VĂN RỚ",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Ông tại Gò Cây Rồi làng Đông Mỹ • Bà tại Rẫy Ông Cử làng Đông Mỹ",
+        status: "VÔ HẬU",
+        spouses: ["Triệu Thị Mun"],
+        childrenSummary: [
+          "1. Cao (Vô danh)", "2. Cao Văn Lang", "3. Cao Văn Hiệp",
+          "4. Cao Thị Vạn", "5. Cao Văn Xong", "6. Cao Văn Sở", "7. Cao Văn Cầu"
+        ],
+        note: "Trang 96: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P2_D9_THUC",
+        parentId: "P2_D8_LOC",
+        gen: 9,
+        branch: "Phái Nhì",
+        order: 1,
+        name: "CAO VĂN THỰC",
+        alias: "",
+        birth: "Sinh tại Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Phạm Thị Đình"],
+        childrenSummary: ["1. Cao Văn Thiệp (xem sinh hạ trang 114)"],
+        note: "Trang 97: Con ông Cao Văn Lộc."
+      },
+      {
+        id: "P2_D9_LONG",
+        parentId: "P2_D8_LOC",
+        gen: 9,
+        branch: "Phái Nhì",
+        order: 2,
+        name: "CAO VĂN LONG",
+        alias: "",
+        birth: "Sinh tại Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Đoàn Thị Đài"],
+        childrenSummary: [
+          "1. Cao Văn Gia", "2. Cao Văn Sĩ",
+          "3. Cao Văn Diệp (xem sinh hạ trang 115)",
+          "4. Cao Văn Nho (xem sinh hạ trang 116)"
+        ],
+        note: "Trang 98: Con ông Cao Văn Lộc."
+      },
+      {
+        id: "P2_D9_HIEU",
+        parentId: "P2_D8_LOC",
+        gen: 9,
+        branch: "Phái Nhì",
+        order: 3,
+        name: "CAO VĂN HIẾU",
+        alias: "",
+        birth: "Sinh tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Không rõ • Xuân Kỳ - Thu Báo",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Tôn Thị Thiêm"],
+        childrenSummary: ["1. Cao (Vô danh)", "2. Cao Văn Hảo", "3. Cao Văn Y"],
+        note: "Trang 99: Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P3_D9_NGHIEP",
+        parentId: "P3_D8_DANG",
+        gen: 9,
+        branch: "Phái Ba",
+        order: 2,
+        name: "CAO VĂN NGHIỆP",
+        alias: "",
+        birth: "Không rõ",
+        death: "Tạ thế ngày 13 tháng 10, hưởng thọ 47 tuổi • Kỵ: 12/10/al",
+        grave: "Gò Rộc Ngắn - Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Đoàn Thị Lụa"],
+        childrenSummary: [
+          "1. Cao Văn Xuân (xem sinh hạ trang 117)",
+          "2. Cao (Vô danh)", "3. Cao Thị An (gả ông Triệu Cam)",
+          "4. Cao Văn Thắng",
+          "5. Cao Văn Ngưu (xem sinh hạ trang 118)",
+          "6. Cao Thị Dương", "7. Cao Văn Bảy",
+          "8. Cao Văn Sơn (xem sinh hạ trang 119)"
+        ],
+        note: "Trang 100: Con ông Cao Văn Đăng và Bà Phùng Thị Khai."
+      },
+      {
+        id: "P4_D9_BI",
+        parentId: "P4_D8_DIEN",
+        gen: 9,
+        branch: "Phái Tư",
+        order: 3,
+        name: "CAO VĂN BÌ",
+        alias: "",
+        birth: "Sinh năm Canh Sửu (1900) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Tạ thế ngày 07 tháng 10 năm Bính Dần (1925) • Kỵ: 06/10/al",
+        grave: "Gò Ông Kỵ, làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Phạm Thị Ra (sinh năm Bính Ngọ 1905; sau khi ông từ trần, bà tái giá sang họ Nguyễn Đình ở Bình Trường)"],
+        childrenSummary: [
+          "1. Cao (Vô danh)",
+          "2. Cao Thị Sổ (gả Triệu Văn Bích - An Phước)",
+          "3. Cao Thị Ánh"
+        ],
+        note: "Trang 101: Con ông Cao Văn Điện và Bà Võ Thị Sao."
+      },
+      {
+        id: "P4_D9_KY",
+        parentId: "P4_D8_HIEN",
+        gen: 9,
+        branch: "Phái Tư",
+        order: 13,
+        name: "CAO VĂN KỸ",
+        alias: "",
+        birth: "Sinh năm Nhâm Dần (1901) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Ông tạ thế ngày 21/3 năm Ất Dậu (1945), kỵ 20/3/al • Bà tạ thế ngày 16/11 năm Quý Hợi (1983), kỵ 15/11/al",
+        grave: "Rừng cây cạnh xoài Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Phùng Thị Thia (sinh năm Bính Ngọ 1905)"],
+        childrenSummary: [
+          "1. Cao Văn Sâm (sinh Đinh Mão, quy năm 1936)",
+          "2. Cao Thị Đặng (sinh Mậu Thìn 1927, quy Tân Tỵ 1940)",
+          "3. Cao Văn Công tức Thông (xem sinh hạ trang 120)",
+          "4. Cao Thị Châu (gả Nguyễn Văn Lý - Gia Phước)",
+          "5. Cao Văn Thuê (sinh Mậu Dần 1937, quy 1948)",
+          "6. Cao Thị Cận (gả Vùng Lân - Đông Mỹ)",
+          "7. Cao Thị Năm (sinh Kỷ Mão 1938, quy Giáp Thân 1943)",
+          "8. Cao (Vô danh)",
+          "9. Cao Thị Liễu (gả Nguyễn Trương Cân Xá)"
+        ],
+        note: "Trang 102: Con ông Cao Văn Hiến và quý Bà Nguyễn Thị Hoài."
+      },
+      {
+        id: "P4_D9_BANG",
+        parentId: "P4_D8_TRANG",
+        gen: 9,
+        branch: "Phái Tư",
+        order: 1,
+        name: "CAO VĂN BẰNG",
+        alias: "",
+        birth: "Sinh năm Canh Tý (1891) tại Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Không rõ",
+        grave: "Cây Xoài Đông Mỹ (Bà I); Gò Ông Kỵ Đông Mỹ (Bà II)",
+        status: "",
+        spouses: ["1. Dương Thị Hoài (làng Tất Thị, Bình Chánh)", "2. Lê Thị Thí (tục huyền để nối dõi)"],
+        childrenSummary: [
+          "1. Cao Thị Bửu (sinh Mậu Thìn 1927, quy Tân Dậu 1981)",
+          "2. Cao Văn Tích (sinh Nhâm Thân 1931)",
+          "3. Cao Thị Bái (sinh Giáp Tuất 1933)",
+          "4. Cao Văn ...", "5. Cao Văn Bột",
+          "6. Cao Văn Nam (xem sinh hạ trang 121)"
+        ],
+        note: "Trang 103: Con ông Cao Văn Trang và Bà Triệu Thị Hoa."
+      },
+      {
+        id: "P5_D9_DANG",
+        parentId: "P5_D8_HOI",
+        gen: 9,
+        branch: "Phái Năm",
+        order: 8,
+        name: "CAO VĂN ĐÁNG",
+        alias: "",
+        birth: "Sinh tại Đông Mỹ, Thăng Bình",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Lê Thị Cát (sau khi ông Đáng tạ thế, bà tái giá về Tân An)"],
+        childrenSummary: ["1. Cao Văn Cử", "2. Cao Văn Con"],
+        note: "Trang 104: Con ông Cao Văn Hội và Bà Nguyễn Thị Huế. Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P5_D9_TUAT",
+        parentId: "P5_D8_HUONG",
+        gen: 9,
+        branch: "Phái Năm",
+        order: 1,
+        name: "CAO VĂN TUẤT",
+        alias: "",
+        birth: "Sinh tại Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: [],
+        childrenSummary: ["1. Cao Thị Toàn", "2. Cao Thị Bỉnh", "3. Cao Thị Chiết", "4. Cao Thị ...", "5. Cao Thị Chái"],
+        note: "Trang 105: Con ông Cao Văn Hướng và Bà Hồ Thị Hạnh. Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P5_D9_TUC",
+        parentId: "P5_D8_HUONG",
+        gen: 9,
+        branch: "Phái Năm",
+        order: 2,
+        name: "CAO VĂN TÚC",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: [],
+        childrenSummary: ["1. Cao Thị Trạc", "2. Cao Thị Phiên", "3. Cao Văn Được"],
+        note: "Trang 106: Con ông Cao Văn Hướng và Bà Hồ Thị Hạnh. Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P5_D9_CAO",
+        parentId: "P5_D8_HUAN",
+        gen: 9,
+        branch: "Phái Năm",
+        order: 1,
+        name: "CAO VĂN CÁO",
+        alias: "",
+        birth: "Sinh tại Đông Mỹ, Thăng Bình",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["Đoàn Thị Chua"],
+        childrenSummary: ["1. Cao Văn Nhữ", "2. Cao Thị Chi", "3. Cao Văn Tấn Ngọc (xem sinh hạ trang 122)"],
+        note: "Trang 107: Con ông Cao Văn Huấn và Bà Trương Thị Trưng."
+      },
+
+      // ==================== ĐỜI 10: ĐỆ THẬP THẾ TỔ (TRANG 109-122) ====================
+      {
+        id: "P1_D10_DAN",
+        parentId: "P1_D9_HOANG",
+        gen: 10,
+        branch: "Phái Nhất",
+        order: 1,
+        name: "CAO NGỌC ĐÀN",
+        alias: "Đại diện Phái Nhất ban trùng tu gia phả 1990",
+        birth: "Sinh năm Bính Thân (1955) tại Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Đoàn Thị Hương (sinh năm Bính Thân, quê Bình Phú, Thăng Bình)"],
+        childrenSummary: [
+          "1. Cao Thị Lãnh (sinh năm Canh Thân 1980)",
+          "2. Cao Ngọc Sang (sinh năm Giáp Tý 1984)",
+          "3. Cao Thị Thúy (sinh năm Canh Ngọ 1990)"
+        ],
+        note: "Trang 109: Con ông Cao Ngọc Hoàng và Bà Trần Thị Quới."
+      },
+      {
+        id: "P2_D10_NHU",
+        parentId: "P2_D9_KHAM",
+        gen: 10,
+        branch: "Phái Nhì",
+        order: 3,
+        name: "CAO VĂN NHƯ",
+        alias: "",
+        birth: "Sinh năm Canh Thân (1919) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Ông tạ thế ngày 15/5 năm Nhâm Tý (1972), kỵ 14/5/al • Bà I mất năm Bính Ngọ (1966), kỵ 07/12/al",
+        grave: "Rừng Độn Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: [
+          "1. Võ Thị Trôn (quê Bình Thế, Thăng Bình)",
+          "2. Phùng Thị Cái (tục huyền nối dõi; sau khi ông mất, bà tái giá về tộc Võ)"
+        ],
+        childrenSummary: [
+          "1. Cao (Vô danh)", "2. Cao (Vô danh)",
+          "3. Cao Văn Bích (xem sinh hạ trang 127)",
+          "4. Cao (Vô danh)", "5. Cao Thị Vân",
+          "6. Cao Thị Minh (gả Nguyễn Phúc - Đông Mỹ)",
+          "7. Cao Thị Lương (gả Đoàn Văn Thừa - Thiên Phước)",
+          "8. Cao Thị Nuôi (con bà II)"
+        ],
+        note: "Trang 110: Con trai ông Cao Văn Kham và Bà Triệu Thị Cần."
+      },
+      {
+        id: "P2_D10_CAI",
+        parentId: "P2_D9_KHAM",
+        gen: 10,
+        branch: "Phái Nhì",
+        order: 4,
+        name: "CAO VĂN CẢI (TÀI)",
+        alias: "Đại diện Phái Nhì ban trùng tu gia phả 1990",
+        birth: "Sinh ngày 18 tháng ... năm Nhâm Tuất (1921) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Nguyễn Thị Khai (sinh ngày 12/02 năm Giáp Tý 1923 tại Long Phụng Loan, Bình Tú, Thăng Bình)"],
+        childrenSummary: [
+          "1. Cao Văn Hoàng (sinh năm Đinh Hợi 1947; tử trận tại vùng 4 Hồ Chí Minh năm Bính Ngọ 1966, nay không rõ phần mộ)",
+          "2. Cao Văn Anh tức Cảnh (xem sinh hạ trang 128)",
+          "3. Cao Thị Ca",
+          "4. Cao Văn Nhân (sinh năm Kỷ Sửu 1949; mộ Rừng Cồi Đông Mỹ)"
+        ],
+        note: "Trang 111: Con ông Cao Văn Kham và Bà Triệu Thị Cần. Năm Ất Mùi (1955) vào trú tại Tiên Lãnh, Tiên Phước, Quảng Nam."
+      },
+      {
+        id: "P2_D10_HIEU",
+        parentId: "P2_D9_KHAM",
+        gen: 10,
+        branch: "Phái Nhì",
+        order: 5,
+        name: "CAO VĂN HIỆU",
+        alias: "",
+        birth: "Sinh tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Ông bà tử nạn cùng một lúc • Kỵ: 25/6/al",
+        grave: "Rừng Cây Vòng - Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Trương Thị Được (sinh năm Mậu Thìn 1928 tại làng Đông Mỹ)"],
+        childrenSummary: [
+          "1. Cao Văn Hoa (xem sinh hạ trang 130)",
+          "2. Cao Văn Lang (xem sinh hạ trang 131)",
+          "3. Cao Thị Hồng (gả Trần Bầu - Tiên Lãnh)",
+          "4. Cao Văn Phào (cùng ông bác ruột lập nghiệp Miền Nam)"
+        ],
+        note: "Trang 112: Con ông Cao Văn Kham và Bà Triệu Thị Cần."
+      },
+      {
+        id: "P2_D10_LUNG",
+        parentId: "P2_D9_BE",
+        gen: 10,
+        branch: "Phái Nhì",
+        order: 9,
+        name: "CAO VĂN LUNG",
+        alias: "",
+        birth: "Không rõ",
+        death: "Không rõ",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["1. Nguyễn Thị Minh", "2. Đặng Thị Đích"],
+        childrenSummary: ["1. Cao Trung Tiến (Cao Văn Nhơn - xem sinh hạ trang 137)", "2. Cao Thị Thà"],
+        note: "Trang 113: Con ông Cao Văn Bé."
+      },
+      {
+        id: "P2_D10_THIEP",
+        parentId: "P2_D9_THUC",
+        gen: 10,
+        branch: "Phái Nhì",
+        order: 1,
+        name: "CAO VĂN THIỆP",
+        alias: "",
+        birth: "Sinh năm Quý Hợi (1921) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Trần Thị Cánh (sinh năm 1929)"],
+        childrenSummary: [
+          "1. Cao Thị Phương (sinh 1951, quy 25/05/1989)",
+          "2. Cao Thị Lan (sinh 1953, gả Kiều Văn Long)",
+          "3. Cao Như Lâm (sinh 1955 - xem sinh hạ trang 143)",
+          "4. Cao Như Hải (sinh 1959)",
+          "5. Cao Văn Ly (sinh 1960 - xem sinh hạ trang 144)",
+          "6. Cao Văn Hương (sinh 1962 - xem sinh hạ trang 145)",
+          "7. Cao Thị Vương (sinh 1964, gả Phạm V. Phi)",
+          "8. Cao (Vô danh)", "9. Cao Văn Cảnh (sinh 1969)",
+          "10. Cao Thị Thu Sương (sinh 1972, gả Dương Vũ)",
+          "11. Cao Thị Thương (sinh 1975)"
+        ],
+        note: "Trang 114: Con ông Cao Văn Thực và Bà Phạm Thị Đình. Lập nghiệp tại thôn Vinh Ba, xã Hòa Đồng, huyện Tuy Hòa, tỉnh Phú Yên."
+      },
+      {
+        id: "P2_D10_DIEP",
+        parentId: "P2_D9_LONG",
+        gen: 10,
+        branch: "Phái Nhì",
+        order: 3,
+        name: "CAO VĂN DIỆP",
+        alias: "",
+        birth: "Sinh tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Kỵ nhật Bà II: .../al",
+        grave: "Không rõ",
+        status: "",
+        spouses: ["1. Võ Thị Bạc", "2. Trần Thị Dinh (hầu thiếp sinh con nối dõi)"],
+        childrenSummary: [
+          "1. Cao Thị Cẩm (gả Nguyễn Văn Tâm)",
+          "2. Cao Thị ... (gả Huỳnh Ngọc Lĩnh)",
+          "3. Cao Văn Thơn",
+          "4. Cao Thị ... (gả Trần Văn Cường)",
+          "5. Cao Văn Nguyên", "6. Cao Thị Giến"
+        ],
+        note: "Trang 115: Con ông Cao Văn Long và Bà Đoàn Thị Đài. Lập nghiệp tại Ban Mê Thuột từ năm 1957."
+      },
+      {
+        id: "P2_D10_NHO",
+        parentId: "P2_D9_LONG",
+        gen: 10,
+        branch: "Phái Nhì",
+        order: 4,
+        name: "CAO VĂN NHO",
+        alias: "",
+        birth: "Sinh năm Canh Ngọ (1929) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Châu Thị Thuận (sinh năm Giáp Tuất 1933 tại xã Bình Sa, Thăng Bình)"],
+        childrenSummary: [
+          "1. Cao Thị Bông", "2. Cao (Vô danh)",
+          "3. Cao Văn Mai (Tử trận, mộ tại Nghĩa trang Liệt sĩ Bình Quế, Thăng Bình)",
+          "4. Cao Văn Tùng (xem sinh hạ trang 139)",
+          "5. Cao Văn Tín",
+          "6. Cao Văn Hương (xem sinh hạ trang 141)",
+          "7. Cao Văn My", "8. Cao Văn Hường", "9. Cao Thị Kim Tiến",
+          "10. Cao Thị (Vô danh)", "11. Cao Thị Kim Oanh"
+        ],
+        note: "Trang 116: Con ông Cao Văn Long và Bà Đoàn Thị Đài."
+      },
+      {
+        id: "P3_D10_XUAN",
+        parentId: "P3_D9_NGHIEP",
+        gen: 10,
+        branch: "Phái Ba",
+        order: 1,
+        name: "CAO VĂN XUÂN",
+        alias: "Đại diện Phái Ba ban trùng tu gia phả 1990",
+        birth: "Sinh ngày 10 tháng 5 năm Canh Ngọ (1929) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: [
+          "1. Nguyễn Thị Giai (sinh năm Canh Ngọ 1929 tại Gia Phước, Thăng Bình)",
+          "2. Nguyễn Thị Quyên (sinh năm Giáp Thân 1943 tại Phú Xuân, Thăng Bình)"
+        ],
+        childrenSummary: [
+          "1. Cao Văn Tòa (xem sinh hạ trang 142 - con bà I)",
+          "2. Cao Văn Mai", "3. Cao Thị Cúc", "4. Cao Văn Lực",
+          "5. Cao Thị Điểu", "6. Cao Văn Vân", "7. Cao Thị Biểu", "8. Cao Văn Khôi"
+        ],
+        note: "Trang 117: Con ông Cao Văn Nghiệp và Bà Đoàn Thị Lụa."
+      },
+      {
+        id: "P3_D10_NGUU",
+        parentId: "P3_D9_NGHIEP",
+        gen: 10,
+        branch: "Phái Ba",
+        order: 5,
+        name: "CAO VĂN NGƯU",
+        alias: "",
+        birth: "Sinh tại Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Tạ thế ngày 24 tháng ...",
+        grave: "Không rõ",
+        status: "VÔ HẬU",
+        spouses: ["Nguyễn Thị Nhựm (quê Bình Sa, Thăng Bình)"],
+        childrenSummary: ["1. Cao Thị Đông", "2. Cao Văn Mường"],
+        note: "Trang 118: Con ông Cao Văn Nghiệp và Bà Đoàn Thị Lụa. Đời ông đến đây VÔ HẬU."
+      },
+      {
+        id: "P3_D10_SON",
+        parentId: "P3_D9_NGHIEP",
+        gen: 10,
+        branch: "Phái Ba",
+        order: 8,
+        name: "CAO VĂN SƠN",
+        alias: "",
+        birth: "Sinh năm Mậu Tý (1947) tại Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Triệu Thị Lan (sinh năm Kỷ Sửu 1948)"],
+        childrenSummary: [
+          "1. Cao Văn Minh (sinh 1971)",
+          "2. Cao Thị Bông (sinh 1972 Nhâm Tý)",
+          "3. Cao Thị Tiến (sinh 1974 Giáp Dần)",
+          "4. Cao Thị Trước (sinh 1976 Bính Thìn)",
+          "5. Cao Văn Lên (sinh 1979, quy năm 1979)",
+          "6. Cao Văn Đương (sinh 1981 Canh Dậu)",
+          "7. Cao Văn Thành (sinh 1983 Quý Hợi)"
+        ],
+        note: "Trang 119: Con ông Cao Văn Nghiệp và Bà Đoàn Thị Lụa."
+      },
+      {
+        id: "P4_D10_CONG",
+        parentId: "P4_D9_KY",
+        gen: 10,
+        branch: "Phái Tư",
+        order: 3,
+        name: "CAO VĂN CÔNG (THÔNG)",
+        alias: "Đại diện Phái Tư ban trùng tu gia phả 1990",
+        birth: "Sinh năm Nhâm Thân (1931) tại Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: [
+          "1. Đoàn Thị Viện (sinh năm Ất Hợi 1934 tại Đông Mỹ)",
+          "2. Nguyễn Thị Mai (sinh năm Mậu Dần 1937 tại Trà Long, Bình Trung, Thăng Bình)"
+        ],
+        childrenSummary: [
+          "1. Cao Thị Hồng (sinh Đinh Dậu 1957, quy 15 tháng 8 tháng tuổi)",
+          "2. Cao Thị Phấn (sinh Kỷ Hợi 1959, gả về Bình Tú)",
+          "3. Cao Văn Minh (xem sinh hạ trang 149)",
+          "4. Cao Văn Thường (sinh Ất Tỵ 1964, quy 1966)",
+          "5. Cao Văn Thọ", "6. Cao Thị ...", "7. Cao Văn Tài",
+          "8. Cao Thị Hiền", "9. Cao Văn Lành", "10. Cao (Vô danh)", "11. Cao Văn Danh"
+        ],
+        note: "Trang 120: Con ông Cao Văn Kỹ và Bà Phùng Thị Thia."
+      },
+      {
+        id: "P4_D10_NAM",
+        parentId: "P4_D9_BANG",
+        gen: 10,
+        branch: "Phái Tư",
+        order: 6,
+        name: "CAO VĂN NAM",
+        alias: "",
+        birth: "Sinh năm Quý Mùi (1942) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Phan Thị Hồng (sinh năm Bính Tuất 1945 tại làng Đông Mỹ)"],
+        childrenSummary: [
+          "1. Cao Thị Đào", "2. Cao Thị Tiên", "3. Cao Văn Biên", "4. Cao Văn Cử",
+          "5. Cao Văn Thành", "6. Cao Thị Công", "7. Cao Văn Sự"
+        ],
+        note: "Trang 121: Con ông Cao Văn Bằng và Bà Lê Thị Thí."
+      },
+      {
+        id: "P5_D10_TANNGOC",
+        parentId: "P5_D9_CAO",
+        gen: 10,
+        branch: "Phái Năm",
+        order: 3,
+        name: "CAO VĂN TẤN NGỌC",
+        alias: "",
+        birth: "Sinh tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "Gò Bồi Lái - Đông Mỹ, Thăng Bình, Quảng Nam",
+        status: "",
+        spouses: ["Huỳnh Thị Khứu (quê làng Gia Phước, Bình An, Thăng Bình)"],
+        childrenSummary: [
+          "1. Cao Văn Thạnh",
+          "2. Cao Văn Dũng (xem sinh hạ trang 158)",
+          "3. Cao Văn Giến"
+        ],
+        note: "Trang 122: Con ông Cao Văn Cáo và Bà Đoàn Thị Chua."
+      },
+
+      // ==================== ĐỜI 11: ĐỆ THẬP NHẤT THẾ TỔ (TRANG 127-158) ====================
+      {
+        id: "P2_D11_BICH",
+        parentId: "P2_D10_NHU",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 3,
+        name: "CAO VĂN BÍCH",
+        alias: "",
+        birth: "Sinh năm Đinh Hợi (1946) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "Tạ thế năm Ất Mão (1975) - Thất tích tại Hải Lăng đường ngày giải phóng • Kỵ: 1/al",
+        grave: "Chưa tìm thấy",
+        status: "",
+        spouses: ["Nguyễn Thị Minh (sinh năm Giáp Thân 1943 tại làng Trà Xuân, Bình Quế)"],
+        childrenSummary: ["1. Cao Thị Nguyệt", "2. Cao Thị Dung"],
+        note: "Trang 127: Con ông Cao Văn Như và Bà Võ Thị Trôn."
+      },
+      {
+        id: "P2_D11_ANH",
+        parentId: "P2_D10_CAI",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 2,
+        name: "CAO VĂN ANH tức CẢNH",
+        alias: "Cao Văn Cảnh",
+        birth: "Sinh ngày 15-11 Canh Dần (1949) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Võ Thị Lệ (sinh ngày 27-4 Đinh Dậu 1956 tại Tiên Lãnh, Tiên Phước)"],
+        childrenSummary: [
+          "1. Cao Thị Nhài (sinh giờ Dậu ngày 18/4 năm Kỷ Mùi 1979)",
+          "2. Cao Văn Thành (sinh giờ Ngọ ngày 21/9 năm Canh Thân 1980)",
+          "3. Cao Thị Định (sinh giờ Mùi ngày 10/10 năm Tân Dậu 1981)",
+          "4. Cao Văn Minh (sinh giờ Sửu ngày 26/12 năm Quý Hợi 1983)",
+          "5. Cao Thị Nga (sinh giờ Ngọ ngày 24/10 năm Ất Sửu 1985)",
+          "6. Cao Thị Hiếu (sinh giờ Thân ngày 16/12 năm Đinh Mão 1987)",
+          "7. Cao Văn Trung (sinh giờ Tý ngày 18/10 năm Kỷ Tỵ 1989)"
+        ],
+        note: "Trang 128: Con ông Cao Văn Cải và Bà Nguyễn Thị Khai."
+      },
+      {
+        id: "P2_D11_HOA",
+        parentId: "P2_D10_HIEU",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 1,
+        name: "CAO VĂN HOA",
+        alias: "",
+        birth: "Sinh năm Quý Tỵ (1953) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Nguyễn Thị Thiện (sinh năm Bính Thân 1956 tại làng Đông Mỹ)"],
+        childrenSummary: [
+          "1. Cao Văn (Vô danh)",
+          "2. Cao Văn Sen (sinh 21-2-1981 Tân Dậu)",
+          "3. Cao Thị Thự (sinh 14-10 Quý Hợi 1983)",
+          "4. Cao (Vô danh)",
+          "5. Cao Văn Ngọc (sinh 2-11 năm 1988 Mậu Thìn)"
+        ],
+        note: "Trang 130: Con ông Cao Văn Hiệu và Bà Trương Thị Được."
+      },
+      {
+        id: "P2_D11_LANG",
+        parentId: "P2_D10_HIEU",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 2,
+        name: "CAO VĂN LANG",
+        alias: "",
+        birth: "Sinh năm Bính Thân (1956) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Nguyễn Thị Thông (sinh năm Đinh Dậu 1957 tại Tiên Cảnh, Tiên Phước)"],
+        childrenSummary: [
+          "1. Cao Thị Truyền (sinh 17-9 Tân Dậu 1981)",
+          "2. Cao Thị ... (sinh 13-6 Quý Hợi 1983)",
+          "3. Cao Thị Trung (sinh 13-6 Quý Hợi 1983, quy 18-7 Quý Hợi)",
+          "4. Cao Văn Hùng (sinh 8 Ất Sửu 1985)",
+          "5. Cao Thị Yến (sinh 10-12 Mậu Thìn 1988)",
+          "6. Cao Văn Nhạn"
+        ],
+        note: "Trang 131: Con ông Cao Văn Hiệu và Bà Trương Thị Được."
+      },
+      {
+        id: "P2_D11_NHON",
+        parentId: "P2_D10_LUNG",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 1,
+        name: "CAO VĂN NHƠN (CAO TRUNG TIẾN)",
+        alias: "Cao Trung Tiến",
+        birth: "Sinh ngày 18 tháng 10 năm Canh Sửu (1960)",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Nguyễn Thị Ba (sinh ngày 10 tháng 7 năm Canh Sửu 1960)"],
+        childrenSummary: [
+          "1. Cao (Vô danh)",
+          "2. Cao Thị Hiền (sinh ngày 02 tháng 11 Giáp Tý)",
+          "3. Cao Thị Xuyến (sinh ngày 16 tháng 10 nhuận Đinh Mão)",
+          "4. Cao Văn Chỉnh (sinh giờ Ngọ ngày 27 tháng 5 năm Canh Ngọ)"
+        ],
+        note: "Trang 137: Con ông Cao Văn Lung."
+      },
+      {
+        id: "P2_D11_TUNG",
+        parentId: "P2_D10_NHO",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 4,
+        name: "CAO VĂN TÙNG",
+        alias: "",
+        birth: "Sinh năm Nhâm Dần (1961) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Phạm Thị Phương (quê làng Bình Như Phước, Bình Quế, Thăng Bình)"],
+        childrenSummary: ["1. Cao Thị Pháp", "2. Cao Văn Nhựt"],
+        note: "Trang 139: Con ông Cao Văn Nho và Bà Châu Thị Thuận."
+      },
+      {
+        id: "P2_D11_HUONG_NHO",
+        parentId: "P2_D10_NHO",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 6,
+        name: "CAO VĂN HƯƠNG",
+        alias: "",
+        birth: "Sinh tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Lê Thị Nhơn"],
+        childrenSummary: [],
+        note: "Trang 141: Con ông Cao Văn Nho và Bà Châu Thị Thuận."
+      },
+      {
+        id: "P2_D11_LAM",
+        parentId: "P2_D10_THIEP",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 3,
+        name: "CAO NHƯ LÂM",
+        alias: "",
+        birth: "Sinh năm 1955 tại thôn Vinh Ba, xã Hòa Đồng, huyện Tuy Hòa, tỉnh Phú Yên",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Cao Thị Nhị (sinh năm 1954 tại thôn Vinh Ba, xã Hòa Đồng, Tuy Hòa, Phú Yên)"],
+        childrenSummary: [
+          "1. Cao Thị Bích Vy (sinh 1985)",
+          "2. Cao Văn Sanh (sinh ngày 24-5-1989)"
+        ],
+        note: "Trang 143: Con ông Cao Văn Thiệp và Bà Trần Thị Cánh."
+      },
+      {
+        id: "P2_D11_LY",
+        parentId: "P2_D10_THIEP",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 5,
+        name: "CAO VĂN LY",
+        alias: "",
+        birth: "Sinh năm 1960 tại thôn Vinh Ba, xã Hòa Đồng, huyện Tuy Hòa, tỉnh Phú Yên",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Lê Thị Thạnh (sinh năm 1961 tại thôn Phú Mỹ, xã Hòa Đồng, Tuy Hòa, Phú Yên)"],
+        childrenSummary: [
+          "1. Cao Như Kim (sinh năm 1982)",
+          "2. Cao Lê Duyên (Nữ - sinh năm 1984)"
+        ],
+        note: "Trang 144: Con ông Cao Văn Thiệp và Bà Trần Thị Cánh."
+      },
+      {
+        id: "P2_D11_HUONG_THIEP",
+        parentId: "P2_D10_THIEP",
+        gen: 11,
+        branch: "Phái Nhì",
+        order: 6,
+        name: "CAO VĂN HƯƠNG",
+        alias: "",
+        birth: "Sinh năm 1962 tại thôn Vinh Ba, xã Hòa Đồng, huyện Tuy Hòa, tỉnh Phú Yên",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Nguyễn Thị Lanh (quê xã Ninh Bình, huyện Ninh Hòa, tỉnh Khánh Hòa)"],
+        childrenSummary: [
+          "1. Cao Văn Cường (năm sinh 1988)",
+          "2. Cao Văn Tý (năm sinh 1990)"
+        ],
+        note: "Trang 145: Con ông Cao Văn Thiệp và Bà Trần Thị Cánh."
+      },
+      {
+        id: "P3_D11_TOA",
+        parentId: "P3_D10_XUAN",
+        gen: 11,
+        branch: "Phái Ba",
+        order: 1,
+        name: "CAO VĂN TÒA",
+        alias: "",
+        birth: "Sinh ngày 01 tháng 7 năm Kỷ Hợi (1958) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Tô Thị Phước (sinh năm Canh Sửu 1960 tại Bình Quế, Thăng Bình)"],
+        childrenSummary: ["1. Cao Văn Cao", "2. Cao Thị Thanh", "3. Cao Thị Nhân"],
+        note: "Trang 142: Con ông Cao Văn Xuân và Bà Nguyễn Thị Giai."
+      },
+      {
+        id: "P4_D11_MINH",
+        parentId: "P4_D10_CONG",
+        gen: 11,
+        branch: "Phái Tư",
+        order: 3,
+        name: "CAO VĂN MINH",
+        alias: "",
+        birth: "Sinh ngày 27 tháng 11 năm Nhâm Dần (1961) tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Nguyễn Thị Điều (sinh năm 1966 tại làng Cân Xá, Bình Quế, Thăng Bình)"],
+        childrenSummary: [],
+        note: "Trang 149: Con ông Cao Văn Công (Thông) và Bà Nguyễn Thị Mai."
+      },
+      {
+        id: "P5_D11_DUNG",
+        parentId: "P5_D10_TANNGOC",
+        gen: 11,
+        branch: "Phái Năm",
+        order: 2,
+        name: "CAO VĂN DŨNG",
+        alias: "",
+        birth: "Sinh tại làng Đông Mỹ, Thăng Bình, Quảng Nam",
+        death: "",
+        grave: "",
+        status: "",
+        spouses: ["Bùi Thị An (quê Đông Thừa, Bình Quế, Thăng Bình)"],
+        childrenSummary: ["1. Cao Văn Sỹ"],
+        note: "Trang 158: Con ông Cao Văn Tấn Ngọc và Bà Huỳnh Thị Khứu."
+      }
+
+      // >>> [DÁN THÊM CÁC ĐỜI MỚI BỔ SUNG NGAY PHÍA TRÊN DÒNG NÀY] <<<
+    ];
+
+    /* ============================================================================
+       DỮ LIỆU 5 PHỤ TRANG NGUYÊN BẢN (TRANG 24-25, 34-35, 47-49, 66-67, 87B)
+       ============================================================================ */
+    const APPENDICES_DATA = {
+      1: {
+        title: "Phụ trang 1: Đệ Tứ Thế Tổ sinh hạ (Đời 5 - Trang 24–25)",
+        desc: "Quý ông Bà được liệt kê trong trang này do quý ông Đệ Tứ Thế Tổ sinh hạ, nhưng không thấy đường dây rõ ràng nên xếp thứ tự từ Phái trên đến Phái dưới để truy niệm (98 vị).",
+        items: [
+          "1. Cao Thị Định", "2. Cao Thị Yết", "3. Cao Văn Chiêm", "4. Cao Văn Côn", "5. Cao Ngọc Đẳng",
+          "6. Cao Viết Nguyệt", "7. Cao Viết Nhuệ", "8. Cao Văn Sách", "9. Cao Văn Lương", "10. Cao Văn Đề",
+          "11. Cao Văn Cẩm", "12. Cao Văn Kiệt", "13. Cao Văn Huỳnh", "14. Cao Văn Cao", "15. Cao Văn Đống",
+          "16. Cao Văn Lâu", "17. Cao Văn Bạm", "18. Cao Văn Sơn", "19. Cao Văn Đột", "20. Cao Văn Thông",
+          "21. Cao Văn Lậu", "22. Cao Thị Hoàng", "23. Cao Thị Lùng", "24. Cao Thị Cẩm", "25. Cao Thị Lớn",
+          "26. Cao Thị Nhơn", "27. Cao Thị Tuyết", "28. Cao Thị Thôi", "29. Cao Văn Đông", "30. Cao Văn Giác",
+          "31. Cao Thị Dung", "32. Cao Thị Cử", "33. Cao (Vô danh)", "34. Cao Thị Nhứt", "35. Cao Văn ...",
+          "36. Cao Văn Ngọt", "37. Cao Văn Khoa", "38. Cao Văn Cuộc", "39. Cao Thị Đảng", "40. Cao Văn Lộng (phối Triệu Thị ...)",
+          "41. Cao Thị Đàm", "42. Cao Thị Chỉ", "43. Cao (Sút hồn)", "44. Cao Văn Đô", "45. Cao Văn Đốc",
+          "46. Cao Văn Cao", "47. Cao Văn ...", "48. Cao Văn ...", "49. Cao Thị Hạnh", "50. Cao Thị Chim",
+          "51. Cao Thị Dư", "52. Cao Thị Mưu", "53. Cao Văn Chí", "54. Cao Văn Trinh", "55. Cao Văn Cầm",
+          "56. Cao Thị Thuận", "57. Cao Văn Biệt (Trường Sa)", "58. Cao Thị ...", "59. Cao Văn ...", "60. Cao Thị Tiết",
+          "61. Cao Thị Hưu", "62. Cao Thị Bẩn", "63. Cao Thị Liệu", "64. Cao Thị Loạn", "65. Cao Thị Đinh",
+          "66. Cao Thị Khía", "67. Cao Thị Đảng", "68. Cao Thị Câu", "69. Cao Thị Ba", "70. Cao Thị Bán",
+          "71. Cao Thị Khoan", "72. Cao Thị Lánh", "73. Cao Thị Chữ", "74. Cao Thị Trường", "75. Cao Thị Điều",
+          "76. Cao Thị Đồng", "77. Cao Thị Nghiệm", "78. Cao Thị Loài", "79. Cao Thị ...", "80. Cao Thị Lọc",
+          "81. Cao Văn Đã", "82. Cao Văn Vũ", "83. Cao Văn Mâu", "84. Cao Văn Bảo", "85. Cao Văn Hi",
+          "86. Cao Văn Cáng", "87. Cao Văn Bình", "88. Cao (Vô danh)", "89. Cao Văn Điều", "90. Cao Văn Hào",
+          "91. Cao (Vô danh)", "92. Cao Thị Tố", "93. Cao (Sút hồn)", "94. Cao Văn Phát", "95. Cao Thị Gương",
+          "96. Cao Thị Mười", "97. Cao Thị Trường", "98. Cao (Bất thức danh)"
+        ]
+      },
+      2: {
+        title: "Phụ trang 2: Đệ Ngũ Thế Tổ sinh hạ (Đời 6 - Trang 34–35)",
+        desc: "Quý ông Bà do Đệ Ngũ Thế Tổ sinh hạ nhưng chưa rõ vị nào sinh hạ trực tiếp (139 vị).",
+        items: [
+          "1–13. (Các vị đầu danh sách)", "14. Cao Văn Chung", "15. Cao Văn Tú", "16. Cao Văn Cấm",
+          "17. Cao Văn Ngoạn", "18. Cao Văn Biên", "19. Cao Văn Chuy", "20. Cao Văn Côn", "21. Cao Văn Li",
+          "22. Cao Văn Mạnh", "23. Cao Văn Khuông", "24. Cao Văn Việt", "25. Cao Văn Nhiều", "26. Cao Văn Khuynh",
+          "27. Cao Văn Khi", "28. Cao Văn Giao", "29. Cao Văn ...", "30. Cao Văn Đoan", "31. Cao Văn Song",
+          "32. Cao Văn Chiêm", "33. Cao Văn Khái", "34. Cao Văn ...", "35. Cao Văn Dâm", "36. Cao Văn Quy",
+          "37. Cao Thị Bạc", "38. Cao Thị Khuyến", "39. Cao Thị Liên", "40. Cao Thị Tiên", "41. Cao Văn Chuộc",
+          "42. Cao Văn Bình", "43. Cao Văn Mông", "44. Cao Văn Bạn", "45. Cao Ngọc Chánh", "46. Cao Ngọc Song",
+          "47. Cao Văn Thiết", "48. Cao Văn Truyền", "49. Cao Văn Thông", "50. Cao Văn Hân", "51. Cao Văn Bành",
+          "52. Cao Văn Bút", "53. Cao Thị Hội", "54. Cao Văn Ban", "55. Cao Văn Ơn", "56. Cao Thị Biểu",
+          "57. Cao Thị Miêu", "58. Cao Văn Cánh", "59. Cao Thị Loan", "60. Cao Thị Điều", "61. Cao Thị Lâu",
+          "62. Cao Thị Tình", "63. Cao Thị Thức", "64. Cao Thị Thao", "65. Cao Thị ...", "66. Cao Thị Hiện",
+          "67. Cao Thị Tầm", "68. Cao Thị Điều", "69. Cao (Vô danh)", "70. Cao (Vô danh)", "71. Cao Thị Đạo",
+          "72. Cao Thị Chữa", "73. Cao Thị Ngak", "74. Cao Thị Cần", "75. Cao (Vô danh)", "76. Cao Thị Củ",
+          "77. Cao Thị Me", "78. Cao Thị Dật", "79. Cao Thị Màng", "80. Cao Thị Cổng", "81. Cao Thị Sưu",
+          "82. Cao Thị The", "83. Cao Thị Xuất", "84. Cao Thị Trí", "85. Cao (Sút hồn)", "86. Cao Thị Chiếu",
+          "87. Cao Văn Giẳng", "88. Cao Văn Hai", "89. Cao Thị Yếu (Thận mục)", "90. Cao Thị Tiể", "91. Cao Thị Lý",
+          "92. Cao Văn Hỏi", "93. Cao Văn Xứ", "94. Cao Văn Xã", "95. Cao Thị Hưng", "96. Cao Thị ...",
+          "97. Cao Thị ...", "98. Cao Thị ...", "99. Cao Thị Đề", "100. Cao Văn Hy", "101. Cao Thị ...",
+          "102. Cao Thị Cài", "103. Cao Thị Quả", "104. Cao Văn Xích", "105. Cao Văn Đước", "106. Cao Văn Mai",
+          "107. Cao Văn ...", "108. Cao Thị Phạn", "109. Cao Thị ...", "110. Cao Văn Câu", "111. Cao Thị Diên",
+          "112. Cao Thị Hề", "113. Cao Văn Thư", "114. Cao Thị Đồn", "115. Cao Thị Minh", "116. Cao Thị Nhỏ",
+          "117. Cao Thị ...", "118. Cao Thị Đệ", "119. Cao Văn Sai (phối Đoàn Thị ...)", "120. Cao Văn Chuyền",
+          "121. Cao Văn Hải", "122. Cao Thị Khó", "123. Cao Văn Sơ (phối Trương Thị Chư)", "124. Cao ...",
+          "125. Cao Thị Phôn (phối ... Thị Đố)", "126. Cao Thị Tàu", "127. Cao Thị Mông", "128. Cao Thị Mạch",
+          "129. Cao Thị ...", "130. Cao Văn Đến", "131. Cao Thị ...", "132. Cao Văn Đổng", "133. Cao Văn Lạc (phối Võ Thị ...)",
+          "134. Cao Văn ...", "135. Cao Văn Xà", "136. Cao Thị ...", "137. Cao Thị ...", "138. Cao Thị ...", "139. Cao ..."
+        ]
+      },
+      3: {
+        title: "Phụ trang 3: Đệ Lục Thế Tổ sinh hạ (Đời 7 - Trang 47–49)",
+        desc: "Quý vị do Đệ Lục Thế Tổ sinh hạ nhưng đường dây không rõ ràng (173 vị), kèm danh sách Tùng phu và nhánh ông Cao Văn Viết.",
+        extraNotes: [
+          "Tùng phu: Trần Thị An, Phan Thị Ơi, Đỗ Thị Ái, Phạm Thị Uỷ, Trần Thị Đột, Trần Thị Ngăn, Nguyễn Thị Hiền, Ngô Thị Lan, Nguyễn Thị Châu, Nguyễn Thị Sắc, Ngô Thị Long, Ngô Thị Lai, Phan Thị Lại, Ngô Thị Động, Tôn Thị Thế, Nguyễn Thị Vật, Triệu Thị Niệm...",
+          "Nhánh Ông Cao Văn Viết sinh hạ: 1. Cao Thị Lẫn; 2. Cao Thị Chinh; 3. Cao Văn Cao (sinh hạ: 1. Cao Thị Cứ; 2. Cao Văn Phẩm; 3. Cao ...; 4. Cao Thị Cúc; 5. Cao Thị Đình; 6. Cao ...)."
+        ],
+        items: [
+          "1. Cao Thị Liêu", "2. Cao Thị Vi", "3. Cao (Sút tiền)", "4. Cao Thị Tập", "5. Cao Thị Kính",
+          "6. Cao Thị Đô", "7. Cao Thị Kim", "8. Cao Thị Trị", "9. Cao Thị Bình", "10. Cao Thị Đơ",
+          "11. Cao Thị Sửu", "12. Cao Thị Lông", "13. Cao Văn Ngạn", "14. Cao Văn Dày", "15. Cao Văn Đô",
+          "16. Cao Văn My", "17. Cao Văn Xuyên", "18. Cao Văn Huệ", "19. Cao Văn Cấm", "20. Cao Văn Chu",
+          "21. Cao Văn Chí", "22. Cao Thị Trụ", "23. Cao Thị Thụy", "24. Cao Văn Trà", "25. Cao (Vô danh)",
+          "26. Cao Văn Tính", "27. Cao Văn Diệu", "28. Cao Thị Bốn", "29. Cao Thị Bảy", "30. Cao Văn ...",
+          "31. Cao Văn Định", "32. Cao Văn Bông", "33. Cao Văn ...", "34. Cao Văn Đẳng", "35. Cao Văn Dinh",
+          "36. Cao Văn Mê", "37. Cao Văn Ba", "38. Cao Văn Chài", "39. Cao Văn Lực", "40. Cao Văn Đuốc",
+          "41. Cao Văn Hoàn", "42. Cao Ngọc Chi", "43. Cao Ngọc Triết", "44. Cao Văn Ba", "45. Cao (Vô danh)",
+          "46. Cao (Sút hồn)", "47. Cao Văn Ấn", "48. Cao Văn Lân", "49. Cao (Vô danh)", "50. Cao Văn Minh",
+          "51. Cao Văn Lai", "52. Cao Văn Ruộng", "53. Cao (Vô danh)", "54. Cao (Vô danh)", "55. Cao Văn Ngọt",
+          "56. Cao Văn Biên", "57. Cao Văn Hóa", "58. Cao Văn Long", "59. Cao Văn Biên", "60. Cao (Vô danh)",
+          "61. Cao Văn Hơn", "62. Cao Văn Bạn", "63. Cao Văn Lương", "64. Cao Văn Hiểu", "65. Cao Văn Điểm",
+          "66. Cao (Vô danh)", "67. Cao Văn Choa", "68. Cao Văn Cung", "69. Cao Văn Bang", "70. Cao Văn Nhưng",
+          "71. Cao Văn Kiên", "72. Cao Văn Thẩm", "73. Cao (Vô danh)", "74. Cao Văn Đồ", "75. Cao Văn ...",
+          "76. Cao Văn Hoàng", "77. Cao Văn My", "78. Cao Văn Bê", "79. Cao Văn Lai", "80. Cao Văn Trường",
+          "81. Cao Văn Hây", "82. Cao (Vô danh)", "83. Cao Văn Củ", "84. Cao Văn Luận", "85. Cao Thị (Vô danh)",
+          "86. Cao Thị Tuyên", "87. Cao ...", "88. Cao Văn Chương (Thận mục)", "89. Cao Thị Lương",
+          "90. Cao Văn Chư", "91. Cao (Sút tiền)", "92. Cao Văn Chương", "93. Cao Thị Lịch", "94. Cao Thị Hiên / Cao Thị Sa",
+          "95. Cao (Vô danh)", "96. Cao Thị Phong", "97. Cao Thị Bố", "98. Cao Thị Thái", "99. Cao (Sút hồn)",
+          "100. Cao Thị Điều", "101. Cao Thị Thường", "102. Cao Thị ...", "103. Cao Thị Ngọt", "104. Cao Thị Quy",
+          "105. Cao Thị Phận", "106. Cao Thị Vịnh", "107. Cao (Sút hồn)", "108. Cao Thị Điểu", "109. Cao Thị Lên",
+          "110. Cao (Vô danh)", "111. Cao Thị Triết", "112. Cao Thị Mơ", "113. Cao Thị Đây", "114. Cao Thị Đoan",
+          "115. Cao Thị Phím", "116. Cao Thị Bế", "117. Cao Thị Hoạc", "118. Cao (Sút hồn)", "119. Cao Thị Thiệp",
+          "120. Cao (Vô danh)", "121. Cao Thị Ba", "122. Cao Thị Biên", "123. Cao Thị Liêm", "124. Cao Thị Kế",
+          "125. Cao (Sút tiền)", "126. Cao Thị Cá", "127. Cao Thị Cô", "128. Cao Thị Thi", "129. Cao Thị Thiên",
+          "130. Cao Thị Cân", "131. Cao Thị Văn", "132. Cao Thị Cương", "133. Cao Thị Soạn", "134. Cao Thị Đạm",
+          "135. Cao Thị Núi", "136. Cao Thị Quân", "137. Cao Thị Miết (Thận mục)", "138. Cao (Sút hồn)",
+          "139. Cao Thị Lên", "140. Cao Thị Bình", "141. Cao Thị Cơ", "142. Cao Thị ...", "143. Cao Thị Soán",
+          "144. Cao Thị Trà", "145. Cao Thị Và", "146. Cao Thị Định (Trường Sa)", "147. Cao Thị Hằng",
+          "148. Cao Thị Phận", "149. Cao Thị Trực", "150. Cao Văn Linh", "151. Cao Văn ...", "152. Cao (Vô danh)",
+          "153. Cao Thị Lộ", "154. Cao Thị (Vô danh)", "155. Cao Thị ...", "156. Cao Thị Ng...", "157. Cao Thị Vịnh",
+          "158. Cao Văn Yên", "159. Cao Văn Ký", "160. Cao Văn Uy", "161. Cao Thị Đồn", "162. Cao Thị Điều",
+          "163. Cao Văn Nghi", "164. Cao Văn Bính", "165. Cao Văn Châm", "166. Cao Văn Xâu", "167. Cao Văn Thanh",
+          "168. Cao Văn ...", "169. Cao Văn Căn (phối Bà Phan Thị Đốc)", "170. Cao Văn Ngạn", "171. Cao Văn Tây",
+          "172. Cao Thị Có", "173. Cao (Vô danh)"
+        ]
+      },
+      4: {
+        title: "Phụ trang 4: Đệ Thất Thế Tổ sinh hạ (Đời 8 - Trang 66–67)",
+        desc: "Quý ông Bà do quý ông Đệ Thất Thế Tổ sinh hạ nhưng đường dây không rõ ràng (178 vị).",
+        items: [
+          "1. Cao Văn Bạn", "2. Cao Văn Da", "3. Cao Văn Châu (phối Trương Thị Xuân)", "4. Cao Văn Cam",
+          "5. Cao (Vô danh)", "6. Cao (Sút hồn)", "7. Cao Văn Chánh", "8. Cao Văn Thời", "9. Cao Văn (Vô danh)",
+          "10. Cao Thị Tứ", "11. Cao Văn Ẩn", "12. Cao Văn Hoài", "13. Cao Văn Trọng", "14. Cao Văn Lành",
+          "15. Cao Văn Trí", "16. Cao Văn Mạnh", "17. Cao Thị Chánh", "18. Cao Thị Trước", "19. Cao Thị Chiếu",
+          "20. Cao Thị Xa", "21. Cao Văn ...", "22. Cao Thị Ghế", "23. Cao Thị Đỏ", "24. Cao Thị ...",
+          "25. Cao Văn Lanh", "26. Cao Thị Lục", "27. Cao Thị Giáo", "28. Cao Thị Xứ", "29. Cao Thị Lò",
+          "30. Cao Thị Chép", "31. Cao (Vô danh)", "32. Cao Thị Truyền", "33. Cao Thị Tình", "34. Cao (Sút hồn)",
+          "35. Cao Thị Bạn", "36. Cao Thị Giai", "37. Cao Thị Y", "38. Cao Thị Nguy", "39. Cao Thị Hội",
+          "40. Cao Thị ...", "41. Cao Thị Khó", "42. Cao Thị Phạn", "43. Cao Thị Càn", "44. Cao Thị Lỗi",
+          "45. Cao Thị Miên", "46. Cao Thị Sum", "47. Cao Thị Mỹ", "48. Cao Thị Thiết", "49. Cao Thị Phôi",
+          "50. Cao Thị Nghiêm", "51. Cao Thị Thạnh", "52. Cao Thị Uỷ", "53. Cao Văn Ân", "54. Cao Văn ...",
+          "55. Cao Văn Chức", "56. Cao (Sút tiền)", "57. Cao (Vô danh)", "58. Cao Thị Dư", "59. Cao Thị Bế",
+          "60. Cao (Vô danh)", "61. Cao Thị Vận", "62. Cao Thị Hinh", "63. Cao Thị Điều", "64. Cao Ngọc ...",
+          "65. Cao Ngọc ...", "66. Cao Ngọc Đường", "67. Cao Ngọc Thơn", "68. Cao Ngọc Điều", "69. Cao Thị Điển",
+          "70. Cao Thị Tình", "71. Cao Thị Đội", "72. Cao Thị Cán", "73. Cao Thị Nghỉ", "74. Cao Thị Lùng",
+          "75. Cao Văn Đê", "76. Cao Thị Cụng", "77. Cao Văn Châu", "78. Cao Văn Yết", "79. Cao Văn Độc",
+          "80. Cao Văn Nga", "81. Cao Văn Phi", "82. Cao Thị Oáng", "83. Cao Thị Thiệu", "84. Cao Thị Lổ",
+          "85. Cao Thị Ve", "86. Cao Thị Rộng", "87. Cao Thị Xưởng", "88. Cao Văn Hàn", "89. Cao Văn Nghiệm",
+          "90. Cao Văn Mai", "91. Cao Thị Thôn", "92. Cao (Sút tôn)", "93. Cao Văn Quy", "94. Cao (Sút hồn)",
+          "95. Cao (Vô danh)", "96. Cao Văn Giảng", "97. Cao Văn Nai", "98. Cao (Vô danh)", "99. Cao (Sút tiền)",
+          "100. Cao Văn Tơ", "101. Cao (Vô danh)", "102. Cao Văn Được", "103. Cao Thị Mông", "104. Cao Thị Trường",
+          "105. Cao (Vô danh)", "106. Cao Văn Bông", "107. Cao Ngọc (Vô danh)", "108. Cao Thị Hiếm", "109. Cao Thị ...",
+          "110. Cao Ngọc Điền", "111. Cao Ngọc (Vô danh)", "112. Cao (Vô danh)", "113. Cao Thị Thuận",
+          "114. Cao Thị Được", "115. Cao Thị Đại", "116. Cao Ngọc Trí", "117. Cao Thị Vinh", "118. Cao Văn ...",
+          "119. Cao Thị Giao", "120. Cao Thị ...", "121. Cao Văn Đốc", "122. Cao Văn Chích", "123. Cao Thị Tốt",
+          "124. Cao Thị Điều", "125. Cao Văn Luân", "126. Cao Thị ...", "127. Cao Thị Lộng", "128. Cao Thị Định",
+          "129. Cao Quý", "130. Cao (Vô danh)", "131. Cao Văn Hồng", "132. Cao Văn Châm", "133. Cao Văn Huê",
+          "134. Cao Văn Tích", "135. Cao Thị Long", "136. Cao Thị Nhảy", "137. Cao Thị Song", "138. Cao Thị Thảo",
+          "139. Cao Thị Biển", "140. Cao Ngọc Lý", "141. Cao Thị Lý", "142. Cao Thị Âu", "143. Cao Ngọc Kiệt",
+          "144. Cao Thị ...", "145. Cao Thị Mật", "146. Cao ...", "147. Cao (Vô danh)", "148. Cao Thị ...",
+          "149. Cao ...", "150. Cao Thị Chế", "151. Cao Thị Ứng", "152. Cao ...", "153. Cao Văn Bụng",
+          "154. Cao Văn Quân", "155. Cao Văn ...", "156. Cao Thị Triết", "157. Cao Thị Chiêu", "158. Cao ...",
+          "159. Cao Văn Xương", "160. Cao Văn Hoán", "161. Cao Thị Tứ", "162. Cao (Sút hồn)", "163. Cao Thị Lần",
+          "164. Cao Thị Nguyệt", "165. Cao Thị Chuối (cầu khu)", "166. Cao Thị Tuất", "167. Cao Thị Phận",
+          "168. Cao Thị Nghi", "169. Cao Văn Hiên", "170. Cao Văn Khai", "171. Cao Văn Chiêm", "172. Cao Văn Cải",
+          "173. Cao Văn Cung", "174. Cao Thị Tai", "175. Cao Văn ...", "176. Cao Văn Trai", "177. Cao Văn Vĩnh",
+          "178. Cao (Vô danh)"
+        ]
+      },
+      5: {
+        title: "Phụ trang 5: Đệ Bát Thế Tổ Phụ trang (Đời 9 - Trang 87B)",
+        desc: "Không rõ vị nào ở Đệ Thất Thế Tổ sinh ra quý vị này, gồm các nhánh nối tiếp từ Cao Văn Môn, Cao Văn Học, Cao Văn Càn, Cao Văn Dân, Cao Văn Đông.",
+        items: [
+          "Nhánh 1: Cao Văn Môn (phối Cao Thị Độ) ➔ Cao Thị Khôi, Cao Thị ...",
+          "Nhánh 2: Cao Văn Học (phối Nguyễn Thị Yên) ➔ Cao Thị Nghệ, Cao Thị Tơ, Cao Thị Thoa, Cao Văn Doãn (phối Nguyễn Thị Giang)",
+          "Nhánh 3: Cao Văn Càn (phối Cao Thị Đông) ➔ 1. Cao Thị Giây; 2. Cao Thị Đèo; 3. Cao Văn Liêu; 4. Cao Văn Mỏ; 5. Cao (Sút hồn); 6. Cao Thị Y; 7. Cao Thị Nguy; 8. Cao Thị Luận",
+          "Nhánh 4: Cao Văn Dân (phối Cao Thị Quế) ➔ Cao Văn Phú (phối ... Thị Dâu) ➔ 3. Cao Văn ...; 4. Cao Văn Mơ; 5. Cao Thị Chiên; 6. Cao Thị Hồi",
+          "Nhánh 5: Cao Văn Đông ➔ 1. Cao Văn Trường; 2. Cao Thị Lưới"
+        ]
+      }
+    };
+
+    /* ============================================================================
+       KHỞI TẠO CẤU TRÚC CÂY & INDEX TÌM KIẾM
+       ============================================================================ */
+    const nodeMap = {};
+    let searchableRecords = [];
+
+    function rebuildTreeIndex() {
+      Object.keys(nodeMap).forEach(k => delete nodeMap[k]);
+      RAW_NODES.forEach(n => {
+        nodeMap[n.id] = { ...n, children: [] };
+      });
+      RAW_NODES.forEach(n => {
+        if (n.parentId && nodeMap[n.parentId]) {
+          nodeMap[n.parentId].children.push(nodeMap[n.id]);
+        }
+      });
+      // Sort children by order
+      Object.values(nodeMap).forEach(n => {
+        n.children.sort((a, b) => (a.order || 99) - (b.order || 99));
+      });
+
+      _cachedCompareCandidates = null;
+      searchableRecords = [];
+      RAW_NODES.forEach(n => {
+        const parentName = n.parentId && nodeMap[n.parentId] ? nodeMap[n.parentId].name : "Gốc Thủy Tổ";
+        const spouseText = (n.spouses && n.spouses.length) ? n.spouses.join(", ") : "";
+        const childrenText = (n.childrenSummary && n.childrenSummary.length) ? n.childrenSummary.join("; ") : "";
+        const fullNorm = removeVietnameseTones(`${n.name} ${n.alias || ""} ${spouseText} ${childrenText} ${n.branch} doi ${n.gen}`);
+
+        searchableRecords.push({
+          type: "TREE_NODE",
+          id: n.id,
+          name: n.name,
+          gen: n.gen,
+          branch: n.branch,
+          subtitle: `${GEN_LABELS[n.gen]} • ${n.branch} • Cha: ${parentName}`,
+          spouses: spouseText,
+          searchNorm: fullNorm
+        });
+      });
+
+      Object.entries(APPENDICES_DATA).forEach(([appNum, appObj]) => {
+        const genNum = Number(appNum) + 4;
+        appObj.items.forEach((rawItem, idx) => {
+          searchableRecords.push({
+            type: "APPENDIX",
+            id: `APP_${appNum}_${idx}`,
+            appendixNum: Number(appNum),
+            name: rawItem,
+            gen: genNum,
+            branch: `Phụ trang ${appNum}`,
+            subtitle: `${GEN_LABELS[genNum]} • Phụ trang ${appNum} (Chưa rõ đường dây sinh hạ)`,
+            spouses: "",
+            searchNorm: removeVietnameseTones(`${rawItem} phu trang ${appNum}`)
+          });
+        });
+      });
+
+      populateAdminParentSelect();
+    }
+
+    function removeVietnameseTones(str) {
+      if (!str) return "";
+      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D").toLowerCase().trim();
+    }
+
+    /* ============================================================================
+       TRẠNG THÁI & VẼ CÂY PHẢ HỆ CHÍNH
+       ============================================================================ */
+    let currentView = "tree";
+    let collapsedIds = new Set();
+    let focusMode = null;
+    let currentScale = 0.85;
+    let currentAppendixTab = 1;
+    let comparePersons = { A: null, B: null, C: null };
+    let isThirdSlotOpen = false;
+
+    function initDefaultCollapsed() {
+      collapsedIds.clear();
+      Object.values(nodeMap).forEach(n => {
+        if (n.gen >= 5 && n.children && n.children.length > 0) {
+          collapsedIds.add(n.id);
+        }
+      });
+    }
+
+    function renderTree() {
+      const canvas = document.getElementById("treeCanvas");
+      const branchFilter = document.getElementById("branchFilter").value;
+      const genFilter = document.getElementById("genFilter").value;
+
+      function buildNodeHTML(node) {
+        if (!focusMode) {
+          if (branchFilter !== "ALL") {
+            if (branchFilter === "Gốc" && node.gen > 3) return "";
+            if (branchFilter !== "Gốc" && node.gen >= 4 && node.branch !== branchFilter) return "";
+          }
+          if (genFilter !== "ALL" && node.gen > Number(genFilter)) return "";
+        } else {
+          if (focusMode.type === "LINEAGE") {
+            if (!focusMode.ancestorIds.has(node.id) && !focusMode.descendantIds.has(node.id)) return "";
+          } else if (focusMode.type === "COMPARE") {
+            if (!focusMode.visibleIds.has(node.id)) return "";
+          }
+        }
+
+        const hasChildren = node.children && node.children.length > 0;
+        const isCollapsed = !focusMode && collapsedIds.has(node.id);
+        const isTarget = focusMode
+          ? (focusMode.type === "LINEAGE" ? node.id === focusMode.targetId : focusMode.targetIds.has(node.id))
+          : (genFilter !== "ALL" && node.gen === Number(genFilter));
+
+        const spouseHTML = node.spouses && node.spouses.length > 0
+          ? `<div class="node-spouse"><strong>Phối:</strong> ${node.spouses.join("; ")}</div>`
+          : "";
+        const statusHTML = node.status ? `<span class="badge-status">${node.status}</span>` : "";
+        const kidsBadge = node.childrenSummary && node.childrenSummary.length > 0
+          ? `<span class="badge-kids">Sinh hạ: ${node.childrenSummary.length}</span>`
+          : "";
+
+        const toggleBtn = hasChildren && !focusMode
+          ? `<button class="collapse-btn" onclick="event.stopPropagation(); toggleCollapse('${node.id}')" title="${isCollapsed ? 'Mở rộng nhánh con' : 'Thu gọn nhánh con'}">${isCollapsed ? '+' + node.children.length : '−'}</button>`
+          : "";
+
+        let cardCls = "node-card";
+        if (node.gen === 0) cardCls += " is-root";
+        if (isTarget) cardCls += " is-focus-target";
+
+        let childrenHTML = "";
+        if (hasChildren && !isCollapsed) {
+          const kids = node.children.map(c => buildNodeHTML(c)).filter(Boolean);
+          if (kids.length > 0) childrenHTML = `<ul>${kids.join("")}</ul>`;
+        }
+
+        return `
+          <li>
+            <div class="${cardCls}" onclick="openDetailDrawer('${node.id}')">
+              <div class="node-meta">
+                <span class="badge-gen">Đời ${node.gen} • ${node.branch}</span>
+                ${kidsBadge}
+              </div>
+              <div class="node-name">${node.name}</div>
+              ${spouseHTML}
+              ${statusHTML}
+              ${toggleBtn}
+            </div>
+            ${childrenHTML}
+          </li>
+        `;
+      }
+
+      const startNode = (focusMode && focusMode.type === "COMPARE" && nodeMap[focusMode.lcaId])
+        ? nodeMap[focusMode.lcaId]
+        : nodeMap["D0_LE"];
+
+      canvas.innerHTML = `<ul>${buildNodeHTML(startNode)}</ul>`;
+      applyZoomTransform();
+    }
+
+    function toggleCollapse(id) {
+      if (collapsedIds.has(id)) collapsedIds.delete(id);
+      else collapsedIds.add(id);
+      renderTree();
+    }
+
+    function expandAllNodes() {
+      collapsedIds.clear();
+      renderTree();
+      showToast("Đã mở rộng toàn bộ các đời và nhánh phả hệ");
+    }
+
+    function collapseToBranches() {
+      initDefaultCollapsed();
+      renderTree();
+      showToast("Đã thu gọn các nhánh từ Đời 5 trở xuống");
+    }
+
+    function applyZoomTransform() {
+      document.getElementById("treeCanvas").style.transform = `scale(${currentScale})`;
+    }
+
+    function zoomTree(delta) {
+      currentScale = Math.min(1.5, Math.max(0.35, Number((currentScale + delta).toFixed(2))));
+      applyZoomTransform();
+    }
+
+    function fitTreeToScreen() {
+      currentScale = window.innerWidth < 640 ? 0.55 : 0.8;
+      applyZoomTransform();
+      const vp = document.getElementById("treeViewport");
+      vp.scrollTo({ top: 0, left: Math.max(0, (vp.scrollWidth - vp.clientWidth) / 2), behavior: "smooth" });
+    }
+
+    // Drag to pan
+    (function setupPan() {
+      const vp = document.getElementById("treeViewport");
+      let isDown = false, startX, startY, sLeft, sTop;
+      vp.addEventListener("mousedown", e => {
+        if (e.target.closest(".node-card") || e.target.closest("button")) return;
+        isDown = true; startX = e.pageX - vp.offsetLeft; startY = e.pageY - vp.offsetTop;
+        sLeft = vp.scrollLeft; sTop = vp.scrollTop;
+      });
+      vp.addEventListener("mouseleave", () => isDown = false);
+      vp.addEventListener("mouseup", () => isDown = false);
+      vp.addEventListener("mousemove", e => {
+        if (!isDown) return;
+        e.preventDefault();
+        vp.scrollLeft = sLeft - ((e.pageX - vp.offsetLeft) - startX) * 1.2;
+        vp.scrollTop = sTop - ((e.pageY - vp.offsetTop) - startY) * 1.2;
+      });
+    })();
+
+    /* ============================================================================
+       TÌM KIẾM GỐC GÁC, BÀ CON (TRỤC DỌC HUYẾT THỐNG)
+       ============================================================================ */
+    const searchInput = document.getElementById("lineageSearchInput");
+    const searchDropdown = document.getElementById("searchDropdown");
+
+    searchInput.addEventListener("input", () => {
+      const q = removeVietnameseTones(searchInput.value);
+      document.getElementById("clearSearchBtn").style.display = q.length > 0 ? "block" : "none";
+      if (!q) {
+        searchDropdown.style.display = "none";
+        return;
+      }
+      const matches = searchableRecords.filter(r => r.searchNorm.includes(q)).slice(0, 25);
+      if (matches.length === 0) {
+        searchDropdown.innerHTML = `<div style="padding:12px; font-size:12.5px; color:var(--ink-muted); text-align:center;">Không tìm thấy thông tin phù hợp với "${searchInput.value}"</div>`;
+      } else {
+        searchDropdown.innerHTML = matches.map(m => `
+          <button class="search-item" onclick="selectSearchResult('${m.id}')">
+            <div>
+              <div style="font-weight:700; font-size:13px; color:var(--ink);">${m.name}</div>
+              <div style="font-size:11.5px; color:var(--ink-muted); margin-top:2px;">${m.subtitle}</div>
+              ${m.spouses ? `<div style="font-size:11px; color:#7A4B12; margin-top:2px;">Phối: ${m.spouses}</div>` : ""}
+            </div>
+            <span class="badge-gen" style="shrink:0;">${m.type === 'TREE_NODE' ? 'Xem trục dọc' : 'Phụ trang'}</span>
+          </button>
+        `).join("");
+      }
+      searchDropdown.style.display = "block";
+    });
+
+    document.addEventListener("click", e => {
+      if (!e.target.closest(".search-wrap")) searchDropdown.style.display = "none";
+      if (!e.target.closest(".compare-slot")) {
+        ["A", "B", "C"].forEach(s => {
+          const dd = document.getElementById(`compareDropdown${s}`);
+          if (dd) dd.style.display = "none";
+        });
+      }
+    });
+
+    function selectSearchResult(recordId) {
+      searchDropdown.style.display = "none";
+      const rec = searchableRecords.find(r => r.id === recordId);
+      if (!rec) return;
+      if (rec.type === "APPENDIX") {
+        switchView("appendix");
+        selectAppendixTab(rec.appendixNum);
+        document.getElementById("appendixSearchInput").value = rec.name.replace(/^\d+\.\s*/, "");
+        renderAppendices();
+        showToast(`Đã mở thông tin ${rec.name} tại Phụ trang ${rec.appendixNum}`);
+        return;
+      }
+      activateLineageFocus(recordId);
+    }
+
+    function activateLineageFocus(targetId) {
+      const target = nodeMap[targetId];
+      if (!target) return;
+
+      const ancestorChain = [];
+      const ancestorIds = new Set();
+      let curr = target;
+      while (curr) {
+        ancestorChain.unshift(curr);
+        ancestorIds.add(curr.id);
+        curr = curr.parentId ? nodeMap[curr.parentId] : null;
+      }
+
+      const descendantIds = new Set();
+      function collectDesc(n) {
+        descendantIds.add(n.id);
+        (n.children || []).forEach(c => collectDesc(c));
+      }
+      collectDesc(target);
+
+      focusMode = { type: "LINEAGE", targetId, ancestorIds, descendantIds };
+
+      document.getElementById("focusBadge").textContent = "Trục dọc huyết thống";
+      document.getElementById("focusBreadcrumb").innerHTML = ancestorChain.map(n =>
+        `<span style="${n.id === targetId ? 'color:var(--crimson); font-weight:700; text-decoration:underline;' : ''}">Đời ${n.gen}: ${n.name}</span>`
+      ).join(' <span style="color:var(--crimson); font-weight:700;">➔</span> ');
+
+      document.getElementById("focusBanner").style.display = "block";
+      document.getElementById("clearSearchBtn").style.display = "block";
+      searchInput.value = target.name;
+
+      switchView("tree");
+      renderTree();
+      fitTreeToScreen();
+      openDetailDrawer(targetId);
+    }
+
+    function clearLineageFocus() {
+      focusMode = null;
+      searchInput.value = "";
+      document.getElementById("clearSearchBtn").style.display = "none";
+      document.getElementById("focusBanner").style.display = "none";
+      renderTree();
+      if (currentView === "compact") renderCompactTree();
+    }
+
+    /* ============================================================================
+       NGĂN KÉO THÔNG TIN CHI TIẾT CÁ NHÂN
+       ============================================================================ */
+    function openDetailDrawer(nodeId) {
+      const node = nodeMap[nodeId];
+      if (!node) return;
+
+      document.getElementById("drawerGenBadge").textContent = `${GEN_LABELS[node.gen]} • ${node.branch}`;
+      document.getElementById("drawerName").textContent = node.name;
+
+      const lineage = [];
+      let curr = node;
+      while (curr) {
+        lineage.unshift(curr);
+        curr = curr.parentId ? nodeMap[curr.parentId] : null;
+      }
+
+      const parentNode = node.parentId ? nodeMap[node.parentId] : null;
+      const siblings = parentNode ? parentNode.children.filter(c => c.id !== node.id) : [];
+
+      document.getElementById("drawerBody").innerHTML = `
+        <div class="info-block">
+          <div class="info-block-title">Dòng truyền thừa từ Ngài Thủy Tổ</div>
+          <div style="display:flex; flex-wrap:wrap; align-items:center; gap:5px; font-size:12px;">
+            ${lineage.map(l => `
+              <span onclick="openDetailDrawer('${l.id}')" style="cursor:pointer; padding:3px 7px; border-radius:6px; ${l.id === node.id ? 'background:var(--crimson); color:#fff; font-weight:700;' : 'background:#fff; border:1px solid var(--border-gold);'}">
+                Đời ${l.gen}: ${l.name}
+              </span>
+            `).join('<span style="color:var(--gold); font-weight:700;">➔</span>')}
+          </div>
+        </div>
+
+        ${node.alias ? `
+          <div class="info-block" style="background:#FFF8EA;">
+            <div class="info-block-title">Danh tánh / Đạo hiệu / Liệt kê</div>
+            <div>${node.alias}</div>
+          </div>
+        ` : ""}
+
+        <div class="info-block" style="background:#fff;">
+          <div class="info-block-title">Thông Tin Thế Thứ & Tiểu Sử</div>
+          <div style="display:grid; gap:6px;">
+            <div><strong>Cha (Hệ trên):</strong> ${parentNode ? parentNode.name : "Đức Ngài Thủy Tổ"}</div>
+            <div><strong>Phái / Nhánh:</strong> ${node.branch} • ${GEN_LABELS[node.gen]}</div>
+            ${node.birth ? `<div><strong>Sinh:</strong> ${node.birth}</div>` : ""}
+            ${node.death ? `<div><strong>Tạ thế / Kỵ nhật:</strong> <span style="color:var(--crimson); font-weight:600;">${node.death}</span></div>` : ""}
+            ${node.grave ? `<div><strong>Phần mộ:</strong> ${node.grave}</div>` : ""}
+            ${node.status ? `<div><strong>Ghi chú hậu duệ:</strong> <span class="badge-status">${node.status}</span></div>` : ""}
+          </div>
+        </div>
+
+        <div class="info-block" style="background:#fff;">
+          <div class="info-block-title">Phối Ngẫu (Vợ / Chồng)</div>
+          ${node.spouses && node.spouses.length > 0
+            ? `<ul style="padding-left:18px; display:grid; gap:4px;">${node.spouses.map(s => `<li>${s}</li>`).join("")}</ul>`
+            : `<p style="color:var(--ink-muted); font-style:italic; font-size:12.5px;">Gia phả gốc không ghi tên phối ngẫu</p>`}
+        </div>
+
+        <div class="info-block" style="background:#fff;">
+          <div class="info-block-title">Danh Sách Sinh Hạ (${node.childrenSummary ? node.childrenSummary.length : 0})</div>
+          ${node.childrenSummary && node.childrenSummary.length > 0
+            ? `<ul style="list-style:none; display:grid; gap:5px;">${node.childrenSummary.map(c => `<li style="padding:6px 9px; background:var(--paper); border-radius:7px; border:1px solid #EFE4CE;">${c}</li>`).join("")}</ul>`
+            : `<p style="color:var(--ink-muted); font-style:italic; font-size:12.5px;">Không có ghi chép sinh hạ tiếp theo</p>`}
+
+          ${node.children && node.children.length > 0 ? `
+            <div style="margin-top:10px; padding-top:8px; border-top:1px solid var(--border-gold);">
+              <div style="font-size:11.5px; font-weight:700; color:#7A4B12; margin-bottom:6px;">Các nhánh con nối tiếp trên cây:</div>
+              <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                ${node.children.map(c => `<button class="btn btn-paper btn-sm" onclick="openDetailDrawer('${c.id}')">${c.name} ➔</button>`).join("")}
+              </div>
+            </div>
+          ` : ""}
+        </div>
+
+        ${siblings.length > 0 ? `
+          <div class="info-block" style="background:#fff;">
+            <div class="info-block-title">Anh chị em cùng nhánh trên cây</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              ${siblings.map(s => `<button class="btn btn-paper btn-sm" onclick="openDetailDrawer('${s.id}')">${s.name}</button>`).join("")}
+            </div>
+          </div>
+        ` : ""}
+
+        ${node.note ? `
+          <div class="info-block" style="background:#FFF8EA;">
+            <div class="info-block-title">Bút Tích Nguyên Bản Trong Gia Phả</div>
+            <p style="font-size:12.5px;">${node.note}</p>
+          </div>
+        ` : ""}
+      `;
+
+      document.getElementById("drawerFocusBtn").onclick = () => {
+        closeDetailDrawer();
+        activateLineageFocus(node.id);
+      };
+      document.getElementById("drawerCompareBtn").onclick = () => {
+        closeDetailDrawer();
+        openCompareModal();
+        const rec = ensureCompareCandidates().find(r => r.id === node.id);
+        if (rec) {
+          const targetSlot = !comparePersons.A ? "A" : (!comparePersons.B ? "B" : "A");
+          pickComparePerson(targetSlot, rec);
+        }
+      };
+
+      document.getElementById("detailOverlay").style.display = "block";
+      document.getElementById("detailDrawer").classList.add("open");
+    }
+
+    function closeDetailDrawer() {
+      document.getElementById("detailOverlay").style.display = "none";
+      document.getElementById("detailDrawer").classList.remove("open");
+    }
+
+    /* ============================================================================
+       SO SÁNH MỐI QUAN HỆ 2 HOẶC 3 ĐỐI TƯỢNG (DẠNG CÂY + KẾT LUẬN GỐC GÁC, XƯNG HÔ)
+       ============================================================================ */
+    function openCompareModal() {
+      document.getElementById("compareModal").style.display = "flex";
+    }
+
+    function closeCompareModal() {
+      document.getElementById("compareModal").style.display = "none";
+    }
+
+    function clearCompareSlot(slot) {
+      comparePersons[slot] = null;
+      const inp = document.getElementById(`compareInput${slot}`);
+      const lbl = document.getElementById(`compareSelected${slot}`);
+      const dd = document.getElementById(`compareDropdown${slot}`);
+      if (inp) inp.value = "";
+      if (lbl) lbl.textContent = slot === "C" ? "Tùy chọn đối tượng C" : `Chưa chọn đối tượng ${slot}`;
+      if (dd) dd.style.display = "none";
+      runMultiComparison();
+    }
+
+    function resetAllCompareSlots() {
+      clearCompareSlot("A");
+      clearCompareSlot("B");
+      clearCompareSlot("C");
+      document.getElementById("compareResultBox").style.display = "none";
+    }
+
+    function swapCompareAB() {
+      const temp = comparePersons.A;
+      comparePersons.A = comparePersons.B;
+      comparePersons.B = temp;
+
+      ["A", "B"].forEach(s => {
+        const rec = comparePersons[s];
+        const inp = document.getElementById(`compareInput${s}`);
+        const lbl = document.getElementById(`compareSelected${s}`);
+        if (rec) {
+          inp.value = rec.name;
+          lbl.innerHTML = `<strong style="color:var(--crimson);">${GEN_LABELS[rec.gen]}</strong> • ${rec.branch}`;
+        } else {
+          inp.value = "";
+          lbl.textContent = `Chưa chọn đối tượng ${s}`;
+        }
+      });
+      runMultiComparison();
+    }
+
+    function toggleThirdCompareSlot(forceState) {
+      isThirdSlotOpen = typeof forceState === "boolean" ? forceState : !isThirdSlotOpen;
+      document.getElementById("compareSlotC").style.display = isThirdSlotOpen ? "block" : "none";
+      document.getElementById("btnToggleThirdPerson").style.display = isThirdSlotOpen ? "none" : "inline-flex";
+      if (!isThirdSlotOpen) {
+        clearCompareSlot("C");
+      } else {
+        runMultiComparison();
+      }
+    }
+
+    function setSampleCompare(ids) {
+      comparePersons = { A: null, B: null, C: null };
+      ["A", "B", "C"].forEach(s => {
+        document.getElementById(`compareInput${s}`).value = "";
+        document.getElementById(`compareSelected${s}`).textContent = "Chưa chọn";
+      });
+      if (ids.length >= 3) toggleThirdCompareSlot(true);
+      else toggleThirdCompareSlot(false);
+
+      const slots = ["A", "B", "C"];
+      ids.forEach((id, idx) => {
+        const rec = searchableRecords.find(r => r.id === id);
+        if (rec && slots[idx]) pickComparePerson(slots[idx], rec);
+      });
+    }
+
+    // Build complete list of candidates for comparison:
+    // 1. All TREE_NODE items
+    // 2. All listed children in childrenSummary that are NOT already separate TREE_NODE items (virtual child records linked to their parent!)
+    // 3. All APPENDIX items
+    function getCompareCandidates() {
+      const list = [];
+      const existingTreeNamesNorm = new Set(
+        RAW_NODES.map(n => removeVietnameseTones(n.name))
+      );
+
+      RAW_NODES.forEach(n => {
+        const parentName = n.parentId && nodeMap[n.parentId] ? nodeMap[n.parentId].name : "Gốc Thủy Tổ";
+        const spouseText = (n.spouses && n.spouses.length) ? n.spouses.join(", ") : "";
+        list.push({
+          type: "TREE_NODE",
+          id: n.id,
+          nodeId: n.id,
+          name: n.name,
+          gen: n.gen,
+          branch: n.branch,
+          order: n.order || 1,
+          subtitle: `${GEN_LABELS[n.gen]} • ${n.branch} • Cha: ${parentName}`,
+          spouses: spouseText,
+          searchNorm: removeVietnameseTones(`${n.name} ${n.alias || ""} ${spouseText} ${n.branch} doi ${n.gen}`)
+        });
+
+        // Also index listed children in childrenSummary if they don't have a standalone card yet
+        if (n.childrenSummary && n.childrenSummary.length > 0 && n.gen < 12) {
+          n.childrenSummary.forEach((rawChild, cIdx) => {
+            // Extract clean person name before "(" or "sinh" or "gả"
+            let cleanName = rawChild.replace(/^\d+[.\-–]\s*/, "").split(/\(|\bsinh\b|\bgả\b|\bquy\b|\bmộ\b|\btử\b|\bphối\b/i)[0].trim();
+            if (!cleanName || cleanName.length < 4) return;
+            if (/vô danh|sút hồn|sút tiền|phụ trang|xem sinh hạ/i.test(cleanName)) return;
+            const normChild = removeVietnameseTones(cleanName);
+            // Skip if already a full TREE_NODE under this parent
+            const alreadyChildNode = (nodeMap[n.id].children || []).some(ch => removeVietnameseTones(ch.name).includes(normChild));
+            if (alreadyChildNode) return;
+
+            const childGen = Math.min(12, n.gen + 1);
+            list.push({
+              type: "VIRTUAL_CHILD",
+              id: `VCHILD_${n.id}_${cIdx}`,
+              parentNodeId: n.id,
+              name: cleanName.toUpperCase(),
+              rawDetail: rawChild,
+              gen: childGen,
+              branch: n.branch,
+              order: cIdx + 1,
+              subtitle: `${GEN_LABELS[childGen]} • ${n.branch} • Cha: ${n.name}`,
+              spouses: "",
+              searchNorm: removeVietnameseTones(`${cleanName} ${n.name} ${n.branch} doi ${childGen}`)
+            });
+          });
+        }
+      });
+
+      Object.entries(APPENDICES_DATA).forEach(([appNum, appObj]) => {
+        const genNum = Number(appNum) + 4;
+        appObj.items.forEach((rawItem, idx) => {
+          list.push({
+            type: "APPENDIX",
+            id: `APP_${appNum}_${idx}`,
+            appendixNum: Number(appNum),
+            name: rawItem,
+            gen: genNum,
+            branch: `Phụ trang ${appNum}`,
+            subtitle: `${GEN_LABELS[genNum]} • Phụ trang ${appNum} (Chưa rõ đường dây sinh hạ)`,
+            spouses: "",
+            searchNorm: removeVietnameseTones(`${rawItem} phu trang ${appNum}`)
+          });
+        });
+      });
+
+      return list;
+    }
+
+    let _cachedCompareCandidates = null;
+    function ensureCompareCandidates() {
+      if (!_cachedCompareCandidates) {
+        _cachedCompareCandidates = getCompareCandidates();
+      }
+      return _cachedCompareCandidates;
+    }
+
+    function handleCompareSearch(slot) {
+      const input = document.getElementById(`compareInput${slot}`);
+      const dropdown = document.getElementById(`compareDropdown${slot}`);
+      const q = removeVietnameseTones(input.value);
+      const candidates = ensureCompareCandidates();
+
+      // If user edits input after selecting someone, clear old selection until re-picked or resolved
+      if (comparePersons[slot] && removeVietnameseTones(comparePersons[slot].name) !== q) {
+        comparePersons[slot] = null;
+        document.getElementById(`compareSelected${slot}`).innerHTML =
+          `<span style="color:#9B1C1C;">Đang tìm... hãy bấm chọn một vị trong danh sách bên dưới</span>`;
+      }
+
+      const matches = (q.length === 0
+        ? candidates.filter(r => r.type === "TREE_NODE" && r.gen >= 4).slice(0, 20)
+        : candidates.filter(r => r.searchNorm.includes(q)).slice(0, 30));
+
+      if (matches.length === 0) {
+        dropdown.innerHTML = `<div style="padding:10px; font-size:12px; color:var(--ink-muted); text-align:center;">Không tìm thấy "${input.value}" trong gia phả</div>`;
+      } else {
+        dropdown.innerHTML = matches.map(m => `
+          <button type="button" class="search-item" style="padding:8px 10px;" onclick="pickComparePersonById('${slot}', '${m.id}')">
+            <div>
+              <div style="font-weight:700; font-size:12.5px; color:var(--ink);">${m.name}</div>
+              <div style="font-size:11px; color:var(--ink-muted);">${m.subtitle}</div>
+            </div>
+            <span class="badge-gen" style="shrink:0;">Chọn</span>
+          </button>
+        `).join("");
+      }
+      dropdown.style.display = "block";
+    }
+
+    function handleCompareKeydown(event, slot) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        resolveTypedCompareSlot(slot);
+        triggerExplicitCompare();
+      }
+    }
+
+    function resolveTypedCompareSlot(slot) {
+      if (comparePersons[slot]) return true;
+      const input = document.getElementById(`compareInput${slot}`);
+      if (!input) return false;
+      const q = removeVietnameseTones(input.value);
+      if (!q) return false;
+
+      const candidates = ensureCompareCandidates();
+      // Prefer exact name match first, then startsWith, then includes
+      let match = candidates.find(c => removeVietnameseTones(c.name) === q)
+               || candidates.find(c => removeVietnameseTones(c.name).startsWith(q))
+               || candidates.find(c => c.searchNorm.includes(q));
+      if (match) {
+        pickComparePerson(slot, match, true);
+        return true;
+      }
+      return false;
+    }
+
+    function triggerExplicitCompare() {
+      resolveTypedCompareSlot("A");
+      resolveTypedCompareSlot("B");
+      if (isThirdSlotOpen) resolveTypedCompareSlot("C");
+
+      ["A", "B", "C"].forEach(s => {
+        const dd = document.getElementById(`compareDropdown${s}`);
+        if (dd) dd.style.display = "none";
+      });
+
+      const selected = [comparePersons.A, comparePersons.B, isThirdSlotOpen ? comparePersons.C : null].filter(Boolean);
+      if (selected.length < 2) {
+        showToast("Vui lòng chọn ít nhất 2 đối tượng (A và B) từ danh sách gợi ý để so sánh!");
+        return;
+      }
+      runMultiComparison();
+      const box = document.getElementById("compareResultBox");
+      if (box) box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    function pickComparePersonById(slot, id) {
+      const candidates = ensureCompareCandidates();
+      const rec = candidates.find(r => r.id === id);
+      if (rec) pickComparePerson(slot, rec);
+    }
+
+    function pickComparePerson(slot, rec, skipRun) {
+      document.getElementById(`compareInput${slot}`).value = rec.name;
+      document.getElementById(`compareDropdown${slot}`).style.display = "none";
+      document.getElementById(`compareSelected${slot}`).innerHTML =
+        `<strong style="color:var(--crimson);">✓ ${GEN_LABELS[rec.gen]}</strong> • ${rec.branch}`;
+      comparePersons[slot] = rec;
+      if (!skipRun) runMultiComparison();
+    }
+
+    function getAncestorRankName(d) {
+      if (d === 0) return "Chính bản thân";
+      if (d === 1) return "Cha / Mẹ";
+      if (d === 2) return "Ông Nội / Bà Nội";
+      if (d === 3) return "Ông Cố / Bà Cố (Cụ)";
+      if (d === 4) return "Ông Sơ / Bà Sơ (Kỵ)";
+      return `Tổ đời thứ ${d} trên`;
+    }
+
+    // Build full path from Root (Thủy Tổ) down to a compare record (supports both TREE_NODE and VIRTUAL_CHILD)
+    function getPathFromRootForRecord(rec) {
+      if (rec.type === "VIRTUAL_CHILD") {
+        const parentPath = [];
+        let curr = nodeMap[rec.parentNodeId];
+        while (curr) {
+          parentPath.unshift(curr);
+          curr = curr.parentId ? nodeMap[curr.parentId] : null;
+        }
+        parentPath.push({
+          id: rec.id,
+          parentId: rec.parentNodeId,
+          gen: rec.gen,
+          branch: rec.branch,
+          order: rec.order || 1,
+          name: rec.name,
+          spouses: [],
+          isVirtualChild: true
+        });
+        return parentPath;
+      }
+      const arr = [];
+      let curr = nodeMap[rec.id];
+      while (curr) {
+        arr.unshift(curr);
+        curr = curr.parentId ? nodeMap[curr.parentId] : null;
+      }
+      return arr;
+    }
+
+    function analyzePairRelationship(rec1, rec2) {
+      const pathRoot1 = getPathFromRootForRecord(rec1);
+      const pathRoot2 = getPathFromRootForRecord(rec2);
+      const path1 = [...pathRoot1].reverse();
+      const path2 = [...pathRoot2].reverse();
+
+      const map1 = new Map(path1.map((n, idx) => [n.id, idx]));
+      let lca = null, d1 = -1, d2 = -1;
+      for (let i = 0; i < path2.length; i++) {
+        if (map1.has(path2[i].id)) {
+          lca = path2[i]; d1 = map1.get(path2[i].id); d2 = i; break;
+        }
+      }
+
+      const p1 = path1[0], p2 = path2[0];
+      const diff = d2 - d1;
+      const spouseStr = (lca.spouses && lca.spouses.length) ? ` và Bà ${lca.spouses.join(" / ")}` : "";
+
+      if (d1 === 0 && d2 === 0) {
+        return { lca, summary: `Hai mục chọn trùng cùng một người (${p1.name}).`, addressing: "Cùng một vị." };
+      }
+      if (d1 === 0 || d2 === 0) {
+        const anc = d1 === 0 ? p1 : p2;
+        const desc = d1 === 0 ? p2 : p1;
+        const steps = Math.max(d1, d2);
+        const rank = getAncestorRankName(steps);
+        return {
+          lca,
+          summary: `Quan hệ trực hệ: <strong>${anc.name}</strong> là <strong>${rank}</strong> của <strong>${desc.name}</strong> (cách nhau ${steps} đời).`,
+          addressing: `<strong>${desc.name}</strong> gọi <strong>${anc.name}</strong> bằng <strong>${rank}</strong>.`
+        };
+      }
+      if (diff === 0) {
+        const rank = getAncestorRankName(d1);
+        const b1 = path1[d1 - 1], b2 = path2[d2 - 1];
+        const p1Senior = b1 && b2 && ((b1.order || 99) < (b2.order || 99));
+        const senior = p1Senior ? p1 : p2;
+        const junior = p1Senior ? p2 : p1;
+        const relName = d1 === 1 ? "Anh em ruột (cùng Cha)"
+          : (d1 === 2 ? "Anh em con chú con bác (cùng Ông Nội)"
+          : (d1 === 3 ? "Anh em họ đời 2 (cùng Ông Cố / Cụ)"
+          : (d1 === 4 ? "Anh em họ đời 3 (cùng Ông Sơ / Kỵ)" : `Anh em họ đồng tông (chung ${rank})`)));
+        return {
+          lca,
+          summary: `Hai người <strong>CÓ cùng ${rank}</strong> là ngài <strong>${lca.name}</strong>${spouseStr} (${GEN_LABELS[lca.gen]}) ➔ Quan hệ: <strong>${relName}</strong>.`,
+          addressing: `Bằng vai cùng Đời ${p1.gen}: Xét theo thứ tự chi nhánh tách từ đời ${GEN_LABELS[lca.gen]}, <strong>${senior.name}</strong> nhánh trên vai <strong>Anh</strong>, <strong>${junior.name}</strong> nhánh dưới vai <strong>Em</strong> (<strong>${junior.name}</strong> gọi <strong>${senior.name}</strong> bằng <strong>Anh</strong>).`
+        };
+      }
+
+      const senior = diff > 0 ? p1 : p2;
+      const junior = diff > 0 ? p2 : p1;
+      const absDiff = Math.abs(diff);
+      const r1 = getAncestorRankName(d1), r2 = getAncestorRankName(d2);
+      let role = "", callAs = "";
+      if (absDiff === 1) {
+        const isDirect = (d1 === 1 && d2 === 2) || (d2 === 1 && d1 === 2);
+        role = isDirect ? "Chú / Bác ruột – Cháu" : "Chú / Bác họ – Cháu";
+        callAs = isDirect ? "Chú / Bác ruột" : "Chú / Bác họ";
+      } else if (absDiff === 2) {
+        role = "Ông họ – Cháu"; callAs = "Ông họ";
+      } else if (absDiff === 3) {
+        role = "Cụ họ (Ông Cố họ) – Chắt"; callAs = "Ông Cố họ (Cụ họ)";
+      } else {
+        role = `Bề trên cách ${absDiff} đời – Hậu duệ`; callAs = `Bậc tiền nhân trên ${absDiff} đời`;
+      }
+
+      return {
+        lca,
+        summary: `Chung gốc tổ tiên tại ngài <strong>${lca.name}</strong>${spouseStr} (${GEN_LABELS[lca.gen]} — là <strong>${r1}</strong> của ${p1.name} và là <strong>${r2}</strong> của ${p2.name}) ➔ Quan hệ: <strong>${role}</strong> (chênh ${absDiff} đời).`,
+        addressing: `<strong>${junior.name}</strong> (Đời ${junior.gen}) gọi <strong>${senior.name}</strong> (Đời ${senior.gen}) bằng <strong>${callAs}</strong>; <strong>${senior.name}</strong> gọi <strong>${junior.name}</strong> bằng <strong>Cháu</strong>.`
+      };
+    }
+
+    function runMultiComparison() {
+      const selected = [comparePersons.A, comparePersons.B, isThirdSlotOpen ? comparePersons.C : null].filter(Boolean);
+      const resultBox = document.getElementById("compareResultBox");
+      if (selected.length < 2) {
+        resultBox.style.display = "none";
+        return;
+      }
+      resultBox.style.display = "block";
+
+      const treeDiagram = document.getElementById("compareTreeDiagram");
+      const verdictCard = document.getElementById("compareVerdictCard");
+      const btnMainTree = document.getElementById("btnShowVOnMainTree");
+
+      // Check if any selected is in Appendix
+      const hasAppendix = selected.some(s => s.type === "APPENDIX");
+      if (hasAppendix) {
+        btnMainTree.style.display = "none";
+        treeDiagram.innerHTML = `<p style="font-size:12.5px; color:var(--ink-muted); text-align:center; padding:12px;">Có đối tượng thuộc danh sách <strong>Phụ trang</strong> (gia phả gốc 1990 ghi nhận chưa rõ đường dây sinh hạ trực tiếp) nên không vẽ được nhánh nối trực hệ.</p>`;
+        const genCompareLines = [];
+        for (let i = 0; i < selected.length; i++) {
+          for (let j = i + 1; j < selected.length; j++) {
+            const a = selected[i], b = selected[j];
+            const d = b.gen - a.gen;
+            if (d === 0) genCompareLines.push(`• <strong>${a.name}</strong> và <strong>${b.name}</strong> cùng thuộc <strong>${GEN_LABELS[a.gen]}</strong> (ngang hàng thế thứ).`);
+            else if (d > 0) genCompareLines.push(`• <strong>${a.name}</strong> (${GEN_LABELS[a.gen]}) ở bậc trên <strong>${b.name}</strong> (${GEN_LABELS[b.gen]}) <strong>${d} đời</strong>.`);
+            else genCompareLines.push(`• <strong>${b.name}</strong> (${GEN_LABELS[b.gen]}) ở bậc trên <strong>${a.name}</strong> (${GEN_LABELS[a.gen]}) <strong>${Math.abs(d)} đời</strong>.`);
+          }
+        }
+        verdictCard.innerHTML = `
+          <div class="info-block-title" style="font-size:13px;">📌 KẾT LUẬN SO SÁNH GỐC GÁC &amp; THẾ THỨ</div>
+          <div style="font-size:13px; display:grid; gap:6px;">
+            <p>Chưa thể xác định các đối tượng có cùng Cha, Ông/Bà Nội hay Ông/Bà Cố trực hệ hay không vì có thành viên nằm trong <strong>Phụ trang</strong>.</p>
+            ${genCompareLines.map(l => `<div>${l}</div>`).join("")}
+          </div>
+        `;
+        return;
+      }
+
+      const hasVirtualChild = selected.some(s => s.type === "VIRTUAL_CHILD");
+      btnMainTree.style.display = hasVirtualChild ? "none" : "inline-flex";
+
+      // Build ancestor paths from Root to each selected person
+      const pathsFromRoot = selected.map(rec => getPathFromRootForRecord(rec));
+
+      // Find Common Ancestor across ALL selected persons (LCA of all 2 or 3)
+      let commonIdx = 0;
+      const minLen = Math.min(...pathsFromRoot.map(p => p.length));
+      while (commonIdx + 1 < minLen) {
+        const candidateId = pathsFromRoot[0][commonIdx + 1].id;
+        if (pathsFromRoot.every(p => p[commonIdx + 1].id === candidateId)) {
+          commonIdx++;
+        } else {
+          break;
+        }
+      }
+
+      const sharedTrunk = pathsFromRoot[0].slice(0, commonIdx + 1);
+      const overallLCA = sharedTrunk[sharedTrunk.length - 1];
+
+      // 1. Render Tree Diagram (Shared Trunk from Thủy Tổ -> Overall LCA -> Parallel Branches for A, B, [C])
+      const trunkHTML = `
+        <div style="display:flex; flex-direction:column; align-items:center; margin-bottom:10px;">
+          <div style="font-size:11px; font-weight:700; color:var(--crimson); text-transform:uppercase; margin-bottom:6px;">
+            Dòng Truyền Thừa Chung Từ Ngài Thủy Tổ Đến Điểm Tách Nhánh
+          </div>
+          ${sharedTrunk.map((n, idx) => `
+            ${idx > 0 ? '<div style="color:var(--gold); font-weight:700; font-size:13px; line-height:1.1;">↓</div>' : ''}
+            <div class="compare-step-card" style="max-width:320px; ${n.id === overallLCA.id ? 'background:#F6E7C8; border:2px solid var(--crimson);' : ''}">
+              <div style="font-size:10px; font-weight:700; color:var(--crimson);">
+                Đời ${n.gen} • ${n.branch} ${n.id === overallLCA.id ? '★ TỔ CHUNG GẦN NHẤT' : ''}
+              </div>
+              <div class="font-serif-royal" style="font-weight:700; font-size:12.5px;">${n.name}</div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+
+      const labels = ["Đối tượng A", "Đối tượng B", "Đối tượng C"];
+      const colsHTML = `
+        <div class="compare-tree-columns" style="grid-template-columns: repeat(${selected.length}, minmax(180px, 1fr)); border-top:2px solid var(--crimson); padding-top:12px;">
+          ${pathsFromRoot.map((p, idx) => {
+            const subBranch = p.slice(commonIdx + 1);
+            const distFromLCA = subBranch.length;
+            return `
+              <div class="compare-branch-col">
+                <div style="font-size:11px; font-weight:700; color:var(--crimson); text-transform:uppercase;">${labels[idx]}</div>
+                <div style="font-size:11px; color:var(--ink-muted); margin-bottom:6px;">Cách tổ chung ${distFromLCA} đời (${getAncestorRankName(distFromLCA)})</div>
+                ${subBranch.length === 0
+                  ? `<div style="font-size:12px; font-style:italic; color:var(--ink-muted); padding:10px 0;">(Chính là Tổ chung)</div>`
+                  : subBranch.map((step, sIdx) => `
+                    <div style="color:var(--crimson); font-weight:700; font-size:12px; line-height:1.1;">↓</div>
+                    <div class="compare-step-card ${sIdx === subBranch.length - 1 ? 'target' : ''}">
+                      <div style="font-size:10px; opacity:0.85;">Đời ${step.gen} • ${step.branch}</div>
+                      <div class="font-serif-royal" style="font-weight:700;">${step.name}</div>
+                    </div>
+                  `).join("")}
+              </div>
+            `;
+          }).join("")}
+        </div>
+      `;
+
+      treeDiagram.innerHTML = trunkHTML + colsHTML;
+
+      // 2. Render Conclusion (Gốc gác chung + Mối quan hệ + Cách xưng hô từng cặp)
+      const pairVerdicts = [];
+      for (let i = 0; i < selected.length; i++) {
+        for (let j = i + 1; j < selected.length; j++) {
+          const res = analyzePairRelationship(selected[i], selected[j]);
+          pairVerdicts.push(`
+            <div style="background:#fff; border:1px solid var(--border-gold); border-left:4px solid var(--crimson); border-radius:10px; padding:10px 12px; margin-top:8px;">
+              <div style="font-weight:700; color:var(--crimson); font-size:13px; margin-bottom:4px;">
+                • Giữa ${selected[i].name} và ${selected[j].name}:
+              </div>
+              <div style="font-size:13px; margin-bottom:4px;"><strong>Gốc gác &amp; Quan hệ:</strong> ${res.summary}</div>
+              <div style="font-size:13px;"><strong>Cách xưng hô:</strong> ${res.addressing}</div>
+            </div>
+          `);
+        }
+      }
+
+      const overallDistances = pathsFromRoot.map(p => p.length - 1 - commonIdx);
+      const isSameGenAll = overallDistances.every(d => d === overallDistances[0]);
+      const overallRank = isSameGenAll ? getAncestorRankName(overallDistances[0]) : "Tổ tiên chung gần nhất";
+
+      verdictCard.innerHTML = `
+        <div class="info-block-title" style="font-size:13.5px; margin-bottom:6px;">
+          📌 KẾT LUẬN VỀ GỐC GÁC, MỐI QUAN HỆ &amp; CÁCH XƯNG HÔ
+        </div>
+        <p style="font-size:13px; margin-bottom:6px;">
+          <strong>1. Nguồn cội chung:</strong> Cả ${selected.length} đối tượng đều bắt nguồn từ <strong>Đức Ngài Thủy Tổ Đại Lang Cao Văn Lễ</strong> và có <strong>${overallRank}</strong> giao nhau gần nhất tại ngài <strong>${overallLCA.name}</strong> (${GEN_LABELS[overallLCA.gen]} • ${overallLCA.branch}).
+        </p>
+        <div style="font-size:13px; font-weight:700;">2. Chi tiết quan hệ &amp; cách xưng hô giữa các đối tượng:</div>
+        ${pairVerdicts.join("")}
+      `;
+
+      // Store state for main tree visualization
+      const visibleIds = new Set();
+      pathsFromRoot.forEach(p => p.slice(commonIdx).forEach(n => {
+        if (!n.isVirtualChild) visibleIds.add(n.id);
+      }));
+      window._lastCompareState = {
+        type: "COMPARE",
+        lcaId: overallLCA.id,
+        visibleIds,
+        targetIds: new Set(selected.filter(s => !s.isVirtualChild).map(s => s.id)),
+        summaryText: `Đối chiếu ${selected.map(s => s.name).join(" • ")} (Tổ chung: ${overallLCA.name})`
+      };
+    }
+
+    function renderCompareOnMainTree() {
+      if (!window._lastCompareState) return;
+      focusMode = window._lastCompareState;
+      closeCompareModal();
+      document.getElementById("focusBadge").textContent = "Sơ đồ so sánh quan hệ";
+      document.getElementById("focusBreadcrumb").innerHTML = `<strong style="color:var(--crimson);">${focusMode.summaryText}</strong>`;
+      document.getElementById("focusBanner").style.display = "block";
+      switchView("tree");
+      renderTree();
+      fitTreeToScreen();
+    }
+
+    /* ============================================================================
+       CHUYỂN CHẾ ĐỘ XEM (SƠ ĐỒ CÂY / DANH SÁCH GỌN / 5 PHỤ TRANG)
+       ============================================================================ */
+    function switchView(view) {
+      currentView = view;
+      document.getElementById("viewTreeSection").style.display = view === "tree" ? "block" : "none";
+      document.getElementById("viewCompactSection").style.display = view === "compact" ? "block" : "none";
+      document.getElementById("viewAppendixSection").style.display = view === "appendix" ? "block" : "none";
+
+      document.getElementById("tabTree").className = "view-tab" + (view === "tree" ? " active" : "");
+      document.getElementById("tabCompact").className = "view-tab" + (view === "compact" ? " active" : "");
+      document.getElementById("tabAppendix").className = "view-tab" + (view === "appendix" ? " active" : "");
+
+      if (view === "tree") renderTree();
+      if (view === "compact") renderCompactTree();
+      if (view === "appendix") renderAppendices();
+    }
+
+    function applyFilters() {
+      if (focusMode) clearLineageFocus();
+      if (currentView === "tree") renderTree();
+      if (currentView === "compact") renderCompactTree();
+    }
+
+    function renderCompactTree() {
+      const container = document.getElementById("compactTreeContainer");
+      const branchFilter = document.getElementById("branchFilter").value;
+      const genFilter = document.getElementById("genFilter").value;
+
+      function buildCompact(node, depth = 0) {
+        if (branchFilter !== "ALL") {
+          if (branchFilter === "Gốc" && node.gen > 3) return "";
+          if (branchFilter !== "Gốc" && node.gen >= 4 && node.branch !== branchFilter) return "";
+        }
+        if (genFilter !== "ALL" && node.gen > Number(genFilter)) return "";
+
+        const kidsHTML = (node.children || []).map(c => buildCompact(c, depth + 1)).filter(Boolean).join("");
+        const indent = depth > 0 ? `margin-left:${Math.min(depth * 12, 48)}px;` : "";
+        const isHi = genFilter !== "ALL" && node.gen === Number(genFilter);
+
+        return `
+          <div class="compact-node" style="${indent}">
+            <div class="compact-card" style="${isHi ? 'background:#FFF4DC; border:2px solid var(--crimson);' : ''}">
+              <div style="flex:1; cursor:pointer;" onclick="openDetailDrawer('${node.id}')">
+                <div style="display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-bottom:4px;">
+                  <span class="badge-gen">Đời ${node.gen} • ${node.branch}</span>
+                  ${node.status ? `<span class="badge-status" style="margin-top:0;">${node.status}</span>` : ""}
+                </div>
+                <div class="font-serif-royal" style="font-weight:700; font-size:14.5px;">${node.name}</div>
+                ${node.spouses && node.spouses.length ? `<div style="font-size:12px; color:var(--ink-muted); margin-top:2px;">Phối: ${node.spouses.join("; ")}</div>` : ""}
+                ${node.childrenSummary && node.childrenSummary.length ? `<div style="font-size:11.5px; color:#7A4B12; margin-top:3px;">Sinh hạ: ${node.childrenSummary.join(", ")}</div>` : ""}
+              </div>
+              <div style="display:flex; flex-direction:column; gap:5px; shrink:0;">
+                <button class="btn btn-paper btn-sm" onclick="openDetailDrawer('${node.id}')">Chi tiết</button>
+                ${kidsHTML ? `<button class="btn btn-crimson btn-sm" onclick="toggleCompactKids(this)">Thu gọn</button>` : ""}
+              </div>
+            </div>
+            ${kidsHTML ? `<div class="compact-kids">${kidsHTML}</div>` : ""}
+          </div>
+        `;
+      }
+
+      container.innerHTML = buildCompact(nodeMap["D0_LE"], 0);
+    }
+
+    function toggleCompactKids(btn) {
+      const box = btn.closest(".compact-node").querySelector(":scope > .compact-kids");
+      if (!box) return;
+      const hidden = box.style.display === "none";
+      box.style.display = hidden ? "block" : "none";
+      btn.textContent = hidden ? "Thu gọn" : "Mở nhánh";
+    }
+
+    function toggleAllCompact(expand) {
+      document.querySelectorAll("#compactTreeContainer .compact-kids").forEach(el => {
+        el.style.display = expand ? "block" : "none";
+      });
+    }
+
+    /* ============================================================================
+       5 PHỤ TRANG
+       ============================================================================ */
+    function selectAppendixTab(num) {
+      currentAppendixTab = num;
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById(`appTab${i}`).className = i === num ? "btn btn-crimson btn-sm" : "btn btn-paper btn-sm";
+      }
+      renderAppendices();
+    }
+
+    function renderAppendices() {
+      const appObj = APPENDICES_DATA[currentAppendixTab];
+      const q = removeVietnameseTones(document.getElementById("appendixSearchInput").value);
+      const filtered = appObj.items.filter(item => removeVietnameseTones(item).includes(q));
+
+      document.getElementById("appendixContent").innerHTML = `
+        <div class="info-block" style="background:#FFF8EA;">
+          <div class="font-serif-royal" style="font-weight:700; font-size:15px; color:var(--crimson);">${appObj.title}</div>
+          <p style="font-size:12.5px; color:var(--ink-muted); margin-top:4px;">${appObj.desc}</p>
+        </div>
+        ${appObj.extraNotes ? appObj.extraNotes.map(n => `
+          <div class="info-block" style="background:#fff; border-left:4px solid var(--gold); font-size:12.5px;">
+            <strong>Ghi chú nguyên bản:</strong> ${n}
+          </div>
+        `).join("") : ""}
+        <div class="appendix-grid">
+          ${filtered.map(item => `<div class="appendix-item">${item}</div>`).join("")}
+        </div>
+        ${filtered.length === 0 ? `<p style="text-align:center; padding:24px; color:var(--ink-muted); font-size:13px;">Không tìm thấy tên nào khớp trong Phụ trang này.</p>` : ""}
+      `;
+    }
+
+    /* ============================================================================
+       XUẤT FILE HTML & CHIA SẺ WEB MIỄN PHÍ
+       ============================================================================ */
+    function openShareModal() { document.getElementById("shareModal").style.display = "flex"; }
+    function closeShareModal() { document.getElementById("shareModal").style.display = "none"; }
+
+    function getCleanStandaloneHTML() {
+      const cloned = document.documentElement.cloneNode(true);
+      cloned.querySelectorAll('[data-bard-client-injected="true"]').forEach(el => el.remove());
+      const fb = cloned.querySelector("#fallbackCodeBox");
+      if (fb) fb.style.display = "none";
+      const ta = cloned.querySelector("#standaloneCodeTextarea");
+      if (ta) ta.value = "";
+      return "<!DOCTYPE html>\n" + cloned.outerHTML;
+    }
+
+    function downloadStandaloneHTML() {
+      try {
+        const content = getCleanStandaloneHTML();
+        const blob = new Blob([content], { type: "text/html;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "index.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        showToast("Đã tải xuống file index.html! Bạn có thể kéo thả lên Netlify Drop hoặc GitHub Pages.");
+      } catch (e) {
+        copyStandaloneHTML();
+      }
+    }
+
+    function copyStandaloneHTML() {
+      const content = getCleanStandaloneHTML();
+      const fb = document.getElementById("fallbackCodeBox");
+      const ta = document.getElementById("standaloneCodeTextarea");
+      if (fb && ta) {
+        fb.style.display = "block";
+        ta.value = content;
+        ta.focus();
+        ta.select();
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(content).then(() => {
+          showToast("Đã sao chép toàn bộ mã HTML! Dán vào Notepad và lưu thành index.html.");
+        }).catch(() => {
+          showToast("Hãy nhấn Ctrl+C trong khung mã nguồn để sao chép và lưu thành index.html.");
+        });
+      }
+    }
+
+    /* ============================================================================
+       QUẢN TRỊ VIÊN (CHỈNH LÝ TIÊU ĐỀ, ẢNH HEADER, BỔ SUNG THÀNH VIÊN)
+       ============================================================================ */
+    const ADMIN_KEY = "caodaitoc_admin_cfg_v1";
+    let adminAuthenticated = false;
+
+    function openAdminModal() {
+      document.getElementById("adminModal").style.display = "flex";
+      if (adminAuthenticated) {
+        document.getElementById("adminLoginBox").style.display = "none";
+        document.getElementById("adminControlsBox").style.display = "block";
+        syncAdminFormFields();
+      }
+    }
+
+    function closeAdminModal() {
+      document.getElementById("adminModal").style.display = "none";
+    }
+
+    function verifyAdminLogin() {
+      const pw = document.getElementById("adminPassInput").value.trim();
+      if (pw === "caovan1990") {
+        adminAuthenticated = true;
+        document.getElementById("adminLoginBox").style.display = "none";
+        document.getElementById("adminControlsBox").style.display = "block";
+        syncAdminFormFields();
+        showToast("Đăng nhập Quản trị thành công!");
+      } else {
+        showToast("Mật khẩu không đúng! Mật khẩu mặc định là: caovan1990");
+      }
+    }
+
+    function syncAdminFormFields() {
+      document.getElementById("adminTitleInput").value = document.getElementById("headerMainTitle").textContent.trim();
+      document.getElementById("adminSubtitleInput").value = document.getElementById("headerSubTitle").textContent.trim();
+      document.getElementById("adminBadgeText").value = document.getElementById("headerDemoBadge").textContent.trim();
+      const emb = document.getElementById("headerEmblemBox");
+      if (!emb.querySelector("img")) {
+        document.getElementById("adminEmblemText").value = emb.textContent.trim();
+      }
+    }
+
+    function populateAdminParentSelect() {
+      const sel = document.getElementById("adminParentSelect");
+      if (!sel) return;
+      sel.innerHTML = RAW_NODES.map(n => `<option value="${n.id}">Đời ${n.gen} (${n.branch}) - ${n.name}</option>`).join("");
+    }
+
+    function handleAdminImageUpload(event, targetType) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const dataUrl = e.target.result;
+        const cfg = JSON.parse(localStorage.getItem(ADMIN_KEY) || "{}");
+        if (targetType === "emblem") {
+          cfg.emblemImg = dataUrl;
+          document.getElementById("headerEmblemBox").innerHTML = `<img src="${dataUrl}" alt="Biểu tượng" />`;
+        } else if (targetType === "banner") {
+          cfg.bannerImg = dataUrl;
+          const banner = document.getElementById("customHeaderBanner");
+          banner.src = dataUrl;
+          banner.style.display = "block";
+        }
+        localStorage.setItem(ADMIN_KEY, JSON.stringify(cfg));
+        showToast("Đã cập nhật hình ảnh tiêu đề!");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearAdminBanner() {
+      const cfg = JSON.parse(localStorage.getItem(ADMIN_KEY) || "{}");
+      delete cfg.bannerImg;
+      localStorage.setItem(ADMIN_KEY, JSON.stringify(cfg));
+      const banner = document.getElementById("customHeaderBanner");
+      banner.style.display = "none";
+      banner.src = "";
+      showToast("Đã xóa ảnh Banner Header");
+    }
+
+    function saveAdminSettings() {
+      const title = document.getElementById("adminTitleInput").value.trim();
+      const subtitle = document.getElementById("adminSubtitleInput").value.trim();
+      const emblemText = document.getElementById("adminEmblemText").value.trim();
+      const badgeText = document.getElementById("adminBadgeText").value.trim();
+
+      if (title) document.getElementById("headerMainTitle").textContent = title;
+      if (subtitle) document.getElementById("headerSubTitle").textContent = subtitle;
+      const badgeEl = document.getElementById("headerDemoBadge");
+      if (badgeText) {
+        badgeEl.textContent = badgeText;
+        badgeEl.style.display = "inline-block";
+      } else {
+        badgeEl.style.display = "none";
+      }
+
+      const cfg = JSON.parse(localStorage.getItem(ADMIN_KEY) || "{}");
+      cfg.title = title;
+      cfg.subtitle = subtitle;
+      cfg.badgeText = badgeText;
+      if (emblemText && !cfg.emblemImg) {
+        cfg.emblemText = emblemText;
+        document.getElementById("headerEmblemBox").textContent = emblemText;
+      }
+      localStorage.setItem(ADMIN_KEY, JSON.stringify(cfg));
+      showToast("Đã lưu thông tin chỉnh lý giao diện!");
+    }
+
+    function loadSavedAdminSettings() {
+      try {
+        const cfg = JSON.parse(localStorage.getItem(ADMIN_KEY) || "{}");
+        if (cfg.title) document.getElementById("headerMainTitle").textContent = cfg.title;
+        if (cfg.subtitle) document.getElementById("headerSubTitle").textContent = cfg.subtitle;
+        if (typeof cfg.badgeText === "string") {
+          const badgeEl = document.getElementById("headerDemoBadge");
+          badgeEl.textContent = cfg.badgeText;
+          badgeEl.style.display = cfg.badgeText ? "inline-block" : "none";
+        }
+        if (cfg.emblemImg) {
+          document.getElementById("headerEmblemBox").innerHTML = `<img src="${cfg.emblemImg}" alt="Biểu tượng" />`;
+        } else if (cfg.emblemText) {
+          document.getElementById("headerEmblemBox").textContent = cfg.emblemText;
+        }
+        if (cfg.bannerImg) {
+          const banner = document.getElementById("customHeaderBanner");
+          banner.src = cfg.bannerImg;
+          banner.style.display = "block";
+        }
+      } catch (e) {}
+    }
+
+    function addNewMemberFromAdmin() {
+      const parentId = document.getElementById("adminParentSelect").value;
+      const name = document.getElementById("adminNewName").value.trim().toUpperCase();
+      const order = Number(document.getElementById("adminNewOrder").value) || 1;
+      const birth = document.getElementById("adminNewBirth").value.trim();
+      const spouse = document.getElementById("adminNewSpouse").value.trim();
+
+      if (!name || !nodeMap[parentId]) {
+        showToast("Vui lòng nhập đầy đủ Họ tên thành viên mới!");
+        return;
+      }
+
+      const parent = nodeMap[parentId];
+      const newGen = Math.min(12, parent.gen + 1);
+      const newId = `${parent.id}_D${newGen}_${Date.now().toString().slice(-4)}`;
+
+      RAW_NODES.push({
+        id: newId,
+        parentId: parent.id,
+        gen: newGen,
+        branch: parent.branch,
+        order,
+        name,
+        alias: "",
+        birth,
+        death: "",
+        grave: "",
+        status: "",
+        spouses: spouse ? [spouse] : [],
+        childrenSummary: [],
+        note: "Bổ sung qua mục Quản trị"
+      });
+
+      rebuildTreeIndex();
+      collapsedIds.delete(parent.id);
+      renderTree();
+      if (currentView === "compact") renderCompactTree();
+
+      document.getElementById("adminNewName").value = "";
+      document.getElementById("adminNewBirth").value = "";
+      document.getElementById("adminNewSpouse").value = "";
+      showToast(`Đã bổ sung ${name} (${GEN_LABELS[newGen]}) vào cây phả hệ! Hãy bấm "Xuất file HTML" để lưu trữ lâu dài.`);
+    }
+
+    function showToast(msg) {
+      const box = document.getElementById("toastBox");
+      box.textContent = msg;
+      box.style.display = "block";
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => { box.style.display = "none"; }, 3800);
+    }
+
+    // Khởi chạy ứng dụng
+    window.addEventListener("DOMContentLoaded", () => {
+      loadSavedAdminSettings();
+      rebuildTreeIndex();
+      initDefaultCollapsed();
+      renderTree();
+      fitTreeToScreen();
+    });
+  </script>
+</body>
+</html>
